@@ -1,0 +1,21 @@
+mapscripts BravefortTown_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: BravefortTown_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script BravefortTown_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_BRAVEFORT_TOWN)
+    end
+}
+
+script BravefortTown_PokemonCenter_1F_EventScript_RegionMap {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("It's convenient that these bulletin boards in the Pokémon Centers have a copy of the Shizen region map.\p
+    It's really helpful if I ever feel lost!"))
+    closemessage
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}

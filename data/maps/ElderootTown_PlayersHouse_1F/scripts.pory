@@ -1,0 +1,100 @@
+mapscripts ElderootTown_PlayersHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ELDEROOT_TOWN_STATE, 1: MomIntroText
+    ]
+}
+
+script MomIntroText {
+    lock
+    applymovement(1, moves(face_up, emote_exclamation_mark))
+    waitmovement (1)
+    playse(SE_PIN)
+    delay (10)
+    msgbox (format("{PLAYER}! Would you mind doing me a favor? I need some ingredients picked up from Shivervale Town, and I was hoping you could pick some up for me.\p
+    ...\p
+    Oh, thank you! Be safe and don't forget your bag upstairs if you didn't grab it already. And don't forget if you want to run there, just hold the B button!"))
+    applymovement(1, MomFaceLeft)
+    waitmovement(1)
+    setvar(VAR_ELDEROOT_TOWN_STATE, 2)
+    release
+}
+
+movement MomFaceLeft {
+    face_left
+}
+
+script ElderootTown_PlayersHouse_1F_EventScript_Mom {
+    goto_if_eq (VAR_ELDEROOT_TOWN_STATE, 2, ElderootTown_PlayersHouse_1F_EventScript_Shivervale)
+    goto_if_eq (VAR_ELDEROOT_TOWN_STATE, 9, LeaveForJourney)
+    goto_if_set (FLAG_SYS_POKEMON_GET, ElderootTown_PlayersHouse_1F_EventScript_MomHealsParty) 
+    release
+    end
+}
+
+script ElderootTown_PlayersHouse_1F_EventScript_Shivervale {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox (format("You remember where Shivervale Town is right? It's just down Route 1 and Route 2. Watch out for tall grass!"))
+    closemessage
+    applymovement(1, moves(face_left))
+    waitmovement(1)
+    release
+}
+
+script LeaveForJourney {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Did you feel that earthquake? That was so strange...\p
+    Anyways, did you forget something, {PLAYER}?\p
+    ...\l
+    ...\p
+    ...Sage of Elderoot...\l
+    ...\p
+    ...\l
+    ...past version of Elderoot?...\p
+    ...\l
+    ...The League of Eight...\p
+    ...\l
+    ...your very own Pokémon journey?!\p
+    It all sounds so strange, but I can't deny that you have your very own Pokémon now.\p
+    I knew eventually this day would come. That's why I ordered you that Pokédex for your birthday.\p
+    I'm sorry that it was a late 16th birthday present, I had to order it and ship it in from another region.\p
+    But it's supposed to be the next best thing for Pokémon trainers, it automatically records Pokémon data!\p
+    Anyways, I'm sorry, I'm rambling to keep you here longer. Don't worry about those ingredients I asked for earlier, I'll just see if the neighbors have some!\p 
+    I guess it's time for you to go...\p
+    Be strong and brave and take care of your Pokémon. I'll always be here if you need me!"))
+    closemessage
+    setvar(VAR_SHIVERVALE_TOWN_STATE, 1)
+    setvar(VAR_ELDEROOT_TOWN_STATE, 10)
+    release
+}
+
+script ElderootTown_PlayersHouse_1F_EventScript_MomHealsParty {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("You and your Pokémon look tired. You should take a quick rest."))
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Take care, honey!"))
+    applymovement(1, moves(face_left))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script ElderootTown_PlayersHouse_1F_EventScript_Bag {
+    if (flag(FLAG_RECEIVED_STARTER_POTIONS) == true) {
+        setvar(VAR_ELDEROOT_TOWN_STATE, 3)
+        release
+    } else {
+    lock
+    msgbox (format("I should go get my bag upstairs before I leave."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+    }
+}

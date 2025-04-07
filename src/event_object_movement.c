@@ -457,6 +457,15 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
+#define OBJ_EVENT_PAL_SILVER                      0x1124
+#define OBJ_EVENT_PAL_SHADOW                      0x1125
+#define OBJ_EVENT_PAL_SHEILA                      0x1126
+#define OBJ_EVENT_PAL_PHANTUMP                    0x1127
+#define OBJ_EVENT_PAL_GUARD                       0x1128
+#define OBJ_EVENT_PAL_BUILDER                     0x1129
+#define OBJ_EVENT_PAL_WORKER                      0x1130
+#define OBJ_EVENT_PAL_BREEDER_M                   0x1131
+#define OBJ_EVENT_PAL_BREEDER_F                   0x1132
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -480,6 +489,15 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_BrendanReflection,     OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION},
     {gObjectEventPal_BridgeReflection,      OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION},
     {gObjectEventPal_PlayerUnderwater,      OBJ_EVENT_PAL_TAG_PLAYER_UNDERWATER},
+    {gObjectEventPalette_Silver,            OBJ_EVENT_PAL_SILVER},
+    {gObjectEventPalette_Sheila,            OBJ_EVENT_PAL_SHEILA},
+    {gObjectEventPalette_Shadow,            OBJ_EVENT_PAL_SHADOW},
+    {gObjectEventPalette_Phantump,          OBJ_EVENT_PAL_PHANTUMP},
+    {gObjectEventPalette_Guard,             OBJ_EVENT_PAL_GUARD},
+    {gObjectEventPalette_Builder,           OBJ_EVENT_PAL_BUILDER},
+    {gObjectEventPalette_Worker,            OBJ_EVENT_PAL_WORKER},
+    {gObjectEventPalette_BreederM,          OBJ_EVENT_PAL_BREEDER_M},
+    {gObjectEventPalette_BreederF,          OBJ_EVENT_PAL_BREEDER_F},
     {gObjectEventPal_QuintyPlump,           OBJ_EVENT_PAL_TAG_QUINTY_PLUMP},
     {gObjectEventPal_QuintyPlumpReflection, OBJ_EVENT_PAL_TAG_QUINTY_PLUMP_REFLECTION},
     {gObjectEventPal_Truck,                 OBJ_EVENT_PAL_TAG_TRUCK},
@@ -503,6 +521,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
+
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

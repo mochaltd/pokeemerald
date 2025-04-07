@@ -1,0 +1,28 @@
+mapscripts Route2_GardenerHouse_MapScripts {
+
+}
+
+script Route2_GardenerHouse_Gardener {
+    call_if_unset(FLAG_RECEIVED_BERRY_JUICE, Route2_GardenerHouse_GardenerJuice)
+    call_if_set(FLAG_RECEIVED_BERRY_JUICE, Route2_GardenerHouse_GardenerGoodLuck)
+}
+
+script Route2_GardenerHouse_GardenerJuice {
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Even Shivervale Town can be a little too busy for me, which is why I enjoy my gardening on Route 2.\p
+    Oh, look at your Pokémon! I've never seen one like that. Here, this is a little something to give them. I made it myself!"))
+    closemessage
+    giveitem(ITEM_BERRY_JUICE)
+    setflag(FLAG_RECEIVED_BERRY_JUICE)
+    release
+}
+
+script Route2_GardenerHouse_GardenerGoodLuck {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Good luck out there!"))
+    closemessage
+    release
+}

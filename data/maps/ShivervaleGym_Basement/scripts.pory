@@ -1,0 +1,76 @@
+mapscripts ShivervaleGym_Basement_MapScripts {
+
+}
+
+script Shivervale_Gym_EventScript_Lucy{
+    trainerbattle_single(TRAINER_LUCY, ShivervaleTown_Gym_Text_LucyIntro, ShivervaleTown_Gym_Text_LucyOutro, Shivervale_Gym_EventScript_LucyDefeated)
+    //specialvar(VAR_RESULT, ShouldTryRematchBattle)
+    //goto_if_eq(VAR_RESULT, TRUE, Shivervale_Gym_EventScript_LucyRematch)
+    goto_if_unset(FLAG_RECEIVED_TM_THIEF, Shivervale_Gym_EventScript_GiveThief)
+    msgbox(Shivervale_Gym_Text_LucyPostBattle, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text ShivervaleTown_Gym_Text_LucyIntro {
+    format("So...it seems the trials of the League of Eight have begun. I was wondering if this day would ever come.\p
+    I am Selene, a member of the League of Eight, which helped end the War of Time 200 years ago.\p
+    I am not the real Selene standing before you, but an avatar of my past self.\p
+    Myself and the rest of the League of Eight were placed in these temples in the event a new trainer would need to be prepared for a great threat.\p
+    Will you be that trainer? Show me what you've got!")
+}
+
+text ShivervaleTown_Gym_Text_LucyOutro {
+    format("I see...another young trainer that shows promise.\p
+    It is an honor to bestow upon you the OBSIDIAN STONE.")
+}
+
+script Shivervale_Gym_EventScript_LucyDefeated{
+	msgbox(Shivervale_Gym_Text_ReceivedObsidianStone, MSGBOX_DEFAULT)
+	waitmessage
+	call(Common_EventScript_PlayGymBadgeFanfare)
+	msgbox(Shivervale_Gym_Text_ObsidianStoneInfoTakeThis, MSGBOX_DEFAULT)
+	setflag(FLAG_DEFEATED_SHIVERVALE_GYM)
+	setflag(FLAG_BADGE01_GET)
+	setvar(VAR_SHIVERVALE_TOWN_STATE, 3)
+	setvar(VAR_0x8008, 1)
+	goto(Shivervale_Gym_EventScript_GiveThief)
+	end
+}
+
+text Shivervale_Gym_Text_ReceivedObsidianStone {
+    format("{PLAYER} received the OBSIDIAN STONE from Selene!")
+}
+
+text Shivervale_Gym_Text_ObsidianStoneInfoTakeThis {
+    format("The OBSIDIAN STONE heightens the ATTACK power of your Pokémon.\p
+    It also enables you to use the HM move CUT outside of battle.\p
+    Please, take this with you too.")
+}
+
+script Shivervale_Gym_EventScript_GiveThief {
+    giveitem(ITEM_TM46)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	setflag(FLAG_RECEIVED_TM_THIEF)
+	msgbox(Shivervale_Gym_Text_ExplainThief, MSGBOX_DEFAULT)
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Be careful out there."))
+	release
+	end
+}
+
+text Shivervale_Gym_Text_ExplainThief {
+    format("That TM, or Technical Machine, contains the moves THIEF.\p
+    Not only does it inflict damage to Pokémon, but may also steal the foe's held item.\p
+    If you use the TM, it will instantly teach the move to any Pokémon that can learn it.\p
+    Also, TMs can be used multiple times, make sure to use it the best that you can.\p
+    ...\p
+    It's strange...we haven't been summoned in almost 200 years, and there have now been two trainers that have begun the trials.\p
+    Let me heal your Pokémon before you go.")
+}
+
+text Shivervale_Gym_Text_LucyPostBattle {
+    format("You show great promise, trainer.\p
+    Continue your travels and grow stronger. I worry what it means for Shizen if we have been summoned.")
+}

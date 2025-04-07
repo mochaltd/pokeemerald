@@ -1,0 +1,44 @@
+mapscripts ElderootTown_GranHouse_MapScripts {
+    
+}
+
+script ElderootTown_GranHouse_EventScript_Grandpa {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Ah {PLAYER}, it's good to see you. Our grandson is visiting from Royalspur City, but he's spent the whole time on his game.\p
+    Maybe you could convince him to spend some time with his grandparents?"))
+    closemessage
+    release
+}
+
+script ElderootTown_GranHouse_EventScript_Boy {
+    lock
+    msgbox(format("Don't mess me up, I'm trying to beat my high score!"))
+    closemessage
+    release
+}
+
+script ElderootTown_GranHouse_EventScript_Grandma {
+    goto_if_unset (FLAG_GET_BERRIES, GiveBerry)
+    goto_if_set (FLAG_GET_BERRIES, ElderootTown_GranHouse_EventScript_SafeTravels)
+}
+
+script GiveBerry {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Oh, hello {PLAYER}. Your mother mentioned you might be heading out of town soon, so I packed you a light snack.\p
+    Do you mind getting it? My knees are hurting today. It's on the left side of the glass cabinet."))
+    closemessage
+    release
+}
+
+script ElderootTown_GranHouse_EventScript_SafeTravels {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Be safe on your travels!"))
+    closemessage
+    release
+}

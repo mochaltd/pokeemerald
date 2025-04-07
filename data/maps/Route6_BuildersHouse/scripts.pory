@@ -1,0 +1,85 @@
+mapscripts Route6_BuildersHouse_MapScripts {
+    
+}
+
+script Route6_BuildersHouse_EventScript_Garrison {
+    trainerbattle_single(TRAINER_GARRISON, Route6_BuildersHouse_Text_GarrisonIntro, Route6_BuildersHouse_Text_GarrisonOutro)
+    msgbox(Route6_BuildersHouse_Text_GarrisonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_BuildersHouse_Text_GarrisonIntro {
+    format("I like to keep my Pokémon in top physical shape.")
+}
+
+text Route6_BuildersHouse_Text_GarrisonOutro {
+    format("Maybe I need to get in top physical shape myself.")
+}
+
+text Route6_BuildersHouse_Text_GarrisonPostBattle {
+    format("I bet the rest of the workers around here want to battle too!")
+}
+
+script Route6_BuildersHouse_EventScript_Marc {
+    trainerbattle_single(TRAINER_MARC, Route6_BuildersHouse_Text_MarcIntro, Route6_BuildersHouse_Text_MarcOutro)
+    msgbox(Route6_BuildersHouse_Text_MarcPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_BuildersHouse_Text_MarcIntro {
+    format("I only worked about three hours today, I need some excitement!")
+}
+
+text Route6_BuildersHouse_Text_MarcOutro {
+    format("Please don't tell anyone how little I worked.")
+}
+
+text Route6_BuildersHouse_Text_MarcPostBattle {
+    format("The beds in here are so comfy.")
+}
+
+script Route6_BuildersHouse_EventScript_Jeff {
+    trainerbattle_single(TRAINER_JEFF, Route6_BuildersHouse_Text_JeffIntro, Route6_BuildersHouse_Text_JeffOutro)
+    msgbox(Route6_BuildersHouse_Text_JeffPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_BuildersHouse_Text_JeffIntro {
+    format("My Pokémon just evolved through hard work!")
+}
+
+text Route6_BuildersHouse_Text_JeffOutro {
+    format("Maybe it'll continue to get even stronger.")
+}
+
+text Route6_BuildersHouse_Text_JeffPostBattle {
+    format("It's nice working so close to the sea.")
+}
+
+script Route6_BuildersHouse_EventScript_HealParty {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("These beds are normally only for the workers here, but it looks like you and your Pokémon could use a rest."))
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Go get 'em!"))
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    closemessage
+    release
+}
+
+script Route6_BuildersHouse_EventScript_Music {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Why is it always so difficult to pick something to listen to?"))
+    closemessage
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    release
+}

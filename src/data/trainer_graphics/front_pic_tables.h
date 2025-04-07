@@ -93,6 +93,12 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_LEAF] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_RS_BRENDAN] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_RS_MAY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SILVER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_UMBRA_GRUNT] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_GUARD] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_BUILDER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_WORKER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_GANG_MEMBER] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -192,6 +198,12 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(LEAF, gTrainerFrontPic_Leaf, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(SILVER, gTrainerFrontPic_Silver, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(UMBRA_GRUNT, gTrainerFrontPic_UmbraGrunt, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(GUARD, gTrainerFrontPic_Guard, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(BUILDER, gTrainerFrontPic_Builder, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(WORKER, gTrainerFrontPic_Worker, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(GANG_MEMBER, gTrainerFrontPic_GangMember, TRAINER_PIC_SIZE),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -291,4 +303,10 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(LEAF, gTrainerPalette_Leaf),
     TRAINER_PAL(RS_BRENDAN, gTrainerPalette_RubySapphireBrendan),
     TRAINER_PAL(RS_MAY, gTrainerPalette_RubySapphireMay),
+    TRAINER_PAL(SILVER, gTrainerPalette_Silver),
+    TRAINER_PAL(UMBRA_GRUNT, gTrainerPalette_UmbraGrunt),
+    TRAINER_PAL(GUARD, gTrainerPalette_Guard),
+    TRAINER_PAL(BUILDER, gTrainerPalette_Builder),
+    TRAINER_PAL(WORKER, gTrainerPalette_Worker),
+    TRAINER_PAL(GANG_MEMBER, gTrainerPalette_GangMember),
 };

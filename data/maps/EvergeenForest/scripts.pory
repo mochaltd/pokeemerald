@@ -1,0 +1,45 @@
+mapscripts EvergreenForest_MapScripts {
+
+}
+
+script EvergreenForest_EventScript_Shrine1 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_down * 7))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}
+
+script EvergreenForest_EventScript_Shrine2 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_left * 10, walk_fast_down * 4))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}
+
+script EvergreenForest_EventScript_Shrine3 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_left * 10, walk_fast_down * 3))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}

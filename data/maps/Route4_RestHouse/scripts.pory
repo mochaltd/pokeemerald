@@ -1,0 +1,17 @@
+mapscripts Route4_RestHouse_MapScripts {
+    
+}
+
+script Route4_RestHouse_EventScript_HealParty {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("You and your Pokémon look like you've been traveling for a while. Please, lie down and rest."))
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Best of luck!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}

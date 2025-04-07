@@ -1,0 +1,142 @@
+mapscripts Route2_MapScripts {
+
+}
+
+script Route2_EventScript_Calvin {
+    trainerbattle_single(TRAINER_YOUNGSTER_CALVIN_ROUTE1, Route2_Text_YoungsterCalvinIntro, Route2_Text_YoungsterCalvinOutro)
+    msgbox(Route2_Text_YoungsterCalvinPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_YoungsterCalvinIntro {
+    format("Alright, a new trainer! This'll be easy!")
+}
+
+text Route2_Text_YoungsterCalvinOutro {
+    format("I thought this battle was going to be easy...")
+}
+
+text Route2_Text_YoungsterCalvinPostBattle {
+    format("I guess I should train some more.")
+}
+
+script Route2_EventScript_Glen {
+    trainerbattle_single(TRAINER_FISHERMAN_GLEN_ROUTE2, Route2_Text_FishermanGlenIntro, Route2_Text_FishermanGlenOutro)
+    msgbox(Route2_Text_FishermanGlenPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_FishermanGlenIntro {
+    format("The fish aren't bitin' and I'm gettin' bored. Let's have a Pokémon battle!")
+}
+
+text Route2_Text_FishermanGlenOutro {
+    format("Well, at least I got some energy back in me.")
+}
+
+text Route2_Text_FishermanGlenPostBattle {
+    format("Fishin' helps me relax from the stress of daily life.")
+}
+
+script Route2_EventScript_Sarah {
+    trainerbattle_single(TRAINER_SARAH_ROUTE2, Route2_Text_SarahIntro, Route2_Text_SarahOutro)
+    msgbox(Route2_Text_SarahPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_SarahIntro {
+    format("That boy over there was rude, so I beat him in a Pokémon battle.\p
+    You seem nice but I'm still going to beat you!")
+}
+
+text Route2_Text_SarahOutro {
+    format("What?! How did I lose? I was so sure I'd win!")
+}
+
+text Route2_Text_SarahPostBattle {
+    format("If you're gonna be a trainer, make sure you stock up on Potions. They can be a lifesaver!")
+}
+
+script Route2_EventScript_PicnicBoy {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("I've been seeing more and more trainers passing through here and Shivervale Town recently. I wonder where they're headed next!"))
+    closemessage
+    applymovement(7, moves(face_left))
+    waitmovement(7)
+    waitmessage
+    end
+}
+
+script Route2_EventScript_PicnicGirl {
+    lock
+    applymovement(6, moves(face_player))
+    waitmovement(6)
+    msgbox(format("My boyfriend and I love going on picnics when the weather is so nice. The Lemonade from the shop in Shivervale Town makes it perfect!"))
+    closemessage
+    applymovement(6, moves(face_right))
+    waitmovement(6)
+    waitmessage
+    end
+}
+
+script Route2_EventScript_Brent {
+    trainerbattle_single(TRAINER_BRENT, Route2_Text_BrentIntro, Route2_Text_BrentOutro)
+    msgbox(Route2_Text_BrentPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_BrentIntro {
+    format("I'm looking for rare Pokémon!")
+}
+
+text Route2_Text_BrentOutro {
+    format("Pokémon are so interesting.")
+}
+
+text Route2_Text_BrentPostBattle {
+    format("One day, I'm going to catch all of the Pokémon in Shizen!")
+}
+
+script Route2_EventScript_Billy {
+    trainerbattle_single(TRAINER_BILLY, Route2_Text_BillyIntro, Route2_Text_BillyOutro)
+    msgbox(Route2_Text_BillyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_BillyIntro {
+    format("Check it out! I'm the Shivervale Town Guardian!")
+}
+
+text Route2_Text_BillyOutro {
+    format("I'm still a strong trainer...")
+}
+
+text Route2_Text_BillyPostBattle {
+    format("One day I'll beat you!")
+}
+
+script Route2_EventScript_Becky {
+    trainerbattle_single(TRAINER_BECKY, Route2_Text_BeckyIntro, Route2_Text_BeckyOutro)
+    msgbox(Route2_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route2_Text_BeckyIntro {
+    format("My Pokémon usually help me find berries, but now they want to battle!")
+}
+
+text Route2_Text_BeckyOutro {
+    format("At least I already found the berries I need.")
+}
+
+text Route2_Text_BeckyPostBattle {
+    format("Maybe if I keep training my Pokémon, they can find more berries!")
+}

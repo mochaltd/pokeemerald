@@ -1,0 +1,42 @@
+mapscripts RoyalspurTunnel_MapScripts {
+    
+}
+
+script RoyalspurTunnel_EventScript_Chip {
+    trainerbattle_single(TRAINER_CHIP, RoyalspurTunnel_Text_ChipIntro, RoyalspurTunnel_Text_ChipOutro)
+    msgbox(RoyalspurTunnel_Text_ChipPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text RoyalspurTunnel_Text_ChipIntro {
+    format("Watch out, you'll ruin my dig site!")
+}
+
+text RoyalspurTunnel_Text_ChipOutro {
+    format("I lost my concentration.")
+}
+
+text RoyalspurTunnel_Text_ChipPostBattle {
+    format("I know there's hidden treasure in here, I just know it!")
+}
+
+script RoyalspurTunnel_EventScript_Zander {
+    trainerbattle_single(TRAINER_ZANDER, RoyalspurTunnel_Text_ZanderIntro, RoyalspurTunnel_Text_ZanderOutro)
+    msgbox(RoyalspurTunnel_Text_ZanderPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text RoyalspurTunnel_Text_ZanderIntro {
+    format("My Pokémon and I got those rocks cleared, but now we want to battle!")
+}
+
+text RoyalspurTunnel_Text_ZanderOutro {
+    format("Maybe we should have asked your Pokémon for help.")
+}
+
+text RoyalspurTunnel_Text_ZanderPostBattle {
+    format("Did you know that sometimes Pokémon can hide in breakable rocks?\p
+    I wish mine were strong enough to break them.")
+}

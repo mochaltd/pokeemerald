@@ -1,0 +1,53 @@
+mapscripts Route6_PokemonDayCare_MapScripts {
+    
+}
+
+script Route6_PokemonDayCare_EventScript_SetupBreeder {
+    goto_if_unset(FLAG_RECEIVED_ROUTE6_EGG, Route6_PokemonDayCare_EventScript_Breeder)
+    goto_if_set(FLAG_RECEIVED_ROUTE6_EGG, Route6_PokemonDayCare_EventScript_TakeCare)
+}
+
+script Route6_PokemonDayCare_EventScript_Breeder {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Hello, trainer! You may have heard about someone trying to steal a new egg that we got recently.\p
+    Luckily, the police got it back for us!\p
+    ...\p
+    You know, we were just going to raise it here, but on second thought, we find that Pokémon tend to be happier with a trustworthy trainer.\p
+    Do you want to take this Pokémon egg with you?"), MSGBOX_YESNO)
+    closemessage
+    if(var(VAR_RESULT) == YES)
+        {
+            giveegg(SPECIES_TOXEL)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY)
+        {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received a Pokémon Egg!")
+            setflag(FLAG_RECEIVED_ROUTE6_EGG)
+            setflag(FLAG_SYS_POKEMON_GET)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC)
+        {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received a Pokémon Egg!\p
+            The Egg was sent to your PC.")
+            setflag(FLAG_RECEIVED_ROUTE6_EGG)
+        }
+        }
+    else
+        {
+            msgbox(format("Don't worry, we'll take good care of it here!"))
+        }
+    waitmessage
+    release
+}
+
+script Route6_PokemonDayCare_EventScript_TakeCare {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Take good care of it for us!"))
+    closemessage
+    release
+}

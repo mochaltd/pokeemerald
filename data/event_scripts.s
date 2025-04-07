@@ -726,7 +726,7 @@ Common_EventScript_OutOfCenterPartyHeal::
 EventScript_RegionMap::
 	lockall
 	msgbox Common_Text_LookCloserAtMap, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+@	fadescreen FADE_TO_BLACK
 	special FieldShowRegionMap
 	waitstate
 	releaseall
@@ -835,11 +835,11 @@ Common_EventScript_PlayerHandedOverTheItem::
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"
-	.string "POKéMON MART$"
+	.string "Pokémon MART$"
 
 gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
-	.string "POKéMON CENTER$"
+	.string "Pokémon CENTER$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"
@@ -859,12 +859,12 @@ gText_SelectWithoutRegisteredItem::
 	.string "registered to SELECT for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
-	.string "There's an e-mail from POKéMON TRAINER\n"
+	.string "There's an e-mail from Pokémon TRAINER\n"
 	.string "SCHOOL.\p"
 	.string "… … … … … …\p"
-	.string "A POKéMON may learn up to four moves.\p"
+	.string "A Pokémon may learn up to four moves.\p"
 	.string "A TRAINER's expertise is tested on the\n"
-	.string "move sets chosen for POKéMON.\p"
+	.string "move sets chosen for Pokémon.\p"
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
@@ -879,7 +879,7 @@ gText_UnusedNicknameReceivedPokemon::
 
 gText_PlayerWhitedOut::
 	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p{PLAYER} whited out!$"
+	.string "Pokémon!\p{PLAYER} whited out!$"
 
 gText_RegisteredTrainerinPokeNav::
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
@@ -895,12 +895,12 @@ gText_ComeBackWithSecretPower::
 	.string "you good stuff in secrecy.$"
 
 gText_PokerusExplanation::
-	.string "Your POKéMON may be infected with\n"
+	.string "Your Pokémon may be infected with\n"
 	.string "POKéRUS.\p"
 	.string "Little is known about the POKéRUS\n"
 	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
+	.string "forms that attach to Pokémon.\p"
+	.string "While infected, Pokémon are said to\n"
 	.string "grow exceptionally well.$"
 
 	.include "data/text/surf.inc"
@@ -914,7 +914,7 @@ gText_BigHoleInTheWall::
 
 gText_SorryWirelessClubAdjustments::
 	.string "I'm terribly sorry.\n"
-	.string "The POKéMON WIRELESS CLUB is\l"
+	.string "The Pokémon WIRELESS CLUB is\l"
 	.string "undergoing adjustments now.$"
 
 gText_UndergoingAdjustments::
@@ -1056,3 +1056,159 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/ElderootTown/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/ElderootTown_PlayersHouse_1F/scripts.inc"
+
+	.include "data/maps/ElderootTown_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/ForestedPath/scripts.inc"
+
+	.include "data/maps/OldElderoot/scripts.inc"
+
+	.include "data/maps/OldElderoot_SageHouse/scripts.inc"
+
+	.include "data/maps/DistortedPath/scripts.inc"
+
+	.include "data/maps/OldElderootCave/scripts.inc"
+
+	.include "data/maps/ElderootTown_DonnaHouse/scripts.inc"
+
+	.include "data/maps/ElderootTown_GranHouse/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/TestGym/scripts.inc"
+
+	.include "data/maps/ShivervaleTown/scripts.inc"
+
+	.include "data/maps/Route2_PaintersHouse/scripts.inc"
+
+	.include "data/maps/Route2_GardenerHouse/scripts.inc"
+
+	.include "data/maps/ShivervaleGym/scripts.inc"
+
+	.include "data/maps/ShivervaleGym_Basement/scripts.inc"
+
+	.include "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/ShivervaleTown_Mart/scripts.inc"
+
+	.include "data/maps/ShivervaleTown_DrinkShop/scripts.inc"
+
+	.include "data/maps/ShivervaleTown_CuttersHouse/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/ShivervaleTown_House1/scripts.inc"
+
+	.include "data/maps/EvergreenForest/scripts.inc"
+
+	.include "data/maps/EvergreenForest_House/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/RoyalspurCity/scripts.inc"
+
+	.include "data/maps/RoyalspurGym/scripts.inc"
+
+	.include "data/maps/ShivervaleGym_Exterior/scripts.inc"
+
+	.include "data/maps/Route4_RestHouse/scripts.inc"
+
+	.include "data/maps/Route4_FishingHut/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_BikeShop/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_House1/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_House2/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_House3/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_House4/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_Mart/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_MayorHouse_1F/scripts.inc"
+
+	.include "data/maps/RoyalspurCity_MayorHouse_2F/scripts.inc"
+
+	.include "data/maps/RoyalspurGym_Interior_1F/scripts.inc"
+
+	.include "data/maps/RoyalspurGym_Interior_Basement/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/RoyalspurTunnel/scripts.inc"
+
+	.include "data/maps/CoaltineTunnel/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/BravefortTown/scripts.inc"
+
+	.include "data/maps/Route6_PokemonDayCare/scripts.inc"
+
+	.include "data/maps/BravefortTown_IVChecker/scripts.inc"
+
+	.include "data/maps/Route6_BuildersHouse/scripts.inc"
+
+	.include "data/maps/BravefortTown_AbandonedWarehouse/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_Lobby/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_1F/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_2F/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_3F/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_4F/scripts.inc"
+
+	.include "data/maps/BravefortTown_OneSeaTower_Rooms/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_Lobby/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_1F/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_2F/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_3F/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_4F/scripts.inc"
+
+	.include "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.inc"
+
+	.include "data/maps/BravefortTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/BravefortTown_Mart/scripts.inc"
+
+	.include "data/maps/BravefortTown_Sewers/scripts.inc"
+
+	.include "data/maps/BravefortTown_Sewers_Tunnel/scripts.inc"
+
+	.include "data/maps/BravefortTown_AbandonedWarehouse_Password/scripts.inc"
+
+	.include "data/maps/BravefortTown_BravefortShipyard/scripts.inc"
+
+	.include "data/maps/BravefortGym_Exterior/scripts.inc"
+
+	.include "data/maps/BravefortGym_Interior_1F/scripts.inc"
+
+	.include "data/maps/BravefortGym_Interior_Basement/scripts.inc"
+
+	.include "data/maps/BravefortGym_Interior_1F_PostBattle/scripts.inc"
+
+	.include "data/maps/BravefortTown_PokemonLab/scripts.inc"
+
+	.include "data/maps/BravefortTown_PokemonLab_New/scripts.inc"
+
+	.include "data/maps/RoyalspurGym_Interior_1F_PostBattle/scripts.inc"
+
+	.include "data/maps/ShivervaleGym_PostBattle/scripts.inc"

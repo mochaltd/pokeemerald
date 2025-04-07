@@ -1,0 +1,25 @@
+mapscripts RoyalspurCity_House4_MapScripts {
+    
+}
+
+script RoyalspurCity_House4_EventScript_Boy {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Every Pokémon has a unique ability that it can use."))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script RoyalspurCity_House4_EventScript_Girl {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Pokémon are such strange creatures."))
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    closemessage
+    release
+}

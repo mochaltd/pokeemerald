@@ -1111,6 +1111,7 @@ SECTIONS {
         sound/songs/midi/mus_vs_rival.o(.rodata);
         sound/songs/midi/mus_vs_elite_four.o(.rodata);
         sound/songs/midi/mus_vs_aqua_magma_leader.o(.rodata);
+        sound/songs/midi/mus_vs_umbra.o(.rodata);
         sound/songs/midi/mus_rg_follow_me.o(.rodata);
         sound/songs/midi/mus_rg_game_corner.o(.rodata);
         sound/songs/midi/mus_rg_rocket_hideout.o(.rodata);
@@ -1290,14 +1291,6 @@ SECTIONS {
         *libc.a:lseekr.o(.rodata);
         *libc.a:readr.o(.rodata);
         src/libisagbprn.o(.rodata);
-    } > ROM =0
-
-    multiboot_data :
-    ALIGN(4)
-    {
-        data/multiboot_ereader.o(.rodata);
-        data/multiboot_berry_glitch_fix.o(.rodata);
-        data/multiboot_pokemon_colosseum.o(.rodata);
     } > ROM =0
 
     anim_mon_front_pic_data __anim_mon_load_address :

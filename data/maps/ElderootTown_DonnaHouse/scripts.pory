@@ -1,0 +1,22 @@
+mapscripts ElderootTown_DonnaHouse_MapScripts {
+    
+}
+
+script ElderootTown_DonnaHouse_EventScript_Donna {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Oh, look at you {PLAYER}, you're all grown up. I remember the day you were born...you've grown up so much.\p
+    Soon you'll be off having new adventures and experiences. Just make sure to visit your mother once in a while, okay?"))
+    closemessage
+    release
+}
+
+script ElderootTown_DonnaHouse_EventScript_Boy {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Someday, I'm gonna be a Pokémon trainer!"))
+    closemessage
+    release
+}

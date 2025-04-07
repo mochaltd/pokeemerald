@@ -1,0 +1,211 @@
+mapscripts Route5_MapScripts {
+    
+}
+
+script Route5_EventScript_PathBlocked {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("There was a slight collapse inside the tunnel and the path is blocked. You'll have to wait until we're finished clearing it."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script Route5_EventScript_Hiker {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    if (!(var(VAR_ROYALSPUR_CITY_STATE) == 0 )) {
+        msgbox(format("We got all of those rocks cleared out. The path is back open!"))
+    }
+    elif (var(VAR_EVERGREEN_FOREST_STATE) == 0) {
+        msgbox(format("There was a slight collapse inside the tunnel and the path is blocked. You'll have to wait until we're finished clearing it."))
+        }
+    closemessage
+    release
+}
+
+//script Route5_EventScript_CavePath {
+    //if (!(var(VAR_ROYALSPUR_CITY_STATE) == 0 )) {
+        //msgbox(format("We got all of those rocks cleared out. The path is back open!"))
+    //}
+    //else{
+        //if(var(VAR_EVERGREEN_FOREST_STATE) == 0){
+        //msgbox(format("There was a slight collapse inside the tunnel and the path is blocked. You'll have to wait until we're finished clearing it."))
+        //}
+    //}
+//}
+
+script Route5_EventScript_TunnelSign {
+    lock
+    msgbox(format("Royalspur Tunnel"))
+    release
+}
+
+script Route5_EventScript_Perry {
+    trainerbattle_single(TRAINER_PERRY, Route5_Text_PerryIntro, Route5_Text_PerryOutro)
+    msgbox(Route5_Text_PerryPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_PerryIntro {
+    format("This mountain is the best place for my bird Pokémon to stretch their wings!")
+}
+
+text Route5_Text_PerryOutro {
+    format("You shot them down...")
+}
+
+text Route5_Text_PerryPostBattle {
+    format("What do you think it feels like to fly?")
+}
+
+script Route5_EventScript_Jasmine {
+    trainerbattle_single(TRAINER_JASMINE, Route5_Text_JasmineIntro, Route5_Text_JasmineOutro)
+    msgbox(Route5_Text_JasminePostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_JasmineIntro {
+    format("Maybe I shouldn't have brought my bike up here...")
+}
+
+text Route5_Text_JasmineOutro {
+    format("This bike is so heavy.")
+}
+
+text Route5_Text_JasminePostBattle {
+    format("I'm gonna have to camp here before I keep going.")
+}
+
+script Route5_EventScript_Cole {
+    trainerbattle_single(TRAINER_COLE, Route5_Text_ColeIntro, Route5_Text_ColeOutro)
+    msgbox(Route5_Text_ColePostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_ColeIntro {
+    format("My Pokémon make it a breeze to cook up some grub!")
+}
+
+text Route5_Text_ColeOutro {
+    format("I wish there was more meat out here.")
+}
+
+text Route5_Text_ColePostBattle {
+    format("You snuffed out my Pokémon!")
+}
+
+script Route5_EventScript_Anthony {
+    trainerbattle_single(TRAINER_ANTHONY, Route5_Text_AnthonyIntro, Route5_Text_AnthonyOutro)
+    msgbox(Route5_Text_AnthonyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_AnthonyIntro {
+    format("Speed is everything. Let's see if you can keep up!")
+}
+
+text Route5_Text_AnthonyOutro {
+    format("Phew... You've got the endurance of a true trainer!")
+}
+
+text Route5_Text_AnthonyPostBattle {
+    format("I like riding the 10-speed because it's fun, uh, it gives me energy, aaand it's a great way to stay in shape.")
+}
+
+script Route5_EventScript_Ball1 {
+    lock
+    removeobject(3)
+    giveitem(ITEM_MAX_REPEL)
+    release
+}
+
+script Route5_EventScript_Tiana {
+    trainerbattle_single(TRAINER_TIANA, Route5_Text_TianaIntro, Route5_Text_TianaOutro)
+    msgbox(Route5_Text_TianaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_TianaIntro {
+    format("Don't underestimate me!")
+}
+
+text Route5_Text_TianaOutro {
+    format("Okay, you're like, really good.")
+}
+
+text Route5_Text_TianaPostBattle {
+    format("Will you train my Pokémon for me?")
+}
+
+script Route5_EventScript_Ball2 {
+    lock
+    removeobject(6)
+    giveitem(ITEM_STARDUST)
+    release
+}
+
+script Route5_EventScript_Claude {
+    trainerbattle_single(TRAINER_CLAUDE, Route5_Text_ClaudeIntro, Route5_Text_ClaudeOutro)
+    msgbox(Route5_Text_ClaudePostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_ClaudeIntro {
+    format("Careful, my Water-types hit like a tidal wave!")
+}
+
+text Route5_Text_ClaudeOutro {
+    format("Welp, back to fishing! Maybe I'll hook a stronger one next time!")
+}
+
+text Route5_Text_ClaudePostBattle {
+    format("I find a lot of good stuff fishing down stream, not just Pokémon.")
+}
+
+script Route5_EventScript_Larry {
+    trainerbattle_single(TRAINER_LARRY, Route5_Text_LarryIntro, Route5_Text_LarryOutro)
+    msgbox(Route5_Text_LarryPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_LarryIntro {
+    format("The great outdoors is the best place to train Pokémon! Nothing beats fresh air and a good battle!")
+}
+
+text Route5_Text_LarryOutro {
+    format("Your Pokémon thrive in the outdoors!")
+}
+
+text Route5_Text_LarryPostBattle {
+    format("Be careful in the cave up ahead.")
+}
+
+script Route5_EventScript_Alexia {
+    trainerbattle_single(TRAINER_ALEXIA, Route5_Text_AlexiaIntro, Route5_Text_AlexiaOutro)
+    msgbox(Route5_Text_AlexiaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route5_Text_AlexiaIntro {
+    format("In a battle, you can't afford to make even one mistake. Let's see how you do!")
+}
+
+text Route5_Text_AlexiaOutro {
+    format("Looks like I need to brush up on my strategy.")
+}
+
+text Route5_Text_AlexiaPostBattle {
+    format("Extra training starts now!")
+}

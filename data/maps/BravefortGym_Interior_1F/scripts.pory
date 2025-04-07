@@ -1,0 +1,102 @@
+mapscripts BravefortGym_Interior_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_BRAVEFORT_TOWN_STATE) >= 5) {
+            setmaplayoutindex(LAYOUT_BRAVEFORT_GYM_INTERIOR_1F_POST_BATTLE)
+        }
+    }
+}
+
+script BravefortGym_Interior_1F_EventScript_LeonardTrigger {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    goto(BravefortGym_Interior_1F_EventScript_Leonard)
+    release
+}
+
+script BravefortGym_Interior_1F_EventScript_Leonard {
+    trainerbattle_single(TRAINER_LEONARD, BravefortGym_Interior_1F_Text_LeonardIntro, BravefortGym_Interior_1F_Text_LeonardOutro, BravefortGym_Interior_1F_EventScript_LeonardDefeated)
+    msgbox(BravefortGym_Interior_1F_Text_LeonardPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortGym_Interior_1F_Text_LeonardIntro {
+    format("Oh...\p
+    Uhh...I didn't know I was supposed to battle anyone.\p
+    I was just keeping an eye on things for my father. But no matter!\p
+    My father has taught me well in the ways of battling and in honor of Captain Barlow, I will be a worthy competitor!")
+}
+
+text BravefortGym_Interior_1F_Text_LeonardOutro {
+    format("You battle with the strength of the sea.")
+}
+
+script BravefortGym_Interior_1F_EventScript_LeonardDefeated {
+    lock
+    msgbox(format("Wow, what a great battle!\p
+    ...\p
+    Huh?...\p
+    Oh, right! Ahem...\p
+    As the future protector of this temple, I give you my blessing to challenge Captain Barlow. Enter the door behind me, and stay strong in the face of the storm."))
+    closemessage
+    setvar(VAR_BRAVEFORT_TOWN_STATE, 5)
+    fadescreen(FADE_TO_BLACK)
+    setmetatile(7, 3, 0x232, FALSE)
+    setmetatile(7, 2, 0x237, FALSE)
+    playse(SE_DOOR)
+    special(DrawWholeMapView)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+text BravefortGym_Interior_1F_Text_LeonardPostBattle {
+    format("Stay strong in the face of the storm.")
+}
+
+script BravefortGym_Interior_1F_EventScript_Sailor {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("This is a table of remembrance for sailors that have been lost to the sea."))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script BravefortGym_Interior_1F_EventScript_OldWoman {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("So young and full of life. Never lose that spark of youth."))
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    closemessage
+    release
+}
+
+script BravefortGym_MartEmployee {
+    call_if_unset(FLAG_BRAVEFORT_GYM_FRESH_WATER, BravefortGym_MartEmployee_FreshWater)
+    call_if_set(FLAG_BRAVEFORT_GYM_FRESH_WATER, BravefortGym_MartEmployee_Enjoy)
+}
+
+script BravefortGym_MartEmployee_FreshWater {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Have a refreshment and enjoy your time in the temple."))
+    closemessage
+    giveitem(ITEM_FRESH_WATER)
+    setflag(FLAG_BRAVEFORT_GYM_FRESH_WATER)
+    release
+}
+
+script BravefortGym_MartEmployee_Enjoy {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Enjoy your time in the temple."))
+    closemessage
+    release
+}

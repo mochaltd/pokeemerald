@@ -1,0 +1,198 @@
+mapscripts BravefortTown_OneSeaTower_Rooms_MapScripts {
+
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Colton {
+    trainerbattle_single(TRAINER_COLTON, BravefortTown_OneSeaTower_Rooms_Text_ColtonIntro, BravefortTown_OneSeaTower_Rooms_Text_ColtonOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_ColtonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ColtonIntro {
+    format("I love hanging out with my Pokémon!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ColtonOutro {
+    format("That was an enjoyable match!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ColtonPostBattle {
+    format("Did you know they built these rooms specifically to be able to battle in them?")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Thomas {
+    trainerbattle_single(TRAINER_THOMAS, BravefortTown_OneSeaTower_Rooms_Text_ThomasIntro, BravefortTown_OneSeaTower_Rooms_Text_ThomasOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_ThomasPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ThomasIntro {
+    format("Child...did you knock on the door?")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ThomasOutro {
+    format("A loss is to be accepted without panic or haste.")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_ThomasPostBattle {
+    format("To never be ruffled in any situation is the gentleman's code!")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Blackglasses {
+    call_if_unset(FLAG_HIDDEN_ITEM_ROUTE_116_BLACK_GLASSES, BravefortTown_OneSeaTower_Rooms_EventScript_GiveBlackglasses)
+    call_if_set(FLAG_HIDDEN_ITEM_ROUTE_116_BLACK_GLASSES, BravefortTown_OneSeaTower_Rooms_EventScript_Taste)
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_GiveBlackglasses {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Don't you think the decoration in here is a little tacky?\p
+    I'm glad you agree, you deserve these for your keen sense of taste."))
+    giveitem(ITEM_BLACK_GLASSES)
+    setflag(FLAG_HIDDEN_ITEM_ROUTE_116_BLACK_GLASSES)
+    closemessage
+    release
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Taste {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("You have great taste!"))
+    closemessage
+    release
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Edmond {
+    trainerbattle_single(TRAINER_EDMOND, BravefortTown_OneSeaTower_Rooms_Text_EdmondIntro, BravefortTown_OneSeaTower_Rooms_Text_EdmondOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_EdmondPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_EdmondIntro {
+    format("Aha! I caught you in my net!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_EdmondOutro {
+    format("You wriggled free...")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_EdmondPostBattle {
+    format("To always be near the ocean is the dream!")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Rest {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("This is a resting room. Feel free to lie down on the bed for a bit."))
+    closemessage
+    release
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Paxton {
+    trainerbattle_single(TRAINER_PAXTON, BravefortTown_OneSeaTower_Rooms_Text_PaxtonIntro, BravefortTown_OneSeaTower_Rooms_Text_PaxtonOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_PaxtonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_PaxtonIntro {
+    format("My wife and I retired here and we need some excitement!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_PaxtonOutro {
+    format("What an excellent match!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_PaxtonPostBattle {
+    format("Such young spirit, it is truly a gift.")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Vicky {
+    trainerbattle_single(TRAINER_VICKY, BravefortTown_OneSeaTower_Rooms_Text_VickyIntro, BravefortTown_OneSeaTower_Rooms_Text_VickyOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_VickyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_VickyIntro {
+    format("Don't tell my husband, but I'm a stronger trainer than him.")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_VickyOutro {
+    format("You might be stronger than both of us!")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_VickyPostBattle {
+    format("Battling keeps my youthful spirit alive.")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Micah {
+    trainerbattle_single(TRAINER_MICAH, BravefortTown_OneSeaTower_Rooms_Text_MicahIntro, BravefortTown_OneSeaTower_Rooms_Text_MicahOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_MicahPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_MicahIntro {
+    format("Are your friends strong?")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_MicahOutro {
+    format("Your friends are, indeed, strong.")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_MicahPostBattle {
+    format("Friends need not be human.\n
+    For me, Pokémon are treasured friends!")
+}
+
+script DoorLocked {
+    lock
+    msgbox(format("The door is locked."))
+    closemessage
+    release
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Garret {
+    trainerbattle_single(TRAINER_GARRET, BravefortTown_OneSeaTower_Rooms_Text_GarretIntro, BravefortTown_OneSeaTower_Rooms_Text_GarretOutro)
+    msgbox(BravefortTown_OneSeaTower_Rooms_Text_GarretPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_GarretIntro {
+    format("Oh...\p
+    You definitely don't belong here.")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_GarretOutro {
+    format("I was distracted by your look.")
+}
+
+text BravefortTown_OneSeaTower_Rooms_Text_GarretPostBattle {
+    format("I will have a word with my landlord about who they let in.")
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_Calcium {
+    lock
+    applymovement(10, moves(face_player))
+    waitmovement(10)
+    msgbox(format("I wish my kid would eat their food instead of throwing it in the trash."))
+    closemessage
+    release
+}
+
+script BravefortTown_OneSeaTower_Rooms_EventScript_LittleGirl {
+    lock
+    applymovement(11, moves(face_player))
+    waitmovement(11)
+    msgbox(format("Milk is gross!"))
+    closemessage
+    release
+}

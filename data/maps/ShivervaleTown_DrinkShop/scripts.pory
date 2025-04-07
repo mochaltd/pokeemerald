@@ -1,0 +1,34 @@
+mapscripts ShivervaleTown_DrinkShop_MapScripts {
+    
+}
+
+script ShivervaleTown_DrinkShop_EventScript_Clerk {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Welcome! How may I serve you?"))
+    waitmessage
+    pokemart(ShivervaleTown_Mart_DrinkShop)
+    msgbox(format("Please come again!"))
+    closemessage
+    release
+    end
+}
+
+mart ShivervaleTown_Mart_DrinkShop {
+    ITEM_BERRY_JUICE
+    ITEM_LEMONADE
+    ITEM_SODA_POP
+    ITEM_NONE
+}
+
+script ShivervaleTown_DrinkShop_EventScript_Boy {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("This shop always serves the most refreshing drinks. I love coming here on warm days!"))
+    closemessage
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}

@@ -1,0 +1,36 @@
+mapscripts BravefortTown_TwoSeaTower_Lobby_MapScripts {
+
+}
+
+script BravefortTown_TwoSeaTower_Lobby_EventScript_TwoSea {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Please enjoy your visit to Two Sea Tower!"))
+    closemessage
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Lobby_EventScript_Receptionist {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("People in Two Sea Tower love to battle in our state of the art battle-tested rooms!"))
+    closemessage
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Lobby_EventScript_Woman {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("The employees here are much nicer than the ones at One Sea Tower."))
+    closemessage
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    release
+}

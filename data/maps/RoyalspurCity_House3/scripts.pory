@@ -1,0 +1,42 @@
+mapscripts RoyalspurCity_House3_MapScripts {
+    
+}
+
+script RoyalspurCity_House3_EventScript_Boy {
+    goto_if_unset(FLAG_RECEIVED_TM_ROAR, GiveRoar)
+    goto_if_set(FLAG_RECEIVED_TM_ROAR, NotScared)
+}
+
+script GiveRoar {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("ROOOAARRRR!\p
+    Did I scare you?\p
+    ...\p
+    Oh...well here, I guess you can have this anyways."))
+    closemessage
+    giveitem(ITEM_TM05)
+    setflag(FLAG_RECEIVED_TM_ROAR)
+    release
+}
+
+script NotScared {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("You weren't even scared. You're tough!"))
+    closemessage
+    release
+}
+
+script RoyalspurCity_House3_EventScript_Mom {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("My son is silly, he's always trying to scare people. I wish he would stop when I'm trying to clean though."))
+    closemessage
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}

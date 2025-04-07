@@ -1,0 +1,236 @@
+mapscripts Route4_MapScripts {
+    
+}
+
+script Route4_EventScript_NorthSign {
+    lock
+    msgbox(format("{UP_ARROW} Evergreen Forest\n
+    {DOWN_ARROW} Royalspur City"))
+    closemessage
+    release
+}
+
+script Route4_EventScript_PokeParkSign {
+    lock
+    msgbox(format("The Poké Park\n
+    Paid for by the citizens of Royalspur City"))
+    closemessage
+    release
+}
+
+script Route4_EventScript_FishingHutSign {
+    lock
+    msgbox(format("The Fishing Lodge:\n
+    Come in and brag about your catch of the day!"))
+    closemessage
+    release
+}
+
+script Route4_EventScript_Ball1 {
+    lock
+    removeobject(5)
+    giveitem(ITEM_TM44)
+    release
+}
+
+script Route4_EventScript_Hiker {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("There's a strange cave up there but I can't move that boulder blocking the path. It's too heavy!"))
+    closemessage
+    release
+}
+
+script Route4_EventScript_Girl {
+    lock
+    applymovement(14, moves(face_player))
+    waitmovement(14)
+    msgbox(format("I love coming out here to pick the wildflowers and decorating my home in Royalspur with them!"))
+    closemessage
+    release
+}
+
+script Route4_EventScript_Ball2 {
+    lock
+    removeobject(20)
+    giveitem(ITEM_NUGGET)
+    release
+}
+
+script Route4_EventScript_Dawson {
+    trainerbattle_single(TRAINER_DAWSON, Route4_Text_DawsonIntro, Route4_Text_DawsonOutro)
+    msgbox(Route4_Text_DawsonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_DawsonIntro {
+    format("My dad bought me these Pokémon!")
+}
+
+text Route4_Text_DawsonOutro {
+    format("How could he buy me weak Pokémon?!")
+}
+
+text Route4_Text_DawsonPostBattle {
+    format("You certainly have an...interesting choice of fashion. You must not be from around here.")
+}
+
+script Route4_EventScript_Abigail {
+    trainerbattle_single(TRAINER_ABIGAIL_1, Route4_Text_AbigailIntro, Route4_Text_AbigailOutro)
+    msgbox(Route4_Text_AbigailPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_AbigailIntro {
+    format("If I beat you, you have to run laps with me!")
+}
+
+text Route4_Text_AbigailOutro {
+    format("I guess you don't care about your fitness.")
+}
+
+text Route4_Text_AbigailPostBattle {
+    format("Running every day strengthens the heart and mind.")
+}
+
+script Route4_EventScript_Beau {
+    trainerbattle_single(TRAINER_BEAU, Route4_Text_BeauIntro, Route4_Text_BeauOutro)
+    msgbox(Route4_Text_BeauPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_BeauIntro {
+    format("I feel like a superhero! Right now, no one can beat me!")
+}
+
+text Route4_Text_BeauOutro {
+    format("I can't win on spirit alone…")
+}
+
+text Route4_Text_BeauPostBattle {
+    format("I'm going to be a real hero one day. I'm going to work harder to make me and my Pokémon stronger.")
+}
+
+script Route4_EventScript_Andrew {
+    trainerbattle_single(TRAINER_ANDREW, Route4_Text_AndrewIntro, Route4_Text_AndrewOutro)
+    msgbox(Route4_Text_AndrewPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_AndrewIntro {
+    format("Check out my catches of the day!")
+}
+
+text Route4_Text_AndrewOutro {
+    format("They look better than they battle.")
+}
+
+text Route4_Text_AndrewPostBattle {
+    format("You came from Elderoot Town? My buddy Glen likes to fish off of Route 2, you probably met him.")
+}
+
+script Route4_EventScript_Fisher1 {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("You definitely look like the fishing type. You should go check out the Fishing Lodge just south of here!"))
+    closemessage
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script Route4_EventScript_Mom {
+    lock
+    applymovement(19, moves(face_player))
+    waitmovement(19)
+    msgbox(format("This Poké Park is so great. My kids love the Lapras slide!"))
+    closemessage
+    applymovement(19, moves(face_original_direction))
+    waitmovement(19)
+    release
+}
+
+script Route4_EventScript_Son {
+    lock
+    applymovement(11, moves(face_player))
+    waitmovement(11)
+    msgbox(format("These Pokémon are soooo big!"))
+    closemessage
+    applymovement(11, moves(face_original_direction))
+    waitmovement(11)
+    release
+}
+
+script Route4_EventScript_Daughter {
+    lock
+    applymovement(12, moves(face_player))
+    waitmovement(12)
+    msgbox(format("Do you think I could have a Pokémon someday?!"))
+    closemessage
+    applymovement(12, moves(face_original_direction))
+    waitmovement(12)
+    release
+}
+
+script Route4_EventScript_Eli {
+    trainerbattle_single(TRAINER_ELI, Route4_Text_EliIntro, Route4_Text_EliOutro)
+    msgbox(Route4_Text_EliPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_EliIntro {
+    format("I'm searching for hidden treasure in these rocks.")
+}
+
+text Route4_Text_EliOutro {
+    format("I can't even find one Nugget.")
+}
+
+text Route4_Text_EliPostBattle {
+    format("I'm not sure I have the patience for mining anymore.")
+}
+
+script Route4_EventScript_Daisy {
+    trainerbattle_single(TRAINER_DAISY, Route4_Text_DaisyIntro, Route4_Text_DaisyOutro)
+    msgbox(Route4_Text_DaisyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_DaisyIntro {
+    format("I love coming out here to pick the wildflowers!")
+}
+
+text Route4_Text_DaisyOutro {
+    format("Your Pokémon are amazing.")
+}
+
+text Route4_Text_DaisyPostBattle {
+    format("Not even losing a battle could spoil this beautiful day.")
+}
+
+script Route4_EventScript_Ivan {
+    trainerbattle_single(TRAINER_IVAN, Route4_Text_IvanIntro, Route4_Text_IvanOutro)
+    msgbox(Route4_Text_IvanPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route4_Text_IvanIntro {
+    format("Fishing takes patience, but battling? That’s all about quick thinking!")
+}
+
+text Route4_Text_IvanOutro {
+    format("That battle went downstream fast...")
+}
+
+text Route4_Text_IvanPostBattle {
+    format("A capable trainer like you should go to the Fishing Lodge just south of here.")
+}

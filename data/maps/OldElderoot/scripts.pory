@@ -1,0 +1,34 @@
+mapscripts OldElderoot_MapScripts {
+   
+}
+
+script OldElderoot_EventScript_SageHouseSign {
+    lockall
+    msgbox("The Sage of Elderoot")
+    releaseall
+}
+
+script OldElderoot_EventScript_Cave {
+    lock
+    msgbox(format("I probably shouldn't go in there until I know what's going on."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script OldElderoot_EventScript_OldHouse {
+    lock
+    msgbox(format("It doesn't look like anyone has lived here for a really long time."))
+    closemessage
+    release
+}
+
+script OldElderoot_SageHouse_EventScript_AfterSageConvo {
+    lock
+    msgbox(format("I can't leave now!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}

@@ -1,0 +1,161 @@
+mapscripts BravefortTown_TwoSeaTower_Rooms_MapScripts {
+
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Gentleman {
+    lock
+    applymovement(10, moves(face_player))
+    waitmovement(10)
+    msgbox(format("I like to spend my time traveling to different regions and seeing the world.\p
+    Other regions I've been to have what they call a 'Gym Challenge' where trainers from all across the region can battle Gym Leaders for badges and get stronger.\p
+    Eventually some trainers can become so strong that they can challenge the Pokémon League and maybe even become the Champion of their region.\p
+    I wonder if Shizen will ever adopt a system like that to motivate trainers."))
+    closemessage
+    applymovement(10, moves(face_original_direction))
+    waitmovement(10)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Shelby {
+    trainerbattle_single(TRAINER_SHELBY_1, BravefortTown_TwoSeaTower_Rooms_Text_ShelbyIntro, BravefortTown_TwoSeaTower_Rooms_Text_ShelbyOutro)
+    msgbox(BravefortTown_TwoSeaTower_Rooms_Text_ShelbyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_ShelbyIntro {
+    format("My Pokémon keep me young!")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_ShelbyOutro {
+    format("The fire of youth burns in my heart!")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_ShelbyPostBattle {
+    format("Take care of your Pokémon and they will take care of you.")
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Melissa {
+    trainerbattle_single(TRAINER_MELISSA, BravefortTown_TwoSeaTower_Rooms_Text_MelissaIntro, BravefortTown_TwoSeaTower_Rooms_Text_MelissaOutro)
+    msgbox(BravefortTown_TwoSeaTower_Rooms_Text_MelissaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_MelissaIntro {
+    format("My Pokémon is beautiful!")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_MelissaOutro {
+    format("Maybe we need some lessons in being graceful during battle.")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_MelissaPostBattle {
+    format("Can I give your Pokémon a makeover?")
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Dwayne {
+    trainerbattle_single(TRAINER_DWAYNE, BravefortTown_TwoSeaTower_Rooms_Text_DwayneIntro, BravefortTown_TwoSeaTower_Rooms_Text_DwayneOutro)
+    msgbox(BravefortTown_TwoSeaTower_Rooms_Text_DwaynePostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_DwayneIntro {
+    format("Uuugghhh...\p
+    I don't feel so good.\p
+    Oh, you want to battle? Sure, I guess so.")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_DwayneOutro {
+    format("I think I need to go to bed.")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_DwaynePostBattle {
+    format("I gotta stop drinking so much...uh...soda.")
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Fernando {
+    trainerbattle_single(TRAINER_FERNANDO_1, BravefortTown_TwoSeaTower_Rooms_Text_FernandoIntro, BravefortTown_TwoSeaTower_Rooms_Text_FernandoOutro, BravefortTown_TwoSeaTower_Rooms_EventScript_LeaveTown)
+    msgbox(BravefortTown_TwoSeaTower_Rooms_Text_FernandoPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    release
+    end
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_FernandoIntro {
+    format("Are you looking for something, or just a fight?!\p
+    ...\p
+    Actually, I have to be honest, I don't want to be in the gang anymore, they've gotten out of control.\p
+    Here, I'll give you this password if you can beat me, I have to prove I put up some sort of fight.")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_FernandoOutro {
+    format("The password is WEEZING.")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_FernandoPostBattle {
+    format("Be safe out there.")
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_LeaveTown {
+    lock
+    msgbox(format("The gang call themselves the Venom Lotus, but I don't know what they're planning. I'm not sure where the password goes either but hopefully it helps.\p
+    Be safe out there."))
+    closemessage
+    setflag(FLAG_GOT_PASSWORD)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Gentleman2 {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("A battle? Oh, I'm much too old for that, but my granddaughter over there is an excellent trainer."))
+    closemessage
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Haley {
+    trainerbattle_single(TRAINER_HALEY_1, BravefortTown_TwoSeaTower_Rooms_Text_HaleyIntro, BravefortTown_TwoSeaTower_Rooms_Text_HaleyOutro)
+    msgbox(BravefortTown_TwoSeaTower_Rooms_Text_HaleyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_HaleyIntro {
+    format("I love my grandpa, but we've been playing the same card game for an hour.\p
+    Can you give me some excitement?")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_HaleyOutro {
+    format("What a great battle!")
+}
+
+text BravefortTown_TwoSeaTower_Rooms_Text_HaleyPostBattle {
+    format("Don't tell my grandpa what I said...")
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Sister {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("My parents left my sister and I here while they took the yacht out. It's so unfair."))
+    closemessage
+    applymovement(7, moves(face_original_direction))
+    waitmovement(7)
+    release
+}
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_LittleGirl {
+    lock
+    applymovement(8, moves(face_player))
+    waitmovement(8)
+    msgbox(format("I wanna go to the beach NOW!!"))
+    closemessage
+    applymovement(8, moves(face_original_direction))
+    waitmovement(8)
+    release
+}

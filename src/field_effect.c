@@ -990,10 +990,10 @@ void MultiplyPaletteRGBComponents(u16 i, u8 r, u8 g, u8 b)
 #define tNumMons         data[1]
 #define tFirstBallX      data[2]
 #define tFirstBallY      data[3]
-#define tMonitorX        data[4]
-#define tMonitorY        data[5]
+//#define tMonitorX        data[4]
+//#define tMonitorY        data[5]
 #define tBallSpriteId    data[6]
-#define tMonitorSpriteId data[7]
+//#define tMonitorSpriteId data[7]
 #define tStartHofFlash   data[15]
 
 // Sprite data for SpriteCB_PokeballGlowEffect
@@ -1016,9 +1016,9 @@ bool8 FldEff_PokecenterHeal(void)
     task = &gTasks[CreateTask(Task_PokecenterHeal, 0xff)];
     task->tNumMons = nPokemon;
     task->tFirstBallX = 93;
-    task->tFirstBallY = 36;
-    task->tMonitorX = 124;
-    task->tMonitorY = 24;
+    task->tFirstBallY = 35;
+    //task->tMonitorX = 124;
+    //task->tMonitorY = 24;
     return FALSE;
 }
 
@@ -1033,14 +1033,14 @@ static void PokecenterHealEffect_Init(struct Task *task)
 {
     task->tState++;
     task->tBallSpriteId = CreateGlowingPokeballsEffect(task->tNumMons, task->tFirstBallX, task->tFirstBallY, TRUE);
-    task->tMonitorSpriteId = CreatePokecenterMonitorSprite(task->tMonitorX, task->tMonitorY);
+    //task->tMonitorSpriteId = CreatePokecenterMonitorSprite(task->tMonitorX, task->tMonitorY);
 }
 
 static void PokecenterHealEffect_WaitForBallPlacement(struct Task *task)
 {
     if (gSprites[task->tBallSpriteId].sState > 1)
     {
-        gSprites[task->tMonitorSpriteId].sState++;
+        //gSprites[task->tMonitorSpriteId].sState++;
         task->tState++;
     }
 }

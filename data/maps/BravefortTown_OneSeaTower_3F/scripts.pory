@@ -1,0 +1,10 @@
+mapscripts BravefortTown_OneSeaTower_3F_MapScripts {
+
+}
+
+script BravefortTown_OneSeaTower_3F_EventScript_Sign {
+    lock
+    msgbox(format("{UP_ARROW} 4th Floor"))
+    closemessage
+    release
+}

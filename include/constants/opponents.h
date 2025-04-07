@@ -2,7 +2,7 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
+#define TRAINER_FISHERMAN_GLEN_ROUTE2         1
 #define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
 #define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
@@ -11,15 +11,15 @@
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
+#define TRAINER_GRUNT1_EVERGREEN_FOREST       10 //TRAINER_GRUNT_PETALBURG_WOODS
+#define TRAINER_YOUNGSTER_CALVIN_ROUTE1      11
+#define TRAINER_SARAH_ROUTE2                 12
+#define TRAINER_SILVER_SHIVERVALE            13 
+#define TRAINER_GRUNT2_EVERGREEN_FOREST       14 //TRAINER_GRUNT_SEAFLOOR_CAVERN_4
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
-#define TRAINER_GRUNT_WEATHER_INST_1         17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
+#define TRAINER_EXPERT_BILL_SHIVERVALEGYM    17 //TRAINER_GRUNT_WEATHER_INST_1
+#define TRAINER_EXPERT_TED_SHIVERVALEGYM     18 //TRAINER_GRUNT_WEATHER_INST_2
 #define TRAINER_GRUNT_WEATHER_INST_3         19
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
@@ -546,7 +546,7 @@
 #define TRAINER_ISAAC_3                     542
 #define TRAINER_ISAAC_4                     543
 #define TRAINER_ISAAC_5                     544
-#define TRAINER_LYDIA_1                     545
+#define TRAINER_LYDIA                       545
 #define TRAINER_HALLE                       546
 #define TRAINER_GARRISON                    547
 #define TRAINER_LYDIA_2                     548

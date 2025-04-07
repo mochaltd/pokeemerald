@@ -2,7 +2,7 @@
 
 SouthernIsland_Interior_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SouthernIsland_Interior_OnResume
-	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_OnTransition
+	//map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_OnTransition
 	.byte 0
 
 SouthernIsland_Interior_OnResume:
@@ -15,21 +15,21 @@ SouthernIsland_Interior_EventScript_TryRemoveLati::
 	removeobject LOCALID_LATI
 	return
 
-SouthernIsland_Interior_OnTransition:
-	call_if_eq VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpLatios
-	call_if_ne VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpLatias
-	call SouthernIsland_Interior_EventScript_SetUpPlayerGfx
-	end
+//SouthernIsland_Interior_OnTransition:
+	//call_if_eq VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpLatios
+	//call_if_ne VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpLatias
+	//call SouthernIsland_Interior_EventScript_SetUpPlayerGfx
+	//end
 
-SouthernIsland_Interior_EventScript_SetUpLatios::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIOS
-	setvar VAR_TEMP_4, SPECIES_LATIOS
-	return
+//SouthernIsland_Interior_EventScript_SetUpLatios::
+	//setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIOS
+	//setvar VAR_TEMP_4, SPECIES_LATIOS
+	//return
 
-SouthernIsland_Interior_EventScript_SetUpLatias::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIAS
-	setvar VAR_TEMP_4, SPECIES_LATIAS
-	return
+//SouthernIsland_Interior_EventScript_SetUpLatias::
+	//setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LATIAS
+	//setvar VAR_TEMP_4, SPECIES_LATIAS
+	//return
 
 SouthernIsland_Interior_EventScript_SetUpPlayerGfx::
 	checkplayergender

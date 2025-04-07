@@ -181,15 +181,15 @@
 #define OBJ_EVENT_GFX_BIG_SNORLAX_DOLL           177
 #define OBJ_EVENT_GFX_BIG_RHYDON_DOLL            178
 #define OBJ_EVENT_GFX_BIG_LAPRAS_DOLL            179
-#define OBJ_EVENT_GFX_BIG_VENUSAUR_DOLL          180
+#define OBJ_EVENT_GFX_GANG_MEMBER                180
 #define OBJ_EVENT_GFX_BIG_CHARIZARD_DOLL         181
-#define OBJ_EVENT_GFX_BIG_BLASTOISE_DOLL         182
-#define OBJ_EVENT_GFX_BIG_WAILMER_DOLL           183
+#define OBJ_EVENT_GFX_BREEDER_F                  182
+#define OBJ_EVENT_GFX_BREEDER_M                  183
 #define OBJ_EVENT_GFX_BIG_REGIROCK_DOLL          184
 #define OBJ_EVENT_GFX_BIG_REGICE_DOLL            185
-#define OBJ_EVENT_GFX_BIG_REGISTEEL_DOLL         186
-#define OBJ_EVENT_GFX_LATIAS                     187
-#define OBJ_EVENT_GFX_LATIOS                     188
+#define OBJ_EVENT_GFX_GUARD                      186
+#define OBJ_EVENT_GFX_BUILDER                    187
+#define OBJ_EVENT_GFX_WORKER                     188
 #define OBJ_EVENT_GFX_GAMEBOY_KID                189
 #define OBJ_EVENT_GFX_CONTEST_JUDGE              190
 #define OBJ_EVENT_GFX_BRENDAN_WATERING           191
@@ -201,7 +201,7 @@
 #define OBJ_EVENT_GFX_KYOGRE_FRONT               197
 #define OBJ_EVENT_GFX_GROUDON_FRONT              198
 #define OBJ_EVENT_GFX_FOSSIL                     199
-#define OBJ_EVENT_GFX_REGIROCK                   200
+#define OBJ_EVENT_GFX_NURSE_M                    200
 #define OBJ_EVENT_GFX_REGICE                     201
 #define OBJ_EVENT_GFX_REGISTEEL                  202
 #define OBJ_EVENT_GFX_SKITTY                     203
@@ -222,24 +222,25 @@
 #define OBJ_EVENT_GFX_JUAN                       218
 #define OBJ_EVENT_GFX_SCOTT                      219
 #define OBJ_EVENT_GFX_POOCHYENA                  220
-#define OBJ_EVENT_GFX_KYOGRE_SIDE                221
-#define OBJ_EVENT_GFX_GROUDON_SIDE               222
-#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           223
-#define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
-#define OBJ_EVENT_GFX_KIRLIA                     225
-#define OBJ_EVENT_GFX_DUSCLOPS                   226
-#define OBJ_EVENT_GFX_UNION_ROOM_NURSE           227
-#define OBJ_EVENT_GFX_SUDOWOODO                  228
-#define OBJ_EVENT_GFX_MEW                        229
-#define OBJ_EVENT_GFX_RED                        230
-#define OBJ_EVENT_GFX_LEAF                       231
-#define OBJ_EVENT_GFX_DEOXYS                     232
-#define OBJ_EVENT_GFX_DEOXYS_TRIANGLE            233
-#define OBJ_EVENT_GFX_BRANDON                    234
-#define OBJ_EVENT_GFX_LINK_RS_BRENDAN            235
-#define OBJ_EVENT_GFX_LINK_RS_MAY                236
-#define OBJ_EVENT_GFX_LUGIA                      237
-#define OBJ_EVENT_GFX_HOOH                       238
+#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           221
+#define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         222
+#define OBJ_EVENT_GFX_SUDOWOODO                  223
+#define OBJ_EVENT_GFX_RED                        224
+#define OBJ_EVENT_GFX_LEAF                       225
+#define OBJ_EVENT_GFX_PHANTUMP                   226
+#define OBJ_EVENT_GFX_DEOXYS_TRIANGLE            227
+#define OBJ_EVENT_GFX_BRANDON                    228
+#define OBJ_EVENT_GFX_LINK_RS_BRENDAN            229
+#define OBJ_EVENT_GFX_LINK_RS_MAY                230
+#define OBJ_EVENT_GFX_LUGIA                      231
+#define OBJ_EVENT_GFX_HOOH                       232
+#define OBJ_EVENT_GFX_SILVER                     233
+#define OBJ_EVENT_GFX_SHADOW                     234
+#define OBJ_EVENT_GFX_SHEILA_NORMAL              235
+#define OBJ_EVENT_GFX_SHEILA_MACH_BIKE           236
+#define OBJ_EVENT_GFX_SHEILA_SURFING             237
+#define OBJ_EVENT_GFX_SHEILA_FIELD_MOVE          238
+#define OBJ_EVENT_GFX_SHEILA_FISHING             239
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
@@ -250,7 +251,7 @@
 // object graphics that can be removed. If more graphics are needed, anything that
 // stores graphics ids will need to be increased in size. See wiki entry below:
 // https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        239
+#define NUM_OBJ_EVENT_GFX                        240
 
 
 // These are dynamic object gfx ids.

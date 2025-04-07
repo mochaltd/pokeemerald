@@ -1,0 +1,69 @@
+mapscripts RoyalspurGym_Interior_Basement_MapScripts {
+    
+}
+
+script RoyalspurGym_EventScript_Raikov {
+    trainerbattle_single(TRAINER_SPENSER, RoyalspurGym_Text_RaikovIntro, RoyalspurGym_Text_RaikovOutro, RoyalspurGym_EventScript_RaikovDefeated)
+    //specialvar(VAR_RESULT, ShouldTryRematchBattle)
+    //goto_if_eq(VAR_RESULT, TRUE, RoyalspurGym_EventScript_RaikovRematch)
+    goto_if_unset(FLAG_RECEIVED_TM_SHOCK_WAVE, RoyalspurGym_EventScript_GiveShockWave)
+    msgbox(RoyalspurGym_Text_RaikovPostBattle, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text RoyalspurGym_Text_RaikovIntro {
+    format("Ahh, the fated challenger has finally come! I can already see you've got the spark of a true trainer.\p
+    Raikov, Commander of the Storms is what they call me! Electric Pokémon weild a power unlike any other, don't ya think?\p
+    However, power alone doesn't get you far...\p
+    ...let's see if you've got the control to handle the storm!")
+}
+
+text RoyalspurGym_Text_RaikovOutro {
+    format("Hah! That was one electrifying match! You remind me of my younger days...full of energy, ready to take on the world!\p
+    It's my honor to give you this CITRINE STONE.")
+}
+
+script RoyalspurGym_EventScript_RaikovDefeated {
+	msgbox(RoyalspurGym_Text_ReceivedCitrineStone, MSGBOX_DEFAULT)
+	waitmessage
+	call(Common_EventScript_PlayGymBadgeFanfare)
+	msgbox(RoyalspurGym_Text_CitrineStoneInfoTakeThis, MSGBOX_DEFAULT)
+	setflag(FLAG_DEFEATED_ROYALSPUR_GYM)
+	setflag(FLAG_BADGE02_GET)
+	setvar(VAR_ROYALSPUR_CITY_STATE, 6)
+	setvar(VAR_0x8008, 1)
+	goto(RoyalspurGym_EventScript_GiveShockWave)
+	end
+}
+
+text RoyalspurGym_Text_ReceivedCitrineStone {
+    format("{PLAYER} received the CITRINE STONE from Raikov!")
+}
+
+text RoyalspurGym_Text_CitrineStoneInfoTakeThis {
+    format("The CITRINE STONE makes all Pokémon up to level 40 obey without question.\p
+    You'll also be able to use the HM move FLASH outside of battle.\p
+    Here, this TM will also serve you well.")
+}
+
+script RoyalspurGym_EventScript_GiveShockWave {
+    giveitem(ITEM_TM34)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	setflag(FLAG_RECEIVED_TM_SHOCK_WAVE)
+	msgbox(RoyalspurGym_Text_ExplainShockWave, MSGBOX_DEFAULT)
+    closemessage
+	release
+	end
+}
+
+text RoyalspurGym_Text_ExplainShockWave {
+    format("That TM contains the moves SHOCK WAVE.\p
+    It's an accurate and powerful Electric-type move that your opponents will never avoid!\p
+    I have informed Barlow in Bravefort Town that he should expect your challenge soon.\p
+    Travel safe and be well, young one!")
+}
+
+text RoyalspurGym_Text_RaikovPostBattle {
+    format("Keep that spark alive, young one. One day, you just might shine brighter than the legends themselves.")
+}

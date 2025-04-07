@@ -214,7 +214,16 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
+#define MAPSEC_ELDEROOT_TOWN                0xD5
+#define MAPSEC_OLD_ELDEROOT                 0xD6
+#define MAPSEC_DISTORTED_PATH               0xD7
+#define MAPSEC_SHIVERVALE_TOWN              0xD8
+#define MAPSEC_ROYALSPUR_CITY               0xD9
+#define MAPSEC_EVERGREEN_FOREST             0xDA
+#define MAPSEC_ROYALSPUR_TUNNEL             0xDB
+#define MAPSEC_COALTINE_TUNNEL              0xDC
+#define MAPSEC_BRAVEFORT_TOWN               0xDD
+#define MAPSEC_NONE                         0xDE
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

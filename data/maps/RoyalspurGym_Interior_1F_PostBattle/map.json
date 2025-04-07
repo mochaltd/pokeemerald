@@ -1,0 +1,28 @@
+{
+  "id": "MAP_ROYALSPUR_GYM_INTERIOR_1F_POST_BATTLE",
+  "name": "RoyalspurGym_Interior_1F_PostBattle",
+  "layout": "LAYOUT_ROYALSPUR_GYM_INTERIOR_1F_POST_BATTLE",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_ROYALSPUR_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

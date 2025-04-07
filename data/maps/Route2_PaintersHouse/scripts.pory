@@ -1,0 +1,13 @@
+mapscripts Route2_PaintersHouse_MapScripts {
+
+}
+
+script Route2_PaintersHouse_Painter {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Living up on this hill gives me a great view of Route 2. It's beauty gives me so much inspiration! I hope you find beauty in your travels."))
+    applymovement(1, moves(face_left))
+    waitmovement(1)
+    release
+}

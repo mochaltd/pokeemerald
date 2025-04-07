@@ -1,0 +1,65 @@
+mapscripts Route4_FishingHut_MapScripts {
+    
+}
+
+script Route4_FishingHut_EventScript_Fisher1 {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("There goes Bill again, ranting and hollerin' about that supposed rare Pokémon he saw."))
+    closemessage
+    release
+}
+
+script Route4_FishingHut_EventScript_FisherBill {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("I swear I saw it! Right there...floating just beneath the surface of the sea...\p
+    A 20-foot-long BARBOACH! If I hadn't scared it off with my yellin', I'd be fish food I tell ya! FISH FOOD!"))
+    closemessage
+    release
+}
+
+script Route4_FishingHut_EventScript_HeadFisher {
+    goto_if_unset(FLAG_RECEIVED_OLD_ROD, GiveOldRod)
+    goto_if_set(FLAG_RECEIVED_OLD_ROD, GetFishing)
+}
+
+script GiveOldRod {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("You look like a capable Pokémon trainer, ever thought about fishing for some new Pokémon? Now you can!"))
+    closemessage
+    giveitem(ITEM_OLD_ROD)
+    setflag(FLAG_RECEIVED_OLD_ROD)
+    release
+}
+
+script GetFishing {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("Get fishin'!"))
+    closemessage
+    release
+}
+
+script Route4_FishingHut_EventScript_Fisher2 {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("You ever just sit back, cast a line, and enjoy the calm? Try it sometime!"))
+    closemessage
+    release
+}
+
+script Route4_FishingHut_EventScript_Fisher3 {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("If you've got a SUPER ROD, you can pull up some real whoppers! Me? I'm still stuck with my OLD ROD..."))
+    closemessage
+    release
+}

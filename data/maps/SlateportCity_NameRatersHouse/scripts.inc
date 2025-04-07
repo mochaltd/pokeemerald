@@ -65,10 +65,10 @@ SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname:
 	.string "Hi, hi! I'm the NAME RATER!\n"
 	.string "I'm the fortune-teller of names!\p"
 	.string "I shall be pleased to rate your\n"
-	.string "POKéMON's nickname.$"
+	.string "Pokémon's nickname.$"
 
 SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname:
-	.string "Which POKéMON's nickname should\n"
+	.string "Which Pokémon's nickname should\n"
 	.string "I critique?$"
 
 SlateportCity_NameRatersHouse_Text_FineNameSuggestBetterOne:
@@ -82,7 +82,7 @@ SlateportCity_NameRatersHouse_Text_WhatShallNewNameBe:
 	.string "nickname be?$"
 
 SlateportCity_NameRatersHouse_Text_MonShallBeKnownAsName:
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It is a better name than before!\n"
 	.string "How fortunate for you!$"
@@ -92,7 +92,7 @@ SlateportCity_NameRatersHouse_Text_DoVisitAgain:
 	.string "Do come visit again.$"
 
 SlateportCity_NameRatersHouse_Text_NameNoDifferentYetSuperior:
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this Pokémon\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It looks no different from before,\n"
 	.string "and yet, this is vastly superior!\p"
@@ -108,4 +108,45 @@ SlateportCity_NameRatersHouse_Text_MagnificentName:
 SlateportCity_NameRatersHouse_Text_ThatIsMerelyAnEgg:
 	.string "Now, now.\n"
 	.string "That is merely an EGG!$"
+
+Script_IVChecker::
+	lock
+	faceplayer
+	bufferpartymonnick 0, 0
+	msgbox Text_IVChecker_Intro, MSGBOX_AUTOCLOSE
+	msgbox Text_IVChecker_1, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetHpIV
+	buffernumberstring 0, VAR_RESULT
+	specialvar VAR_RESULT, GetAtkIV
+	buffernumberstring 1, VAR_RESULT
+	specialvar VAR_RESULT, GetDefIV
+	buffernumberstring 2, VAR_RESULT
+	msgbox Text_IVChecker_2, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetSpAtkIV
+	buffernumberstring 0, VAR_RESULT
+	specialvar VAR_RESULT, GetSpDefIV
+	buffernumberstring 1, VAR_RESULT
+	specialvar VAR_RESULT, GetSpeedIV
+	buffernumberstring 2, VAR_RESULT
+	msgbox Text_IVChecker_3, MSGBOX_DEFAULT
+	release
+	end
+
+Text_IVChecker_Intro:
+	.string "Hello, trainer! I can tell you\n"
+	.string "the hidden stats of your Pokémon.$"
+
+Text_IVChecker_1:
+	.string "Your {STR_VAR_1}...$"
+
+Text_IVChecker_2:
+	.string "Its HP IV is {STR_VAR_1}.\p"
+	.string "Its Attack IV is {STR_VAR_2}.\p"
+	.string "Its Defense IV is {STR_VAR_3}.$"
+
+Text_IVChecker_3:
+	.string "Its Special Attack IV is {STR_VAR_1}.\p"
+	.string "Its Special Defense IV is {STR_VAR_2}.\p"
+	.string "Its Speed IV is {STR_VAR_3}.\p"
+	.string "Come back any time!$"
 

@@ -350,6 +350,30 @@ static const union AnimCmd *const sAnims_PikeQueenLucy[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Silver[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_UmbraGrunt[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Guard[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Builder[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Worker[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GangMember[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_PyramidKingBrandon[] ={
     sAnim_GeneralFrame0,
 };
@@ -464,5 +488,11 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RED] = sAnims_Red,
     [TRAINER_PIC_LEAF] = sAnims_Leaf,
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
-    [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
+    //[TRAINER_PIC_CUEBALL] = sAnims_RubySapphireMay,
+    [TRAINER_PIC_SILVER] = sAnims_Silver,
+    [TRAINER_PIC_UMBRA_GRUNT] = sAnims_UmbraGrunt,
+    [TRAINER_PIC_GUARD] = sAnims_Guard,
+    [TRAINER_PIC_BUILDER] = sAnims_Builder,
+    [TRAINER_PIC_WORKER] = sAnims_Worker,
+    [TRAINER_PIC_GANG_MEMBER] = sAnims_GangMember,
 };

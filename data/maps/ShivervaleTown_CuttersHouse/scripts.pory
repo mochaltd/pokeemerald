@@ -1,0 +1,51 @@
+mapscripts ShivervaleTown_CuttersHouse_MapScripts {
+    
+}
+
+//script ShivervaleTown_CuttersHouse_EventScript_Hiker {
+    //call_if_unset(FLAG_RECEIVED_HM_CUT, ShivervaleTown_CuttersHouse_HMCUT)
+    //call_if_set(FLAG_RECEIVED_HM_CUT, ShivervaleTown_CuttersHouse_HikerGoodLuck)
+//}
+
+//script ShivervaleTown_CuttersHouse_HMCUT {
+    //applymovement(1, moves(face_player))
+    //waitmovement(1)
+    //msgbox(format("I've noticed some strange trees blocking the path to Evergreen Forest.\p
+    //I thought this Hidden Machine would help, but I can't get it to work. Maybe you can figure it out.\p
+    //Apparently, you don't even have to teach the move to a Pokémon. It can just use it if it's able to learn the move!"))
+    //closemessage
+    //giveitem(ITEM_HM01)
+    //setflag(FLAG_RECEIVED_HM_CUT)
+    //release
+//}
+
+//script ShivervaleTown_CuttersHouse_HikerGoodLuck {
+    //lock
+    //applymovement(1, moves(face_player))
+    //waitmovement(1)
+    //msgbox(format("I've heard stories of strange Pokémon in the Evergreen Forest. Stay safe!"))
+    //closemessage
+    //release
+//}
+
+script ShivervaleTown_CuttersHouse_EventScript_Hiker {
+    if(flag(FLAG_RECEIVED_HM_CUT)) {
+        lock
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("I've heard stories of strange Pokémon in the Evergreen Forest. Stay safe!"))
+        closemessage
+        release
+    }
+    elif(!(flag(FLAG_RECEIVED_HM_CUT))) {
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("I've noticed some strange trees blocking the path to Evergreen Forest.\p
+        I thought this Hidden Machine would help, but I can't get it to work. Maybe you can figure it out.\p
+        Apparently, you don't even have to teach the move to a Pokémon. It can just use it if it's able to learn the move!"))
+        closemessage
+        giveitem(ITEM_HM01)
+        setflag(FLAG_RECEIVED_HM_CUT)
+        release
+    }
+}

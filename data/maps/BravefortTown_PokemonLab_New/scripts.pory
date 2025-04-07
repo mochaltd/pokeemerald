@@ -1,0 +1,82 @@
+mapscripts BravefortTown_PokemonLab_New_MapScripts {
+    
+}
+
+script BravefortTown_PokemonLab_New_Scientist {
+    if(flag(FLAG_RECEIVED_HM_ROCK_SMASH)) {
+        lock
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("Thank you for your help, {PLAYER}!"))
+        closemessage
+        release
+    }
+    elif(!(flag(FLAG_RECEIVED_HM_ROCK_SMASH))) {
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("Oh! Hello, {PLAYER}!\p
+        It's good to see you again under better circumstances.\p
+        It looks like you've been getting some use out of the Exp. Share! That's great news, that was one of our projects that we were most excited about.\p
+        We also work on optimizing the Technical and Hidden Machines that have become so popular recently. I actually have one for you as a thanks for saving me in Coaltine Tunnel."))
+        closemessage
+        giveitem(ITEM_HM06)
+        setflag(FLAG_RECEIVED_HM_ROCK_SMASH)
+        msgbox(format("That HM contains ROCK SMASH to help you break through rocks to find rare Pokémon or find new passages.\p
+        I hope this is a great help to your journey."))
+        release
+    }
+}
+
+// script BravefortTown_PokemonLab_New_Scientist {
+    //call_if_unset(FLAG_RECEIVED_HM_ROCK_SMASH, BravefortTown_PokemonLab_New_GiveRockSmash)
+    //call_if_set(FLAG_RECEIVED_HM_ROCK_SMASH, BravefortTown_PokemonLab_New_ThankYou)
+//}
+
+//script BravefortTown_PokemonLab_New_GiveRockSmash {
+    //applymovement(1, moves(face_player))
+    //waitmovement(1)
+    //msgbox(format("Oh! Hello, {PLAYER}!\p
+    //It's good to see you again under better circumstances.\p
+    //It looks like you've been getting some use out of the Exp. Share! That's great news, that was one of our projects that we were most excited about.\p
+    //We also work on optimizing the Technical and Hidden Machines that have become so popular recently. I actually have one for you as a thanks for saving me in Coaltine Tunnel."))
+    //closemessage
+    //giveitem(ITEM_HM06)
+    //setflag(FLAG_RECEIVED_HM_ROCK_SMASH)
+    //msgbox(format("That HM contains ROCK SMASH to help you break through rocks to find rare Pokémon or find new passages.\p
+    //I hope this is a great help to your journey."))
+    //release
+//}
+
+//script BravefortTown_PokemonLab_New_ThankYou {
+    //lock
+    //applymovement(1, moves(face_player))
+    //waitmovement(1)
+    //msgbox(format("Thank you for your help, {PLAYER}!"))
+    //closemessage
+    //release
+//}
+
+script BravefortTown_PokemonLab_EventScript_New_ScientistIV {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Have you seen our field workers at the Pokémon Centers around Shizen?\p
+    They can tell you some deeper stats about your Pokémon than your Pokédex can."))
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    closemessage
+    release
+}
+
+script BravefortTown_PokemonLab_EventScript_New_Scientist2 {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Pokémon are such mysteries.\p
+    Our next big research project is to figure out how the Pokémon around the region are able to match their strength based on a trainer's strength.\p
+    Research is so exciting!"))
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    closemessage
+    release
+}

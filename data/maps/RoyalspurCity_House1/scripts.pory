@@ -1,0 +1,34 @@
+mapscripts RoyalspurCity_House1_MapScripts {
+    
+}
+
+script RoyalspurCity_House1_EventScript_Camper {
+    goto_if_unset(FLAG_ITEM_ROUTE_115_GREAT_BALL, GiveGreatBalls)
+    goto_if_set(FLAG_ITEM_ROUTE_115_GREAT_BALL, EnjoyGreatBalls)
+}
+
+script GiveGreatBalls {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Pokémon technology has advanced really fast in recent years. You used to only be able to use standard Poké Balls, but now there's even better ones.\p
+    Here, I'll share some with you!"))
+    giveitem(ITEM_GREAT_BALL, 3)
+    setflag(FLAG_ITEM_ROUTE_115_GREAT_BALL)
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script EnjoyGreatBalls {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Be sure to catch lots of Pokémon!"))
+    closemessage
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}

@@ -1,0 +1,30 @@
+mapscripts ShivervaleGym_Exterior_MapScripts {
+    
+}
+
+script ShivervaleGym_Exterior_EventScript_Woman {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Isn't this place wonderful?\p
+    The ever-present life force of the League of Eight within these temples provides us with a constant snapshot in time of past Shizen.\p
+    Around every temple is this picturesque view."))
+    closemessage
+    release
+}
+
+script ShivervaleGym_Exterior_EventScript_BlackBelt {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Coming here makes me feel closer to my ancestors and the legacy they left behind."))
+    closemessage
+    release
+}
+
+script ShivervaleGym_Exterior_EventScript_Statue {
+    lock
+    msgbox(format("This statue depicts an ancient Pokémon."))
+    closemessage
+    release
+}

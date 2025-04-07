@@ -27,7 +27,7 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_DESK] =
     {
         .id = DECOR_POKEMON_DESK,
-        .name = _("POKéMON DESK"),
+        .name = _("Pokémon DESK"),
         .permission = DECORPERM_SOLID_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DESK,
@@ -135,7 +135,7 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_CHAIR] =
     {
         .id = DECOR_POKEMON_CHAIR,
-        .name = _("POKéMON CHAIR"),
+        .name = _("Pokémon CHAIR"),
         .permission = DECORPERM_PASS_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_CHAIR,
@@ -1368,17 +1368,17 @@ const struct Decoration gDecorations[] =
         .tiles = DecorGfx_LAPRAS_DOLL,
     },
 
-    [DECOR_VENUSAUR_DOLL] =
-    {
-        .id = DECOR_VENUSAUR_DOLL,
-        .name = _("VENUSAUR DOLL"),
-        .permission = DECORPERM_SPRITE,
-        .shape = DECORSHAPE_1x2,
-        .category = DECORCAT_DOLL,
-        .price = 10000,
-        .description = DecorDesc_VENUSAUR_DOLL,
-        .tiles = DecorGfx_VENUSAUR_DOLL,
-    },
+    //[DECOR_VENUSAUR_DOLL] =
+    //{
+        //.id = DECOR_VENUSAUR_DOLL,
+        //.name = _("VENUSAUR DOLL"),
+        //.permission = DECORPERM_SPRITE,
+        //.shape = DECORSHAPE_1x2,
+        //.category = DECORCAT_DOLL,
+        //.price = 10000,
+        //.description = DecorDesc_VENUSAUR_DOLL,
+        //.tiles = DecorGfx_VENUSAUR_DOLL,
+    //},
 
     [DECOR_CHARIZARD_DOLL] =
     {
@@ -1392,29 +1392,29 @@ const struct Decoration gDecorations[] =
         .tiles = DecorGfx_CHARIZARD_DOLL,
     },
 
-    [DECOR_BLASTOISE_DOLL] =
-    {
-        .id = DECOR_BLASTOISE_DOLL,
-        .name = _("BLASTOISE DOLL"),
-        .permission = DECORPERM_SPRITE,
-        .shape = DECORSHAPE_1x2,
-        .category = DECORCAT_DOLL,
-        .price = 10000,
-        .description = DecorDesc_BLASTOISE_DOLL,
-        .tiles = DecorGfx_BLASTOISE_DOLL,
-    },
+    //[DECOR_BLASTOISE_DOLL] =
+    //{
+        //.id = DECOR_BLASTOISE_DOLL,
+        //.name = _("BLASTOISE DOLL"),
+        //.permission = DECORPERM_SPRITE,
+        //.shape = DECORSHAPE_1x2,
+        //.category = DECORCAT_DOLL,
+        //.price = 10000,
+        //.description = DecorDesc_BLASTOISE_DOLL,
+        //.tiles = DecorGfx_BLASTOISE_DOLL,
+    //},
 
-    [DECOR_WAILMER_DOLL] =
-    {
-        .id = DECOR_WAILMER_DOLL,
-        .name = _("WAILMER DOLL"),
-        .permission = DECORPERM_SPRITE,
-        .shape = DECORSHAPE_1x2,
-        .category = DECORCAT_DOLL,
-        .price = 10000,
-        .description = DecorDesc_WAILMER_DOLL,
-        .tiles = DecorGfx_WAILMER_DOLL,
-    },
+    //[DECOR_WAILMER_DOLL] =
+    //{
+        //.id = DECOR_WAILMER_DOLL,
+        //.name = _("WAILMER DOLL"),
+        //.permission = DECORPERM_SPRITE,
+        //.shape = DECORSHAPE_1x2,
+        //.category = DECORCAT_DOLL,
+        //.price = 10000,
+        //.description = DecorDesc_WAILMER_DOLL,
+        //.tiles = DecorGfx_WAILMER_DOLL,
+    //},
 
     [DECOR_REGIROCK_DOLL] =
     {

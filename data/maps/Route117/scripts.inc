@@ -59,26 +59,26 @@ Route117_EventScript_RematchIsaac::
 	msgbox Route117_Text_IsaacPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-Route117_EventScript_Lydia::
-	trainerbattle_single TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat, Route117_EventScript_RegisterLydia
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchLydia
-	msgbox Route117_Text_LydiaPostBattle, MSGBOX_DEFAULT
-	release
-	end
+//Route117_EventScript_Lydia::
+	//trainerbattle_single TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat, Route117_EventScript_RegisterLydia
+	//specialvar VAR_RESULT, ShouldTryRematchBattle
+	//goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchLydia
+	//msgbox Route117_Text_LydiaPostBattle, MSGBOX_DEFAULT
+	//release
+	//end
 
-Route117_EventScript_RegisterLydia::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox Route117_Text_LydiaRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_LYDIA_1
-	release
-	end
+//Route117_EventScript_RegisterLydia::
+	//special PlayerFaceTrainerAfterBattle
+	//waitmovement 0
+	//msgbox Route117_Text_LydiaRegister, MSGBOX_DEFAULT
+	//register_matchcall TRAINER_LYDIA_1
+	//release
+	//end
 
-Route117_EventScript_RematchLydia::
-	trainerbattle_rematch TRAINER_LYDIA_1, Route117_Text_LydiaRematchIntro, Route117_Text_LydiaRematchDefeat
-	msgbox Route117_Text_LydiaPostRematch, MSGBOX_AUTOCLOSE
-	end
+//Route117_EventScript_RematchLydia::
+	//trainerbattle_rematch TRAINER_LYDIA_1, Route117_Text_LydiaRematchIntro, Route117_Text_LydiaRematchDefeat
+	//msgbox Route117_Text_LydiaPostRematch, MSGBOX_AUTOCLOSE
+	//end
 
 Route117_EventScript_Dylan::
 	trainerbattle_single TRAINER_DYLAN_1, Route117_Text_DylanIntro, Route117_Text_DylanDefeat, Route117_EventScript_RegisterDylan
@@ -181,7 +181,7 @@ Route117_EventScript_Aisha::
 	end
 
 Route117_Text_DayCarePokemonHadNewMove:
-	.string "I left my POKéMON at the DAY CARE.\p"
+	.string "I left my Pokémon at the DAY CARE.\p"
 	.string "When I got it back, it had a new move\n"
 	.string "that I didn't teach it.\l"
 	.string "I was really, really surprised.$"
@@ -203,6 +203,6 @@ Route117_Text_RouteSignMauville:
 	.string "{RIGHT_ARROW} MAUVILLE CITY$"
 
 Route117_Text_DayCareSign:
-	.string "POKéMON DAY CARE\n"
-	.string "“Let us raise your POKéMON.”$"
+	.string "Pokémon DAY CARE\n"
+	.string "“Let us raise your Pokémon.”$"
 

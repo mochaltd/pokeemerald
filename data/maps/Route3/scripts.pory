@@ -1,0 +1,68 @@
+mapscripts Route3_MapScripts {
+
+}
+
+script Route3_Text_RouteSign {
+    lock
+    msgbox("{UP_ARROW} Shivervale Town\l
+    {DOWN_ARROW} Evergreen Forest")
+    closemessage
+    release
+}
+
+script Route3_EventScript_Jacob {
+    trainerbattle_single(TRAINER_JACOB, Route3_Text_JacobIntro, Route2_Text_JacobOutro)
+    msgbox(Route3_Text_JacobPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route3_Text_JacobIntro {
+    format("I'm in the middle of my daily workout routine right now, but luckily my routine today includes a Pokémon battle!")
+}
+
+text Route2_Text_JacobOutro {
+    format("I'm actually feeling kind of tired now...")
+}
+
+text Route3_Text_JacobPostBattle {
+    format("Maybe today should just be a rest day.")
+}
+
+script Route3_EventScript_Davis {
+    trainerbattle_single(TRAINER_DAVIS, Route3_Text_DavisIntro, Route2_Text_DavisOutro)
+    msgbox(Route3_Text_DavisPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route3_Text_DavisIntro {
+    format("I just caught some new Pokémon in Evergreen Forest. I'm gonna test them out on you!")
+}
+
+text Route2_Text_DavisOutro {
+    format("My bugs were no match for your Pokémon.")
+}
+
+text Route3_Text_DavisPostBattle {
+    format("If you're going into the forest, make sure to take some Antidotes with you.")
+}
+
+script Route3_EventScript_Autumn {
+    trainerbattle_single(TRAINER_AUTUMN, Route3_Text_AutumnIntro, Route2_Text_AutumnOutro)
+    msgbox(Route3_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route3_Text_AutumnIntro {
+    format("I'm heading into the forest to look for new ingredients!")
+}
+
+text Route2_Text_AutumnOutro {
+    format("Wow! You're really good!")
+}
+
+text Route3_Text_AutumnPostBattle {
+    format("Fresh ingredients are the best!")
+}

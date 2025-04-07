@@ -1,0 +1,12 @@
+mapscripts RoyalspurCity_House2_MapScripts {
+    
+}
+
+script RoyalspurCity_House2_EventScript_Woman {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("The mountain air feels so nice in Royalspur, but if I ever need to travel to Bravefort Town, it can be a really long journey."))
+    closemessage
+    release
+}

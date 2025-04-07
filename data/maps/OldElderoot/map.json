@@ -1,0 +1,96 @@
+{
+  "id": "MAP_OLD_ELDEROOT",
+  "name": "OldElderoot",
+  "layout": "LAYOUT_OLD_ELDEROOT",
+  "music": "MUS_RG_LAVENDER",
+  "region_map_section": "MAPSEC_OLD_ELDEROOT",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 23,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_DISTORTED_PATH",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DISTORTED_PATH",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 18,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_ELDEROOT_SAGE_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_ELDEROOT_CAVE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "5",
+      "script": "OldElderoot_EventScript_Cave"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "6",
+      "script": "OldElderoot_SageHouse_EventScript_AfterSageConvo"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "6",
+      "script": "OldElderoot_SageHouse_EventScript_AfterSageConvo"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "OldElderoot_EventScript_SageHouseSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "OldElderoot_EventScript_OldHouse"
+    }
+  ]
+}

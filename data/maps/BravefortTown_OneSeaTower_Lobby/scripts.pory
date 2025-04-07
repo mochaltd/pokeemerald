@@ -1,0 +1,39 @@
+mapscripts BravefortTown_OneSeaTower_Lobby_MapScripts {
+
+}
+
+script BravefortTown_OneSeaTower_Lobby_EventScript_OneSea {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Do you need assistance?\p
+    Oh, you don't live here, never mind. Enjoy your visit to One Sea Tower."))
+    closemessage
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script BravefortTown_OneSeaTower_Lobby_EventScript_Receptionist {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Do you know someone who lives here, child?\p
+    Please don't cause too much ruckus."))
+    closemessage
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}
+
+script BravefortTown_OneSeaTower_Lobby_EventScript_RichBoy {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("They told me my apartment would be ready by the time I arrived, but the door was locked.\p
+    This is outrageous!"))
+    closemessage
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    release
+}

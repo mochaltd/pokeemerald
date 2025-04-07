@@ -1,0 +1,74 @@
+mapscripts BravefortTown_BravefortShipyard_MapScripts {
+
+}
+
+script BravefortTown_BravefortShipyard_EventScript_Scientist {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("This generator helps keep everything running smoothly here. It also serves as a backup power source for the lighthouse."))
+    closemessage
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}
+
+script BravefortTown_BravefortShipyard_EventScript_CantPass {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Sorry, I can't let you out on the docks, we've got a big shipment coming in soon."))
+    closemessage
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script BravefortTown_BravefortShipyard_EventScript_Ernest {
+    trainerbattle_single(TRAINER_ERNEST_1, BravefortTown_BravefortShipyard_Text_ErnestIntro, BravefortTown_BravefortShipyard_Text_ErnestOutro)
+    msgbox(BravefortTown_BravefortShipyard_Text_ErnestPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_BravefortShipyard_Text_ErnestIntro {
+    format("It's time for my break. Wanna battle?")
+}
+
+text BravefortTown_BravefortShipyard_Text_ErnestOutro {
+    format("Thanks for winning so fast. Now I can enjoy the rest of my break!")
+}
+
+text BravefortTown_BravefortShipyard_Text_ErnestPostBattle {
+    format("You should be careful around here.")
+}
+
+script BravefortTown_BravefortShipyard_EventScript_Phillip {
+    trainerbattle_single(TRAINER_PHILLIP, BravefortTown_BravefortShipyard_Text_PhillipIntro, BravefortTown_BravefortShipyard_Text_PhillipOutro)
+    msgbox(BravefortTown_BravefortShipyard_Text_PhillipPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_BravefortShipyard_Text_PhillipIntro {
+    format("I build 'em up, and I knock 'em down! Let's see if you can stand tall!")
+}
+
+text BravefortTown_BravefortShipyard_Text_PhillipOutro {
+    format("Looks like I need to reinforce my strategy...")
+}
+
+text BravefortTown_BravefortShipyard_Text_PhillipPostBattle {
+    format("We've gone 13 days without an accident related to a Pokémon battle.")
+}
+
+script BravefortTown_BravefortShipyard_EventScript_Owner {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("We're doing some innovative work that will one day make Bravefort Town a booming metropolis! How exciting!"))
+    closemessage
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    release
+}

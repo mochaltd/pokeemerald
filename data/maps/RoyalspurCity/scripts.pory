@@ -1,0 +1,128 @@
+mapscripts RoyalspurCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: RoyalspurCity_OnTransition
+}
+
+script RoyalspurCity_OnTransition {
+    setflag(FLAG_VISITED_ROYALSPUR_CITY)
+    end
+}
+
+script RoyalspurCity_EventScript_Man3 {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("Have you been to the temple yet? It's built in honor of Raikov, the Electric Pokémon commander."))
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_Poochyena {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
+    msgbox(format("Grrr-ow!"))
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    closemessage
+    release
+}
+
+script RoyalspurCity_Mart_EventScript_SaleWoman {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Hello! I sell berries and natural remedies that I make from my garden ingredients. Have a look!"))
+    waitmessage
+    pokemart(RoyalspurCity_Mart_SaleWoman)
+    msgbox(format("Please come again!"))
+    closemessage
+    release
+    end
+}
+
+mart RoyalspurCity_Mart_SaleWoman {
+    ITEM_HEAL_POWDER
+    ITEM_ENERGY_POWDER
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_PERSIM_BERRY
+}
+
+script RoyalspurCity_EventScript_Beauty {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("I like coming here to buy flowers for myse...\p
+    I mean...other people.\p
+    I have plenty of people that buy me flowers!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_Gentleman {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Every now and then, I come in here to pick flowers for my wife."))
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_RichBoy {
+    lock
+    applymovement(6, moves(face_player))
+    waitmovement(6)
+    msgbox(format("My dad gave me some money to come and buy a bike for my birthday, but even the money he gave me wasn't enough..."))
+    applymovement(6, moves(face_original_direction))
+    waitmovement(6)
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_MayorHouseSign {
+    lock
+    msgbox(format("The Mayor of Royalspur City"))
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_Gardener {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("I work as the personal gardener for the mayor. It's amazing the variety of flowers I'm able to grow up high on this mountain!"))
+    applymovement(5, moves(face_original_direction))
+    waitmovement(5)
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_TempleSign {
+    lock
+    msgbox(format("{LEFT_ARROW} Royalspur Temple\p
+    In honor of Raikov, Commander of Storms."))
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_BikeShopSign {
+    lock
+    msgbox(format("Rolf's Bicycle Shop"))
+    closemessage
+    release
+}
+
+script RoyalspurCity_EventScript_GardenSign {
+    lock
+    msgbox(format("Royalspur Flower Garden"))
+    closemessage
+    release
+}

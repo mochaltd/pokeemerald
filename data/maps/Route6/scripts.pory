@@ -1,0 +1,153 @@
+mapscripts Route6_MapScripts {
+    
+}
+
+script Route6_EventScript_Foster {
+    trainerbattle_single(TRAINER_FOSTER, Route6_Text_FosterIntro, Route6_Text_FosterOutro)
+    msgbox(Route6_Text_FosterPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_Text_FosterIntro {
+    format("Help me unwind after my long shift!")
+}
+
+text Route6_Text_FosterOutro {
+    format("I could use a cold drink after that battle.")
+}
+
+text Route6_Text_FosterPostBattle {
+    format("We're hoping to get the tunnel lit up so that it's easier to travel through.")
+}
+
+script Route6_EventScript_Builder {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("With Bravefort Town expanding so much, it can be hard for goods to travel to and from there.\p
+    That's why we're about to start a big project to make it easier to travel through the Coaltine Tunnel."))
+    closemessage
+    release
+}
+
+script Route6_EventScript_Myles {
+    trainerbattle_single(TRAINER_MYLES, Route6_Text_MylesIntro, Route6_Text_MylesOutro)
+    msgbox(Route6_Text_MylesPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_Text_MylesIntro {
+    format("Aren't Pokémon just wonderful?")
+}
+
+text Route6_Text_MylesOutro {
+    format("Raising Pokémon is a fulfilling life.")
+}
+
+text Route6_Text_MylesPostBattle {
+    format("Make sure to stop by our Day Care!")
+}
+
+script Route6_EventScript_Lydia {
+    trainerbattle_single(TRAINER_LYDIA, Route6_Text_LydiaIntro, Route6_Text_LydiaOutro)
+    msgbox(Route6_Text_LydiaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_Text_LydiaIntro {
+    format("Let me see how you raise your Pokémon!")
+}
+
+text Route6_Text_LydiaOutro {
+    format("They seem to trust you a lot.")
+}
+
+text Route6_Text_LydiaPostBattle {
+    format("Battling is my favorite way to raise my Pokémon.")
+}
+
+script Route6_EventScript_Donald {
+    trainerbattle_single(TRAINER_DONALD, Route6_Text_DonaldIntro, Route6_Text_DonaldOutro)
+    msgbox(Route6_Text_DonaldPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_Text_DonaldIntro {
+    format("They evolve quickly, adapt fast, and strike before you know it!")
+}
+
+text Route6_Text_DonaldOutro {
+    format("Your Pokémon were able to strike faster...")
+}
+
+text Route6_Text_DonaldPostBattle {
+    format("I don't care what people say, bug Pokémon are the best!")
+}
+
+script Route6_EventScript_Huey {
+    trainerbattle_single(TRAINER_HUEY, Route6_Text_HueyIntro, Route6_Text_HueyOutro)
+    msgbox(Route6_Text_HueyPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Route6_Text_HueyIntro {
+    format("No runnin' from this storm, matey!")
+}
+
+text Route6_Text_HueyOutro {
+    format("Aye, even the mightiest captain faces a storm now and then...")
+}
+
+text Route6_Text_HueyPostBattle {
+    format("Ye got the better of me this time, but the tides always turn!")
+}
+
+script Route6_EventScript_Ball1 {
+    lock
+    removeobject(8)
+    giveitem(ITEM_RARE_CANDY)
+    release
+}
+
+script Route6_EventScript_Ball2 {
+    lock
+    removeobject(1)
+    giveitem(ITEM_TM22)
+    release
+}
+
+script Route6_EventScript_Guard {
+    lock
+    applymovement(11, moves(face_player))
+    waitmovement(11)
+    msgbox(format("Someone stole a rare Pokémon Egg from an employee of this day care, luckily we were able to get it back.\p
+    We weren't able to catch the culprit, though...they escaped somewhere in Bravefort Town. Be careful out there."))
+    closemessage
+    release
+}
+
+script Route6_EventScript_DaycareSign {
+    lock
+    msgbox(format("Pokémon Day Care"))
+    closemessage
+    release
+}
+
+script Route6_EventScript_BuilderSign {
+    lock
+    msgbox(format("Builder's House"))
+    closemessage
+    release
+}
+
+script Route6_EventScript_TunnelSign {
+    lock
+    msgbox(format("Coaltine Tunnel"))
+    closemessage
+    release
+}

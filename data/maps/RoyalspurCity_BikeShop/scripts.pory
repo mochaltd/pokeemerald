@@ -1,0 +1,49 @@
+mapscripts RoyalspurCity_BikeShop_MapScripts {
+    
+}
+
+script RoyalspurCity_BikeShop_EventScript_ShopOwner {
+    goto_if_set(FLAG_RECEIVED_BIKE, EnjoyBike)
+    goto_if_unset(FLAG_RECEIVED_BIKE_VOUCHER, BikeSoldOut)
+    goto_if_set(FLAG_RECEIVED_BIKE_VOUCHER, GiveBike)
+}
+
+script BikeSoldOut {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Oh, hello! Were you looking for a bike? I'm sorry, they're all sold out right now. Please come back later."))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script GiveBike {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Oh, hello! Were you looking for a bike? I'm sorry, they're all sold out right now. Please come back later.\p
+    ...\l
+    ...\p
+    Oh, that's the Mayor's BIKE VOUCHER! She asked me to hold onto this for her but it looks like it's yours now!"))
+    closemessage
+    giveitem(ITEM_BICYCLE)
+    removeitem(ITEM_BIKE_VOUCHER)
+    setflag(FLAG_RECEIVED_BIKE)
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script EnjoyBike {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Enjoy your bike!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}

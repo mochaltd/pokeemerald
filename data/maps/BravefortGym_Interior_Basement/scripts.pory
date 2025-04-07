@@ -1,0 +1,68 @@
+mapscripts BravefortGym_Interior_Basement_MapScripts {
+    
+}
+
+script BravefortGym_Interior_Basement_Barlow {
+    trainerbattle_single(TRAINER_DRAKE, RoyalspurGym_Text_BarlowIntro, RoyalspurGym_Text_BarlowOutro, BravefortGym_Interior_Basement_BarlowDefeated)
+    //specialvar(VAR_RESULT, ShouldTryRematchBattle)
+    //goto_if_eq(VAR_RESULT, TRUE, BravefortGym_Interior_Basement_BarlowRematch)
+    goto_if_unset(FLAG_RECEIVED_TM_SHOCK_WAVE, BravefortGym_Interior_Basement_GiveWaterPulse)
+    msgbox(BravefortGym_Text_BarlowPostBattle, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text RoyalspurGym_Text_BarlowIntro {
+    format("Har, har, har! You've done well to get here, trainer.\p
+    I be Captain Barlow, Commander of the High Seas and master of Pokémon as fierce as the ocean itself!\p
+    So, tell me...do ye got the guts to face the wrath of the sea? Or will ye be sent sinkin' to the depths below?\p
+    Time to find out what yer made of!")
+}
+
+text RoyalspurGym_Text_BarlowOutro {
+    format("Not since my days on the high seas have I felt such a rush!\p
+    I bestow upon ye this AZURITE STONE.")
+}
+
+script BravefortGym_Interior_Basement_BarlowDefeated {
+	msgbox(BravefortGym_Text_ReceivedAzuriteStone, MSGBOX_DEFAULT)
+	waitmessage
+	call(Common_EventScript_PlayGymBadgeFanfare)
+	msgbox(BravefortGym_Text_AzuriteStoneInfoTakeThis, MSGBOX_DEFAULT)
+	setflag(FLAG_DEFEATED_BRAVEFORT_GYM)
+	setflag(FLAG_BADGE03_GET)
+	setvar(VAR_BRAVEFORT_TOWN_STATE, 6)
+	setvar(VAR_0x8008, 1)
+	goto(BravefortGym_Interior_Basement_GiveWaterPulse)
+	end
+}
+
+text BravefortGym_Text_ReceivedAzuriteStone {
+    format("{PLAYER} received the AZURITE STONE from Barlow!")
+}
+
+text BravefortGym_Text_AzuriteStoneInfoTakeThis {
+    format("The AZURITE STONE makes yer Pokémon a little bit faster, as if the wind was picking up in yer sails.\p
+    You'll also be able to use the HM move ROCK SMASH outside of battle.\p
+    Take this TM as a gift as well.")
+}
+
+script BravefortGym_Interior_Basement_GiveWaterPulse {
+    giveitem(ITEM_TM03)
+	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
+	setflag(FLAG_RECEIVED_TM_WATER_PULSE)
+	msgbox(BravefortGym_Text_ExplainWaterPulse, MSGBOX_DEFAULT)
+    closemessage
+	release
+	end
+}
+
+text BravefortGym_Text_ExplainWaterPulse {
+    format("Aye, that TM contains the moves WATER PULSE.\p
+    It be a strong Water-type move that might send your enemies in a whirpool of confusion!\p
+    Pebblehorn City should be your next stop, young sailor. Go forth with the strength of the seas!")
+}
+
+text BravefortGym_Text_BarlowPostBattle {
+    format("Being a strong trainer be just the same as being a powerful sailor. Always know how to weather the storm.")
+}

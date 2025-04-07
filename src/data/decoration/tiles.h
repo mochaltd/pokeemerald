@@ -614,21 +614,21 @@ const u16 DecorGfx_LAPRAS_DOLL[] = {
     OBJ_EVENT_GFX_BIG_LAPRAS_DOLL
 };
 
-const u16 DecorGfx_VENUSAUR_DOLL[] = {
-    OBJ_EVENT_GFX_BIG_VENUSAUR_DOLL
-};
+//const u16 DecorGfx_VENUSAUR_DOLL[] = {
+    //OBJ_EVENT_GFX_BIG_VENUSAUR_DOLL
+//};
 
 const u16 DecorGfx_CHARIZARD_DOLL[] = {
     OBJ_EVENT_GFX_BIG_CHARIZARD_DOLL
 };
 
-const u16 DecorGfx_BLASTOISE_DOLL[] = {
-    OBJ_EVENT_GFX_BIG_BLASTOISE_DOLL
-};
+//const u16 DecorGfx_BLASTOISE_DOLL[] = {
+    //OBJ_EVENT_GFX_BIG_BLASTOISE_DOLL
+//};
 
-const u16 DecorGfx_WAILMER_DOLL[] = {
-    OBJ_EVENT_GFX_BIG_WAILMER_DOLL
-};
+//const u16 DecorGfx_WAILMER_DOLL[] = {
+    //OBJ_EVENT_GFX_BIG_WAILMER_DOLL
+//};
 
 const u16 DecorGfx_REGIROCK_DOLL[] = {
     OBJ_EVENT_GFX_BIG_REGIROCK_DOLL
@@ -639,5 +639,5 @@ const u16 DecorGfx_REGICE_DOLL[] = {
 };
 
 const u16 DecorGfx_REGISTEEL_DOLL[] = {
-    OBJ_EVENT_GFX_BIG_REGISTEEL_DOLL
+    OBJ_EVENT_GFX_BIG_REGICE_DOLL
 };

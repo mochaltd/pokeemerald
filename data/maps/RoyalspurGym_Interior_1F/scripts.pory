@@ -1,0 +1,123 @@
+mapscripts RoyalspurGym_Interior_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_ROYALSPUR_CITY_STATE) >= 5) {
+            setmaplayoutindex(LAYOUT_ROYALSPUR_GYM_INTERIOR_1F_POST_BATTLE)
+        }
+    }
+}
+
+script RoyalspurGym_EventScript_Mollie_Trigger {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    goto(RoyalspurGym_EventScript_Mollie)
+}
+
+script RoyalspurGym_EventScript_Mollie {
+    trainerbattle_single(TRAINER_MOLLIE, RoyalspurGym_Text_MollieIntro, RoyalspurGym_Text_MollieOutro, RoyalspurGym_EventScript_MollieDefeated)
+    msgbox(RoyalspurGym_Text_MolliePostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text RoyalspurGym_Text_MollieIntro {
+    format("Fufufu...\p
+    I was told of a new trainer taking the trials but I couldn't believe it until now.\p
+    As this temple's protector, I will use the power of Electric-type Pokémon in honor of Raikov!")
+}
+
+text RoyalspurGym_Text_MollieOutro {
+    format("Such trust already between you and your Pokémon.")
+}
+
+script RoyalspurGym_EventScript_MollieDefeated {
+    lock
+    msgbox(format("Raikov will be pleased to fight such a strong, young trainer. You may enter through the door behind me."))
+    closemessage
+    setvar(VAR_ROYALSPUR_CITY_STATE, 5)
+    fadescreen(FADE_TO_BLACK)
+    setmetatile(7, 3, 0x232, FALSE)
+    setmetatile(7, 2, 0x237, FALSE)
+    playse(SE_DOOR)
+    special(DrawWholeMapView)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+text RoyalspurGym_Text_MolliePostBattle {
+    format("Raikov will be pleased to fight such a strong, young trainer. You may enter through the door behind me.")
+}
+
+script RoyalspurGym_EventScript_Takao {
+    trainerbattle_single(TRAINER_TAKAO, RoyalspurGym_Text_TakaoIntro, RoyalspurGym_Text_TakaoOutro)
+    msgbox(RoyalspurGym_Text_TakaoPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text RoyalspurGym_Text_TakaoIntro {
+    format("How do we pay tribute to Raikov? By battling fiercely!")
+}
+
+text RoyalspurGym_Text_TakaoOutro {
+    format("Raikov's memory is honored by your competitiveness.")
+}
+
+text RoyalspurGym_Text_TakaoPostBattle {
+    format("Battle on!")
+}
+
+script RoyalspurGym_EventScript_Jocelyn {
+    trainerbattle_single(TRAINER_JOCELYN, RoyalspurGym_Text_JocelynIntro, RoyalspurGym_Text_JocelynOutro)
+    msgbox(RoyalspurGym_Text_JocelynPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text RoyalspurGym_Text_JocelynIntro {
+    format("Face me!")
+}
+
+text RoyalspurGym_Text_JocelynOutro {
+    format("Your Pokémon fight with grace and power.")
+}
+
+text RoyalspurGym_Text_JocelynPostBattle {
+    format("Battling with our Pokémon makes us stronger too.")
+}
+
+script RoyalspurGym_EventScript_Artist {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Watching powerful Pokémon battles here inspires my art."))
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    closemessage
+    release
+}
+
+script RoyalspurGym_MartEmployee {
+    call_if_unset(FLAG_ROYALSPUR_GYM_FRESH_WATER, RoyalspurGym_MartEmployee_FreshWater)
+    call_if_set(FLAG_ROYALSPUR_GYM_FRESH_WATER, RoyalspurGym_MartEmployee_Enjoy)
+}
+
+script RoyalspurGym_MartEmployee_FreshWater {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("Have a refreshment and enjoy your time in the temple."))
+    closemessage
+    giveitem(ITEM_FRESH_WATER)
+    setflag(FLAG_ROYALSPUR_GYM_FRESH_WATER)
+    release
+}
+
+script RoyalspurGym_MartEmployee_Enjoy {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("Enjoy your time in the temple."))
+    closemessage
+    release
+}

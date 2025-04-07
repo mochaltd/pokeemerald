@@ -1,0 +1,95 @@
+mapscripts ElderootTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ElderootTown_OnTransition
+}
+
+script ElderootTown_OnTransition {
+    setflag(FLAG_VISITED_ELDEROOT_TOWN)
+    end
+}
+
+script ElderootTown_EventScript_TownSign {
+    lockall
+    msgbox("Elderoot Town\l
+    The Town of Beginnings")
+    releaseall
+}
+
+script ElderootTown_EventScript_PlayerHouseSign {
+    lockall
+    msgbox("{PLAYER}'s House")
+    releaseall
+}
+
+script ElderootTown_EventScript_StrangeFeeling {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
+    waitmovement(0)
+    playse(SE_PIN)
+    msgbox(format("{PAUSE_MUSIC}Huh?"))
+    call(PathShake)
+    delay(5)
+    msgbox(format("What was that?"))
+    closemessage
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_fast_right * 8, walk_fast_up * 5))
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    delay(10)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_fast_down * 5, walk_fast_left * 8))
+    waitmovement(OBJ_EVENT_ID_CAMERA)
+    special(RemoveCameraObject)
+    msgbox(format("{RESUME_MUSIC}Has that cave always been there?...\p
+    I better go check it out."))
+    setvar(VAR_ELDEROOT_TOWN_STATE, 4)
+    releaseall
+}
+
+script PathShake {
+    delay(30)
+    setvar(VAR_0x8004, 2)
+    setvar(VAR_0x8005, 6)
+    setvar(VAR_0x8006, 15)
+    setvar(VAR_0x8007, 4)
+    special(ShakeCamera)
+    waitstate
+    delay(60)
+}
+
+script ElderootTown_EventScript_BetterCheckItOut {
+    lockall
+    msgbox(format("I'd better go check out that strange cave."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+    waitmovement(0)
+    releaseall
+}
+
+script ElderootTown_EventScript_TalkToMom {
+    lock
+    msgbox(format("Wow, my very own Pokémon...\p 
+    I suppose I should go talk to my mom before I leave."))
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 9)
+    release
+}
+
+script ElderootTown_EventScript_SayGoodbye {
+    lock
+    msgbox(format("Mom would kill me if I left without saying goodbye!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    closemessage
+    release
+}
+
+script ElderootTown_EventScript_DonnaHouseSign {
+    lockall
+    msgbox("Donna's House")
+    releaseall
+}
+
+script ElderootTown_EventScript_LockedHouse {
+    lock
+    msgbox(format("The door is locked. I guess they don't want me to come in."))
+    closemessage
+    release
+}

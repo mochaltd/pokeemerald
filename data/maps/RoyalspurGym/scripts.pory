@@ -1,0 +1,15 @@
+mapscripts RoyalspurGym_MapScripts {
+    
+}
+
+script RoyalspurGym_EventScript_BlackBelt {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("I come here to chop wood with my bare hands for training.\p
+    HYYAAAHHH!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}

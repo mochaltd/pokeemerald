@@ -1,0 +1,115 @@
+mapscripts ShivervaleTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ShivervaleTown_OnTransition
+}
+
+script ShivervaleTown_OnTransition {
+    setflag(FLAG_VISITED_SHIVERVALE_TOWN)
+    call_if_set(FLAG_RECEIVED_STARTER_POTIONS, ShivervaleTown_EventScript_SetupRivalBattle)
+    end
+}
+
+script ShivervaleTown_TempleSign {
+    lock
+    msgbox(format("{UP_ARROW} Shivervale Temple\p
+    In honor of Selene, the Leader of Darkness."))
+    release
+}
+
+script ShivervaleTown_TownSign {
+    lock
+    msgbox(format("Shivervale Town\p
+    A charming destination."))
+    release
+}
+
+script ShivervaleTown_Mom {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("This park area is nice to let my kids run around in and burn off some energy.\p
+    They can be a hassle if they're inside all day."))
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
+    release
+}
+
+script ShivervaleTown_Boy {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Weeeeee!!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script ShivervaleTown_Girl {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Waaaaahhhh!!"))
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    release
+}
+
+script ShivervaleTown_PC {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("If you use a PC, you can store items and Pokémon. The power of science is staggering!"))
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}
+
+script ShivervaleTown_EventScript_SetupRivalBattle {
+    if (!(flag(FLAG_RECEIVED_TM_THIEF))) {
+        setflag(FLAG_SHIVERVALE_RIVALBATTLE)
+    }
+    elif (var(VAR_SHIVERVALE_TOWN_STATE) == 4){
+        setflag(FLAG_SHIVERVALE_RIVALBATTLE)
+    }
+    else{
+        if(flag(FLAG_RECEIVED_TM_THIEF)){
+        clearflag(FLAG_SHIVERVALE_RIVALBATTLE)
+        }
+    }
+}
+
+script ShivervaleTown_EventScript_RivalBattle{
+    trainerbattle_single(TRAINER_SILVER_SHIVERVALE, ShivervaleTown_Text_RivalIntro, ShivervaleTown_Text_RivalOutro, ShivervaleTown_EventScript_RivalDefeated)
+    release
+    end
+}
+
+text ShivervaleTown_Text_RivalIntro {
+    format("I don't know how you found out about the trials but that power is mine and mine alone. You would be wise to not interfere.")
+}
+
+text ShivervaleTown_Text_RivalOutro {
+    format("Hmph. This means nothing.")
+}
+
+
+script ShivervaleTown_EventScript_RivalDefeated {
+    lock
+    msgbox(format("You got lucky this time but don't expect that to happen again.\p
+    The name's Kade, and I will be the one to claim the power from the League of Eight, not you.\p
+    I will show this world what it truly means to be strong.\p
+    Stay out of my way."))
+    closemessage
+    applymovement(5, RivalLeave)
+    waitmovement(5)
+    removeobject(5)
+    setflag(FLAG_SHIVERVALE_RIVALBATTLE)
+    setvar(VAR_SHIVERVALE_TOWN_STATE, 4)
+    setvar(VAR_EVERGREEN_FOREST_STATE, 0)
+    release
+}
+
+movement RivalLeave {
+    face_down
+    walk_down * 4
+    walk_right * 9
+}

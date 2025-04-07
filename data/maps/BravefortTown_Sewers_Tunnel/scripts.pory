@@ -1,0 +1,112 @@
+mapscripts BravefortTown_Sewers_Tunnel_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: BravefortTown_Sewers_Tunnel_OnTransition
+}
+
+script BravefortTown_Sewers_Tunnel_OnTransition {
+    call_if_set(FLAG_BRAVEFORT_SEWERS_GANG, BravefortTown_Sewers_Tunnel_EventScript_SetupGangBattle)
+    end
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_SetupGangBattle {
+    if (!(var(VAR_BRAVEFORT_TOWN_STATE) == 2 )) {
+        setflag(FLAG_BRAVEFORT_SEWERS_GANG)
+    }
+    else{
+        if(var(VAR_BRAVEFORT_TOWN_STATE) == 2){
+        clearflag(FLAG_BRAVEFORT_SEWERS_GANG)
+        }
+    }
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_Vincent {
+    trainerbattle_single(TRAINER_VINCENT, BravefortTown_Sewers_Tunnel_Text_VincentIntro, BravefortTown_Sewers_Tunnel_Text_VincentOutro)
+    msgbox(BravefortTown_Sewers_Tunnel_Text_VincentPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Sewers_Tunnel_Text_VincentIntro {
+    format("I'm stronger than the last guy!")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_VincentOutro {
+    format("Not strong enough, I guess.")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_VincentPostBattle {
+    format("Don't get any ideas just because you beat me.")
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_Braxton {
+    trainerbattle_single(TRAINER_BRAXTON, BravefortTown_Sewers_Tunnel_Text_BraxtonIntro, BravefortTown_Sewers_Tunnel_Text_BraxtonOutro)
+    msgbox(BravefortTown_Sewers_Tunnel_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Sewers_Tunnel_Text_BraxtonIntro {
+    format("You'll never stop us!")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_BraxtonOutro {
+    format("You're too late.")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_BraxtonPostBattle {
+    format("You may have been able to beat me, but Leroy is unstoppable.")
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_Edgar {
+    trainerbattle_single(TRAINER_EDGAR, BravefortTown_Sewers_Tunnel_Text_EdgarIntro, BravefortTown_Sewers_Tunnel_Text_EdgarOutro)
+    msgbox(BravefortTown_Sewers_Tunnel_Text_EdgarPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Sewers_Tunnel_Text_EdgarIntro {
+    format("You think you can get past me? Think again!")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_EdgarOutro {
+    format("You're pretty strong, kid.")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_EdgarPostBattle {
+    format("We'll make the owners of the towers pay for what they did.")
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_Leroy {
+    trainerbattle_single(TRAINER_LEROY, BravefortTown_Sewers_Tunnel_Text_LeroyIntro, BravefortTown_Sewers_Tunnel_Text_LeroyOutro, BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested)
+    end
+}
+
+text BravefortTown_Sewers_Tunnel_Text_LeroyIntro {
+    format("You're strong, kid, I'll give you that.\p
+    The Venom Locust's goal has been to destroy the towers built on the remains of the fort that once stood strong above us.\p
+    The owners of these towers polluted our waters, destroyed a historical landmark, and ruined the spectacle of our town.\p
+    We thought we were going to need the rare Pokémon in the Egg in order to accomplish our goals, but I found a different one...\p
+    ...one much stronger and more capable.\p
+    So now, once I defeat you, I will unleash my poison Pokémon to fill the towers with noxious gases until the residents are forced to leave, and the owners will be forced to bankruptcy!\p
+    ...\p
+    You still wish to stand against us?\p
+    ...\p
+    Fine, then show me how strong your resolve is!")
+}
+
+text BravefortTown_Sewers_Tunnel_Text_LeroyOutro {
+    format("You may have won this battle, but you won't win the war.")
+}
+
+script BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested {
+    lock
+    msgbox(format("You have stopped us for now, but there are others who will rise in our place. This isn't over."))
+    closemessage
+    setvar(VAR_BRAVEFORT_TOWN_STATE, 3)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    removeobject(2)
+    removeobject(3)
+    removeobject(4)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}

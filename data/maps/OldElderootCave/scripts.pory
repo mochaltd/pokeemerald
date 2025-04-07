@@ -1,0 +1,343 @@
+mapscripts OldElderootCave_MapScripts {
+   MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ELDEROOT_TOWN_STATE, 6: GetPokemon
+    ]
+}
+
+script GetPokemon {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 4))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Welcome, {PLAYER}. It is here that your Pokémon journey will begin.\p
+    In order to bring Celebi back home, you must prove yourself as a trainer, and have an astounding bond with your Pokémon.\p
+    You must travel to the temples of the League of Eight, spread throughout the Shizen region.\p
+    The League of Eight were the eight trainers that banded together to stop DIALGA and PALKIA and ended the War of Time.\p
+    In each temple resides an avatar of each member of the League of Eight, where you must battle them with your Pokémon.\p 
+    If you're able to emerge victorious, they will bestow upon you a STONE. These eight STONES will be necessary in order to bring Celebi back.\p
+    Now, the time has come for you to choose your first Pokémon.\p
+    In front of you are Poké Balls that contain rare Pokémon that have existed since the birth of the Shizen region.\p
+    I have kept them here for safekeeping and one of them will serve you greatly on your journey. Choose the partner that speaks to your heart the most."))
+    waitmessage
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 7)
+    release
+}
+
+script OldElderootCave_EventScripts_Pokeball1 {
+    lockall
+    if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
+        showmonpic(SPECIES_PICHU, 10,3)
+        msgbox(format("Do you want to choose Pichu, the Tiny Mouse Pokémon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_PICHU, 5, ITEM_ORAN_BERRY)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Pichu!")
+                removeobject(2)
+                setflag(FLAG_GOT_PICHU)
+                call(NicknamePichuPartyMon)
+                call(PokemonChosenPichu)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Pichu!")
+                removeobject(2)
+                setflag(FLAG_GOT_PICHU)
+                call(NicknamePichuBoxMon)
+                call(PokemonChosenPichu)
+            }
+            else{
+                hidemonpic
+                msgbox("You don't have any room.")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(OldElderootCave_TakeYourTime)
+            closemessage
+        }
+        setflag(FLAG_SYS_POKEMON_GET)
+        releaseall
+        end
+    }
+}
+
+script OldElderootCave_EventScripts_Pokeball2 {
+    lockall
+    if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
+        showmonpic(SPECIES_OSHAWOTT, 10,3)
+        msgbox(format("Do you want to choose Oshawott, the Sea Otter Pokémon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_OSHAWOTT, 5, ITEM_ORAN_BERRY)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received an Oshawott!")
+                removeobject(3)
+                setflag(FLAG_GOT_OSHAWOTT)
+                call(NicknameOshawottPartyMon)
+                call(PokemonChosenOshawatt)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received an Oshawott!")
+                removeobject(3)
+                setflag(FLAG_GOT_OSHAWOTT)
+                call(NicknameOshawottBoxMon)
+                call(PokemonChosenOshawatt)
+            }
+            else{
+                hidemonpic
+                msgbox("You don't have any room.")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(OldElderootCave_TakeYourTime)
+            closemessage
+        }
+        setflag(FLAG_SYS_POKEMON_GET)
+        releaseall
+        end
+    }
+}
+
+script OldElderootCave_EventScripts_Pokeball3 {
+    lockall
+    if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
+        showmonpic(SPECIES_ROWLET, 10,3)
+        msgbox(format("Do you want to choose Rowlet, the Grass Quill Pokémon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_ROWLET, 5, ITEM_ORAN_BERRY)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Rowlet!")
+                removeobject(5)
+                setflag(FLAG_GOT_ROWLET)
+                call(NicknameRowletPartyMon)
+                call(PokemonChosenRowlet)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Rowlet!")
+                removeobject(5)
+                setflag(FLAG_GOT_ROWLET)
+                call(NicknameRowletBoxMon)
+                call(PokemonChosenRowlet)
+            }
+            else{
+                hidemonpic
+                msgbox("You don't have any room.")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(OldElderootCave_TakeYourTime)
+            closemessage
+        }
+        setflag(FLAG_SYS_POKEMON_GET)
+        releaseall
+        end
+    }
+}
+
+script OldElderootCave_EventScripts_Pokeball4 {
+    lockall
+    if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
+        showmonpic(SPECIES_CYNDAQUIL, 10,3)
+        msgbox(format("Do you want to choose Cyndaquil, the Fire Mouse Pokémon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Cyndaquil!")
+                removeobject(4)
+                setflag(FLAG_GOT_CYNDAQUIL)
+                call(NicknameCyndaquilPartyMon)
+                call(PokemonChosenCyndaquil)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("You received a Cyndaquil!")
+                removeobject(4)
+                setflag(FLAG_GOT_CYNDAQUIL)
+                call(NicknameCyndaquilBoxMon)
+                call(PokemonChosenCyndaquil)
+            }
+            else{
+                hidemonpic
+                msgbox("You don't have any room.")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(OldElderootCave_TakeYourTime)
+            closemessage
+        }
+        setflag(FLAG_SYS_POKEMON_GET)
+        releaseall
+        end
+    }
+}
+
+text OldElderootCave_TakeYourTime {
+    format("Don't worry, take your time. It's a big decision.")
+}
+
+script PokemonChosenPichu {
+    lock
+    msgbox(format("A great choice indeed, young {PLAYER}. You and Pichu can now begin the greatest adventure known to Shizen, together.\p
+    Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
+    Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
+    waitmessage
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    removeobject(4)
+    removeobject(5)
+    removeobject(6)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script PokemonChosenOshawatt {
+    lock
+    msgbox(format("A great choice indeed, young {PLAYER}. You and Oshawott can now begin the greatest adventure known to Shizen, together.\p
+    Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
+    Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon.\p"))
+    waitmessage
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    removeobject(4)
+    removeobject(5)
+    removeobject(6)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script PokemonChosenRowlet {
+    lock
+    msgbox(format("A great choice indeed, young {PLAYER}. You and Rowlet can now begin the greatest adventure known to Shizen, together.\p
+    Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
+    Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
+    waitmessage
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    removeobject(3)
+    removeobject(4)
+    removeobject(6)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script PokemonChosenCyndaquil {
+    lock
+    msgbox(format("A great choice indeed, young {PLAYER}. You and Cyndaquil can now begin the greatest adventure known to Shizen, together.\p
+    Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
+    Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
+    waitmessage
+    closemessage
+    setvar(VAR_ELDEROOT_TOWN_STATE, 8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    removeobject(3)
+    removeobject(5)
+    removeobject(6)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script NicknamePichuPartyMon {
+    msgbox("Do you want to give Pichu a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknamePichuBoxMon {
+    msgbox("Do you want to give Pichu a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        call(Common_EventScript_TransferredToPC)
+    }
+}
+
+script NicknameOshawottPartyMon {
+    msgbox("Do you want to give Oshawott a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameOshawottBoxMon {
+    msgbox("Do you want to give Oshawott a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        call(Common_EventScript_TransferredToPC)
+    }
+}
+
+script NicknameRowletPartyMon {
+    msgbox("Do you want to give Rowlet a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameRowletBoxMon {
+    msgbox("Do you want to give Rowlet a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        call(Common_EventScript_TransferredToPC)
+    }
+}
+
+script NicknameCyndaquilPartyMon {
+    msgbox("Do you want to give Cyndaquil a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameCyndaquilBoxMon {
+    msgbox("Do you want to give Cyndaquil a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        call(Common_EventScript_TransferredToPC)
+    }
+}
+
+
+
+script OldElderootCave_EventScripts_Primaroot {
+    lock
+    msgbox(format("There are some preserved roots here encased in glass. This must be the roots of the Primaroot Tree that the Sage mentioned.\p
+    It feels warm and comforting to the touch."))
+    closemessage
+    release
+}
+
+script OldElderootCave_EventScripts_DontForgetPokemon {
+    lock
+    msgbox(format("I can't forget my Pokémon!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}

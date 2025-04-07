@@ -1,0 +1,297 @@
+mapscripts EvergreenForest_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: EvergreenForest_OnTransition
+}
+
+script EvergreenForest_OnTransition {
+    call_if_set(FLAG_EVERGREEN_GRUNTBATTLE, EvergreenForest_EventScript_SetupGruntBattle)
+    end
+}
+
+script EvergreenForest_EventScript_SetupGruntBattle {
+    if (!(var(VAR_EVERGREEN_FOREST_STATE) == 1 )) {
+        setflag(FLAG_EVERGREEN_GRUNTBATTLE)
+    }
+    else{
+        if(var(VAR_EVERGREEN_FOREST_STATE) == 1){
+        clearflag(FLAG_EVERGREEN_GRUNTBATTLE)
+        }
+    }
+}
+
+script EvergreenForest_EventScript_UmbraPreBattle {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("Get lost, kid"))
+    closemessage
+    release
+}
+
+script EvergreenForest_EventScript_Grunt1Battle{
+    trainerbattle_single(TRAINER_GRUNT1_EVERGREEN_FOREST, EvergreenForest_Text_Grunt1Intro, EvergreenForest_Text_Grunt1Outro, EvergreenForest_EventScript_Grunt1Defeated)
+    release
+    end
+}
+
+text EvergreenForest_Text_Grunt1Intro {
+    format("Get out of here, kid. We're looking for information on rare Pokémon.\p
+    ...\p
+    Why?\p
+    It's none of your business. If you won't leave, then I'll make you leave!")
+}
+
+text EvergreenForest_Text_Grunt1Outro {
+    format("Who is this kid?")
+}
+
+script EvergreenForest_EventScript_Grunt1Defeated {
+    lock
+    applymovement(8, moves(face_left))
+    waitmovement(8)
+    msgbox(format("How did I lose to this kid?"))
+    closemessage
+    applymovement(7, moves(face_right))
+    waitmovement(7)
+    msgbox(format("Get outta the way, I'll show you how it's done."))
+    applymovement(7, moves(face_down))
+    waitmovement(7)
+    msgbox(format("You'll be sorry that you messed with us!"))
+    closemessage
+    goto(EvergreenForest_EventScript_Grunt2Battle)
+    release
+}
+
+script EvergreenForest_EventScript_Grunt2Battle{
+    trainerbattle_no_intro(TRAINER_GRUNT2_EVERGREEN_FOREST, EvergreenForest_Text_Grunt2Outro)
+    goto(EvergreenForest_EventScript_Grunt2Defeated)
+    release
+    end
+}
+
+text EvergreenForest_Text_Grunt2Outro {
+    format("The boss isn't gonna like this...")
+}
+
+script EvergreenForest_EventScript_Grunt2Defeated {
+    lock
+    msgbox(format("Come on, let's get out of here. This shrine didn't have anything helpful and this kid is the real deal!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 2)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(7)
+    removeobject(8)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(2, moves(walk_left * 7, walk_up, face_player))
+    waitmovement(2)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    msgbox(format("Thank you, trainer, those guys were scaring me. That shrine is dedicated to Mismagius, a Pokémon that has protected these woods for as long as anyone can remember.\p
+    I heard those guys talking about forcing dreams and nightmares on people...\p
+    The legend of Mismagius is that she would inflict nightmares on people who wished to harm these woods to make them too afraid to enter the forest.\p
+    I'm not sure what they were hoping to find, but it worries me that people like them are interested in that power...\p
+    Anyways, thank you again for saving the shrine. I want you to have this as a token of my thanks."))
+    closemessage
+    giveitem(ITEM_RARE_CANDY)
+    setvar(VAR_ROYALSPUR_CITY_STATE, 0)
+    release
+}
+
+script EvergreenForest_HexGirl {
+    if(!(var(VAR_EVERGREEN_FOREST_STATE) == 1)) {
+        msgbox(format("My grandma lives in these woods and makes medicine for people, but people like to call her a witch.\p
+        They just don't understand her."))
+        closemessage
+    }
+    else {
+        if(var(VAR_EVERGREEN_FOREST_STATE) == 1) {
+            msgbox(format("You have to help! They're going to destroy the shrine!"))
+            closemessage
+        }
+    }
+}
+
+script EvergreenForest_EventScript_Shrine1 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_down * 7))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}
+
+script EvergreenForest_EventScript_Shrine2 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_left * 10, walk_fast_down * 4))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}
+
+script EvergreenForest_EventScript_Shrine3 {
+    lock
+    msgbox(format("Someone please help!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_left * 10, walk_fast_down * 3))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Help! Those strange men came into the forest and are defacing the forest shrine. You have to do something!"))
+    closemessage
+    setvar(VAR_EVERGREEN_FOREST_STATE, 1)
+    release
+}
+
+script EvergreenForest_EventScript_DontLeave1 {
+    lock
+    applymovement(2, moves(face_up))
+    waitmovement(2)
+    msgbox(format("Please don't leave me!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script EvergreenForest_EventScript_DontLeave2 {
+    lock
+    applymovement(2, moves(face_down))
+    waitmovement(2)
+    msgbox(format("Please don't leave me!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script EvergreenForest_EventScript_Taylor {
+    trainerbattle_single(TRAINER_TAYLOR, EvergreenForest_Text_TaylorIntro, EvergreenForest_Text_TaylorOutro)
+    msgbox(EvergreenForest_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text EvergreenForest_Text_TaylorIntro {
+    format("… … … … … …\p
+    Want to battle?")
+}
+
+text EvergreenForest_Text_TaylorOutro {
+    format("Lost it…")
+}
+
+text EvergreenForest_Text_TaylorPostBattle {
+    format("I'll try harder…\p
+    For my precious Bug Pokémon…")
+}
+
+script EvergreenForest_EventScript_Drew {
+    trainerbattle_single(TRAINER_DREW, EvergreenForest_Text_DrewIntro, EvergreenForest_Text_DrewOutro)
+    msgbox(EvergreenForest_Text_DrewPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text EvergreenForest_Text_DrewIntro {
+    format("I think I took a wrong turn, and it's dark in here...\p
+    I'll get my confidence back by beating you!")
+}
+
+text EvergreenForest_Text_DrewOutro {
+    format("Great, now I'm lost with no Pokémon.")
+}
+
+text EvergreenForest_Text_DrewPostBattle {
+    format("Have you heard about the witch in the forest?")
+}
+
+script EvergreenForest_EventScript_Heidi {
+    trainerbattle_single(TRAINER_HEIDI, EvergreenForest_Text_HeidiIntro, EvergreenForest_Text_HeidiOutro)
+    msgbox(EvergreenForest_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text EvergreenForest_Text_HeidiIntro {
+    format("I thought this forest was going to be less scary.")
+}
+
+text EvergreenForest_Text_HeidiOutro {
+    format("Can you help me find the exit?")
+}
+
+text EvergreenForest_Text_HeidiPostBattle {
+    format("There are some scary people in this forest.")
+}
+
+script EvergreenForest_EventScript_Leah {
+    trainerbattle_single(TRAINER_LEAH, EvergreenForest_Text_LeahIntro, EvergreenForest_Text_LeahOutro)
+    msgbox(EvergreenForest_Text_LeahPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text EvergreenForest_Text_LeahIntro {
+    format("Have you ever talked to a dead Pokémon?")
+}
+
+text EvergreenForest_Text_LeahOutro {
+    format("Sorry, that was a strange thing to ask.")
+}
+
+text EvergreenForest_Text_LeahPostBattle {
+    format("Be careful of the weird people in this forest.")
+}
+
+script EvergreenForest_EventScript_Sign1 {
+    lock
+    msgbox(format("{UP_ARROW} Route 3"))
+    closemessage
+    release
+}
+
+script EvergreenForest_EventScript_Ball1 {
+    lock
+    removeobject(5)
+    giveitem(ITEM_SUPER_POTION)
+    release
+}
+
+script EvergreenForest_EventScript_Ball2 {
+    lock
+    removeobject(9)
+    giveitem(ITEM_ELIXIR)
+    release
+}
+
+script EvergreenForest_EventScript_Ball3 {
+    lock
+    removeobject(6)
+    giveitem(ITEM_GREAT_BALL)
+    release
+}
+
+script EvergreenForest_EventScript_Sign2 {
+    lock
+    msgbox(format("{DOWN_ARROW} Route 4\l
+    {DOWN_ARROW} Royalspur City"))
+    closemessage
+    release
+}
+
+script EvergreenForest_EventScript_HouseSign {
+    lock
+    msgbox(format("It's hard to read the original sign.\p
+    Someone wrote WITCH'S HUT in really big letters."))
+    closemessage
+    release
+}

@@ -557,7 +557,7 @@ static void SetupRoomObjectEvents(void)
     u16 objGfx2;
 
     VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LINK_RECEPTIONIST);
-    VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_DUSCLOPS);
+    //VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_DEOXYS);
     setObjGfx1 = TRUE;
     setObjGfx2 = FALSE;
     objGfx1 = 0;
@@ -575,14 +575,14 @@ static void SetupRoomObjectEvents(void)
     case PIKE_ROOM_NPC:
         objGfx1 = (u8)(GetNPCRoomGraphicsId());
         break;
-    case PIKE_ROOM_STATUS:
-        objGfx1 = OBJ_EVENT_GFX_GENTLEMAN;
-        if (sStatusMon == PIKE_STATUSMON_DUSCLOPS)
-            objGfx2 = OBJ_EVENT_GFX_DUSCLOPS;
-        else
-            objGfx2 = OBJ_EVENT_GFX_KIRLIA;
-        setObjGfx2 = TRUE;
-        break;
+    //case PIKE_ROOM_STATUS:
+        //objGfx1 = OBJ_EVENT_GFX_GENTLEMAN;
+        //if (sStatusMon == PIKE_STATUSMON_DUSCLOPS)
+            //objGfx2 = OBJ_EVENT_GFX_DEOXYS;
+        //else
+            //objGfx2 = OBJ_EVENT_GFX_DEOXYS;
+        //setObjGfx2 = TRUE;
+        //break;
     case PIKE_ROOM_HEAL_PART:
         objGfx1 = OBJ_EVENT_GFX_GENTLEMAN;
         break;

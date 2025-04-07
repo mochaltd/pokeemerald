@@ -1,0 +1,54 @@
+mapscripts ShivervaleTown_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ShivervaleTown_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ShivervaleTown_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_SHIVERVALE_TOWN)
+    end
+}
+
+script ShivervaleTown_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, LOCALID_NURSE)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+	end
+}
+
+script ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("The man at the house to the south of here gave me an HM!\p"
+	"I used it to teach my Pokémon how to CUT down skinny trees."))
+    closemessage
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}
+
+script ShivervaleTown_PokemonCenter_1F_EventScript_MaleandFemalePokemon {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("Just like people, there are male and female Pokémon.\p
+    But no one seems to have any idea how they're different."))
+    closemessage
+    applymovement(5, moves(face_original_direction))
+    waitmovement(5)
+    release
+}
+
+script ShivervaleTown_PokemonCenter_1F_EventScript_PokemonCenter {
+    lock
+    applymovement(6, moves(face_player))
+    waitmovement(6)
+    msgbox(format("Technology has been changing so quickly. To think you can now heal Pokémon in an instant!\p
+    What's next, a portable communication device?"))
+    closemessage
+    applymovement(6, moves(face_original_direction))
+    waitmovement(6)
+    release
+}

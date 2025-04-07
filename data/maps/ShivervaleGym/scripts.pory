@@ -1,0 +1,97 @@
+mapscripts ShivervaleGym_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_SHIVERVALE_TOWN_STATE) >= 2) {
+            setmaplayoutindex(LAYOUT_SHIVERVALE_GYM_POST_BATTLE)
+        }
+    }
+}
+
+script ShivervaleGym_EventScript_Bill_Trigger {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    goto(Route2_EventScript_Bill)
+}
+
+script Route2_EventScript_Bill {
+    trainerbattle_single(TRAINER_EXPERT_BILL_SHIVERVALEGYM, ShivervaleGym_Text_BillIntro, ShivervaleGym_Text_BillOutro, Shivervale_Gym_EventScript_BillDefeated)
+    msgbox(ShivervaleGym_Text_BillPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text ShivervaleGym_Text_BillIntro {
+    format("A second trainer wishes to begin the trials? How surprising.\p
+    How were you made aware of the trials?\p
+    ...\n...\p
+    I see.\p
+    Well, in order to begin the trials, you must prove yourself first.\p
+    My Pokémon and I may have been out of battle for a while, but we will not be so easily defeated.\p
+    Prepare yourself!")
+}
+
+text ShivervaleGym_Text_BillOutro {
+    format("You have proven yourself worthy, young trainer. A bright future you have, indeed.")
+}
+
+script Shivervale_Gym_EventScript_BillDefeated {
+    lock
+    msgbox(format("Please, go forth through these doors. Selene is waiting."))
+    setflag(FLAG_DEFEATED_BILL)
+    setvar(VAR_SHIVERVALE_TOWN_STATE, 2)
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    setmetatile(7, 3, 0x232, FALSE)
+    setmetatile(7, 2, 0x237, FALSE)
+    playse(SE_DOOR)
+    special(DrawWholeMapView)
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+text ShivervaleGym_Text_BillPostBattle {
+    format("Please, go forth through these doors. Selene is waiting.")
+}
+
+script ShivervaleGym_EventScript_Girl3 {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("I like to come here when I need to refocus myself. Selene is a huge inspiration for me."))
+    closemessage
+    release
+}
+
+script ShivervaleGym_EventScript_Boy2 {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("The gardens out back are so pretty. Sometimes it's just nice to sit here and relax."))
+    closemessage
+    release
+}
+
+script ShivervaleGym_MartEmployee {
+    call_if_unset(FLAG_SHIVERVALE_GYM_FRESH_WATER, ShivervaleGym_MartEmployee_FreshWater)
+    call_if_set(FLAG_SHIVERVALE_GYM_FRESH_WATER, ShivervaleGym_MartEmployee_Enjoy)
+}
+
+script ShivervaleGym_MartEmployee_FreshWater {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Have a refreshment and enjoy your time in the temple."))
+    closemessage
+    giveitem(ITEM_FRESH_WATER)
+    setflag(FLAG_SHIVERVALE_GYM_FRESH_WATER)
+    release
+}
+
+script ShivervaleGym_MartEmployee_Enjoy {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Enjoy your time in the temple."))
+    closemessage
+    release
+}

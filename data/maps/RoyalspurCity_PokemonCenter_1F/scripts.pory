@@ -1,0 +1,42 @@
+mapscripts RoyalspurCity_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: RoyalspurCity_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script RoyalspurCity_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_ROYALSPUR_CITY)
+    end
+}
+
+script RoyalspurCity_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, LOCALID_NURSE)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+	end
+}
+
+script RoyalspurCity_PokemonCenter_1F_EventScript_TrainersCanUsePC {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("That PC in the corner there is for any Pokémon Trainer to use.\p
+	Naturally, that means you're welcome to use it, too."))
+    closemessage
+    applymovement(5, moves(face_original_direction))
+    waitmovement(5)
+    release
+}
+
+script RoyalspurCity_PokemonCenter_1F_EventScript_PokeCentersAreGreat {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Pokémon Centers are great! You can use their services as much as you like, and it's all for free.\p
+	You never have to worry!"))
+    closemessage
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}

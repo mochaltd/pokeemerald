@@ -1,0 +1,87 @@
+mapscripts BravefortTown_AbandonedWarehouse_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(flag(FLAG_ENTERED_PASSWORD)) {
+            setmaplayoutindex(LAYOUT_BRAVEFORT_TOWN_ABANDONED_WAREHOUSE_PASSWORD)
+        }
+    }
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance {
+    goto_if_unset(FLAG_GOT_PASSWORD, BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_NoPassword)
+    goto_if_set(FLAG_GOT_PASSWORD, BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_Password)
+    goto_if_eq(VAR_BRAVEFORT_TOWN_STATE, 1, BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_PasswordEntered)
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_NoPassword {
+    lock
+    msgbox(format("The computer is asking for a password."))
+    closemessage
+    release
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_Password {
+    lock
+    msgbox(format("{PLAYER} entered the password..."))
+    playse(SE_CLICK)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
+    waitmovement(0)
+    playse(SE_PIN)
+    setmetatile(23, 5, 0x228, FALSE)
+    msgbox(format("It sounds like something opened up somewhere."))
+    setvar(VAR_BRAVEFORT_TOWN_STATE, 1)
+    setflag(FLAG_ENTERED_PASSWORD)
+    closemessage
+    release
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_SecretEntrance_PasswordEntered {
+    lock
+    msgbox(format("The password has already been entered."))
+    closemessage
+    release
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_Shawn {
+    trainerbattle_single(TRAINER_SHAWN, BravefortTown_AbandonedWarehouse_Text_ShawnIntro, BravefortTown_AbandonedWarehouse_Text_ShawnOutro)
+    msgbox(BravefortTown_AbandonedWarehouse_Text_ShawnPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_AbandonedWarehouse_Text_ShawnIntro {
+    format("You're never going to find our hideout!")
+}
+
+text BravefortTown_AbandonedWarehouse_Text_ShawnOutro {
+    format("You're not a regular guard.")
+}
+
+text BravefortTown_AbandonedWarehouse_Text_ShawnPostBattle {
+    format("Even if I wanted to give you the password, they didn't tell me what it was. Ha!")
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_GangMember {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Get outta here, this ain't no place for a kid."))
+    closemessage
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
+    release
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_Elixir {
+    lock
+    removeobject(1)
+    giveitem(ITEM_ELIXIR)
+    release
+}
+
+script BravefortTown_AbandonedWarehouse_EventScript_XSpecial {
+    lock
+    removeobject(2)
+    giveitem(ITEM_X_SPECIAL)
+    release
+}

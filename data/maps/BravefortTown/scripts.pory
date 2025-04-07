@@ -1,0 +1,282 @@
+mapscripts BravefortTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: BravefortTown_OnTransition
+}
+
+script BravefortTown_OnTransition {
+    setflag(FLAG_VISITED_BRAVEFORT_TOWN)
+    end
+}
+
+script BravefortTown_EventScript_TempleSign {
+    lock
+    msgbox(format("{UP_ARROW} Bravefort Temple\p
+    In honor of Barlow, Commander of the Seas."))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_TwoSeaTowerSign {
+    lock
+    msgbox(format("Two Sea Tower"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_OneSeaTowerSign {
+    lock
+    msgbox(format("One Sea Tower"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_LabSign {
+    lock
+    msgbox(format("Bravefort Pokémon Lab"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_NameRaterSign {
+    lock
+    msgbox(format("Name Rater's House"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_WarehouseSign {
+    lock
+    msgbox(format("Bravefort Shipping Warehouse"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Scientist {
+    lock
+    applymovement(14, moves(face_player))
+    waitmovement(14)
+    msgbox(format("I've been working some long hours in the lab, I needed to get some fresh air."))
+    closemessage
+    applymovement(14, moves(face_original_direction))
+    waitmovement(14)
+    release
+}
+
+script BravefortTown_EventScript_GoodForHair {
+    lock
+    applymovement(15, moves(face_player))
+    waitmovement(15)
+    msgbox(format("The ocean has so many more benefits than just being beautiful. The fresh ocean air is great for my hair and skin!"))
+    closemessage
+    applymovement(15, moves(face_original_direction))
+    waitmovement(15)
+    release
+}
+
+script BravefortTown_EventScript_TwoSeas {
+    lock
+    applymovement(12, moves(face_player))
+    waitmovement(12)
+    msgbox(format("Enjoy your visit to Two Seas Tower!"))
+    closemessage
+    applymovement(12, moves(face_original_direction))
+    waitmovement(12)
+    release
+}
+
+script BravefortTown_EventScript_Guard {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    if(var(VAR_BRAVEFORT_TOWN_STATE) > 3) {
+    msgbox(format("Thank you for your help in stopping the Venom Locust. We are greatly appreciative."))
+    closemessage
+    } elif(var(VAR_BRAVEFORT_TOWN_STATE) < 3) {
+    msgbox(format("We're trying to track down the thieves that were behind the theft at the Pokémon Day Care.\p
+    We tracked them to this abandoned warehouse but we don't know where they went from there.\p
+    You're welcome to take a look inside."))
+    closemessage
+    }
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}
+
+script BravefortTown_EventScript_Guard_VenomLocustArrested {
+    lock
+    applymovement(1, moves(emote_exclamation_mark, face_player))
+    waitmovement(1)
+    playse(SE_PIN)
+    msgbox(format("Hey, it's you!\p
+    Because of you, the police were able to arrest the members of the Venom Locust that were down in the sewer planning their attack on One and Two Sea Tower.\p
+    Here, this reward is for you."))
+    msgbox(format("{PAUSE_MUSIC} {PLAYER} received ¥4,000!"))
+    playse(MUS_OBTAIN_ITEM)
+    waitse
+    addmoney(4000)
+    closemessage
+    setflag(FLAG_RECEIVED_POLICE_REWARD)
+    setvar(VAR_BRAVEFORT_TOWN_STATE, 4)
+    msgbox(format("{RESUME_MUSIC} Thank you again!"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Military {
+    lock
+    applymovement(14, moves(face_player))
+    waitmovement(14)
+    msgbox(format("Have you ever wondered where the name Bravefort comes from?\p
+    Many, many years ago, Shizen had a military force headquartered here, and their fort was located where the apartments are now located.\p
+    It rubs me the wrong way that they would destroy a part of history just for more living spaces."))
+    closemessage
+    applymovement(14, moves(face_original_direction))
+    waitmovement(14)
+    release
+}
+
+script BravefortTown_EventScript_CantPassYet {
+    lock
+    applymovement(13, moves(face_player))
+    waitmovement(13)
+    msgbox(format("I'm sorry, we're not allowing anyone into the temple grounds until we find the culprit that attacked the Day Care.\p
+    Please come back later once our investigation has included."))
+    closemessage
+    applymovement(13, moves(face_original_direction))
+    waitmovement(13)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script BravefortTown_EventScript_GuardCantPassYet {
+    lock
+    applymovement(13, moves(face_player))
+    waitmovement(13)
+    if(var(VAR_BRAVEFORT_TOWN_STATE) < 3) {
+    msgbox(format("I'm sorry, we're not allowing anyone into the temple grounds until we find the culprit that attacked the Day Care.\p
+    Please come back later once our investigation has included."))
+    closemessage
+    }
+    elif(var(VAR_BRAVEFORT_TOWN_STATE) > 3) {
+    msgbox(format("Thank you for helping us capture those thugs. Enjoy your time in the temple!"))
+    closemessage 
+    }
+    applymovement(13, moves(face_original_direction))
+    waitmovement(13)
+    release
+}
+
+script BravefortTown_EventScript_DisgruntledSailor {
+    lock
+    applymovement(3, moves(face_player))
+    waitmovement(3)
+    msgbox(format("Moving goods over to the warehouse was a lot easier before they built these stupid towers here."))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Sailor {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Do you ever wonder what's in some of these boxes?\p
+    I hope I wouldn't get in trouble if something bad was in them."))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Girlfriend {
+    lock
+    applymovement(4, moves(face_player))
+    waitmovement(4)
+    msgbox(format("Don't you think lighthouses are so romantic?"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Boyfriend {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("People say that an AMPHAROS provides light from the lighthouse.\p
+    Pokémon are amazing."))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Ghost {
+    lock
+    applymovement(6, moves(face_player))
+    waitmovement(6)
+    msgbox(format("This new warehouse was built about 5 years ago after we outgrew the old one.\p
+    Rumors say that the ghost of Pirate Captain Driftide haunts the old warehouse.\p
+    I think that's just something that was made up to try and keep people out of there."))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Walter {
+    trainerbattle_single(TRAINER_WALTER_2, BravefortTown_Text_WalterIntro, BravefortTown_Text_WalterOutro)
+    msgbox(BravefortTown_Text_WalterPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Text_WalterIntro {
+    format("Care to have a beach battle with a gentleman?")
+}
+
+text BravefortTown_Text_WalterOutro {
+    format("You battle exquisitly.")
+}
+
+text BravefortTown_Text_WalterPostBattle {
+    format("Is it weird wearing a suit on the beach?")
+}
+
+script BravefortTown_EventScript_Beauty {
+    lock
+    applymovement(11, moves(face_player))
+    waitmovement(11)
+    msgbox(format("My children love Pokémon battling!"))
+    closemessage
+    release
+}
+
+script BravefortTown_EventScript_Austina {
+    trainerbattle_single(TRAINER_AUSTINA, BravefortTown_Text_AustinaIntro, BravefortTown_Text_AustinaOutro)
+    msgbox(BravefortTown_Text_AustinaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Text_AustinaIntro {
+    format("Play in the sand with me!")
+}
+
+text BravefortTown_Text_AustinaOutro {
+    format("Waahhhh, you beat me!")
+}
+
+text BravefortTown_Text_AustinaPostBattle {
+    format("You were supposed to let me win!")
+}
+
+script BravefortTown_EventScript_Simon {
+    trainerbattle_single(TRAINER_SIMON, BravefortTown_Text_SimonIntro, BravefortTown_Text_SimonOutro)
+    msgbox(BravefortTown_Text_SimonPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text BravefortTown_Text_SimonIntro {
+    format("I've won against my sister 4 times now, you're going to make it my first 5 win streak!")
+}
+
+text BravefortTown_Text_SimonOutro {
+    format("Wow, you're strong...")
+}
+
+text BravefortTown_Text_SimonPostBattle {
+    format("I'll try to get a higher win streak tomorrow!")
+}

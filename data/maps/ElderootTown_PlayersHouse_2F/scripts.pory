@@ -1,0 +1,45 @@
+mapscripts ElderootTown_PlayersHouse_2F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ELDEROOT_TOWN_STATE, 0: IntroText
+    ]
+    MAP_SCRIPT_ON_TRANSITION: ElderootTown_HealLocation_OnTransition
+}
+
+script ElderootTown_HealLocation_OnTransition {
+    setrespawn(HEAL_LOCATION_ELDEROOT_TOWN_PLAYERS_HOUSE_2F)
+    end
+}
+
+script IntroText {
+    lockall
+    msgbox (format("Mom: {PLAYER}? Could you come downstairs please?"))
+    setflag (FLAG_SYS_B_DASH)
+    setvar(VAR_ELDEROOT_TOWN_STATE, 1)
+    releaseall
+}
+
+script ElderootTown_EventScript_GetPotions {
+    lockall
+    giveitem (ITEM_POTION, 5)
+    giveitem (ITEM_POKE_BALL, 5)
+    giveitem (ITEM_TOWN_MAP)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("{PLAYER} received a Pokédex!"))
+    waitfanfare
+    closemessage
+    removeobject(2)
+    setflag(FLAG_SYS_POKEDEX_GET)
+    special(SetUnlockedPokedexFlags)
+    msgbox(format("What is a Pokédex? I wonder what it does...\p
+    I'll figure it out later."))
+    closemessage
+    releaseall
+    end
+}
+
+script ElderootTown_EventScript_PikachuDoll {
+    lockall
+    msgbox (format("Mom got me this Pikachu doll for my birthday a few years ago."))
+    releaseall
+    end
+}

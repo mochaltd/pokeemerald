@@ -1,0 +1,15 @@
+mapscripts Route1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route1_HealLocation_OnTransition
+}
+
+script Route1_HealLocation_OnTransition {
+    setrespawn(HEAL_LOCATION_ELDEROOT_TOWN_PLAYERS_HOUSE_2F)
+    end
+}
+
+script Route1_EventScript_RouteSign {
+    lock
+    msgbox(format("{DOWN_ARROW} Route 2"))
+    closemessage
+    release
+}

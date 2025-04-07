@@ -1,0 +1,98 @@
+mapscripts EvergreenForest_House_MapScripts {
+    
+}
+
+script EvergreenForest_House_EventScript_SetupPhantump {
+    call_if_set(FLAG_TALKED_OLD_WOMAN, EvergreenForest_House_EventScript_Phantump)
+    call_if_unset(FLAG_TALKED_OLD_WOMAN, EvergreenForest_House_EventScript_PhantumpCry)
+}
+
+script EvergreenForest_House_EventScript_OldWoman {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Oh, a visitor!\p
+    Excuse my surprise but I don't really get very many visitors, unless it's my granddaughter.\p
+    ...\l
+    ...\p
+    You helped my granddaughter protect the shrine? You must be a very capable Pokémon trainer.\p
+    You know, my PHANTUMP here has been a loyal friend for many years helping me make medicine here in my home, but lately I can sense it's getting more of an adventurous spirit.\p
+    And I can sense that it trusts you after telling me you helped save my granddaughter."))
+    msgbox("Would you be willing to take PHANTUMP\n
+    with you on your journey?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES)
+        {
+            msgbox(format("Oh, splendid! You can go talk to PHANTUMP when you're ready."))
+            setflag(FLAG_TALKED_OLD_WOMAN)
+        }
+    else
+        {
+            msgbox(format("Oh...well that's okay. I'm sure he'll find adventure in other ways."))
+        }
+    waitmessage
+    release
+}
+
+script EvergreenForest_House_EventScript_Phantump {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    showmonpic(SPECIES_PHANTUMP, 10, 3)
+    msgbox("Take PHANTUMP with you?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES)
+    {
+        givemon(SPECIES_PHANTUMP, 10)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY)
+        {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received PHANTUMP!")
+            removeobject(2)
+            setflag(FLAG_RECEIVED_PHANTUMP)
+            setflag(FLAG_SYS_POKEMON_GET)
+            call(NicknamePhantumpPartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC)
+        {
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("{PLAYER} received PHANTUMP!")
+            removeobject(2)
+            setflag(FLAG_RECEIVED_PHANTUMP)
+            call(NicknamePhantumpBoxMon)
+        }
+    }
+    else
+    {
+        hidemonpic
+        msgbox(format("You left PHANTUMP where he was."))
+    }
+    release
+}
+
+script NicknamePhantumpPartyMon {
+    msgbox("Do you want to give Phantump a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknamePhantumpBoxMon {
+    msgbox("Do you want to give Phantump a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        call(Common_EventScript_TransferredToPC)
+    }
+}
+
+script EvergreenForest_House_EventScript_PhantumpCry {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Fwaaaaoooomph!"))
+    playmoncry(SPECIES_PHANTUMP, CRY_MODE_NORMAL)
+    waitmoncry
+    closemessage
+    release
+}

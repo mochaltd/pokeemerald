@@ -1,0 +1,81 @@
+{
+  "id": "MAP_DISTORTED_PATH",
+  "name": "DistortedPath",
+  "layout": "LAYOUT_DISTORTED_PATH",
+  "music": "MUS_RG_LAVENDER",
+  "region_map_section": "MAPSEC_DISTORTED_PATH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNKNOWN",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_ELDEROOT_TOWN",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_ELDEROOT_TOWN",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 16,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_ELDEROOT_TOWN",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_ELDEROOT",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "5",
+      "script": "DistortedPath_EventScripts_PathClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "5",
+      "script": "DistortedPath_EventScripts_PathClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ELDEROOT_TOWN_STATE",
+      "var_value": "5",
+      "script": "DistortedPath_EventScripts_PathClosed"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -1,0 +1,433 @@
+mapscripts CoaltineTunnel_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: CoaltineTunnel_OnTransition
+}
+
+script CoaltineTunnel_OnTransition {
+    call_if_set(FLAG_COALTINE_GRUNTBATTLE, CoaltineTunnel_EventScript_SetupGruntBattle)
+    call_if_set(FLAG_HIDE_COALTINE_SCIENTIST, CoaltineTunnel_EventScript_SetupScientist)
+    end
+}
+
+script CoaltineTunnel_EventScript_SetupGruntBattle {
+    if (!(var(VAR_ROYALSPUR_CITY_STATE) == 6 )) {
+        setflag(FLAG_COALTINE_GRUNTBATTLE)
+    }
+    else{
+        if(var(VAR_ROYALSPUR_CITY_STATE) == 6){
+        clearflag(FLAG_COALTINE_GRUNTBATTLE)
+        }
+    }
+}
+
+script CoaltineTunnel_EventScript_SetupScientist {
+    if (!(var(VAR_ROYALSPUR_CITY_STATE) == 6 )) {
+        setflag(FLAG_HIDE_COALTINE_SCIENTIST)
+    }
+    else{
+        if(var(VAR_ROYALSPUR_CITY_STATE) == 6){
+        clearflag(FLAG_HIDE_COALTINE_SCIENTIST)
+        }
+    }
+}
+
+script CoaltineTunnel_EventScript_Trigger1 {
+    lock
+    msgbox(format("Please, let me go!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left * 2, walk_down, walk_left * 6, face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, moves(face_right))
+    waitmovement(1)
+    msgbox(format("I promise you, I don't know anything else, I'm just a scientist!"))
+    closemessage
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    msgbox(format("We know you're lying! We know this writing says something about how the crystals in this cave are connected to the gods DIALGA and PALKIA!"))
+    closemessage
+    applymovement(3, moves(face_right))
+    waitmovement(3)
+    msgbox(format("Translate it for us, or you'll be sorry!"))
+    closemessage
+    applymovement(3, moves(emote_exclamation_mark, face_down))
+    waitmovement(3)
+    playse(SE_PIN)
+    msgbox(format("Hey, who is this kid?"))
+    closemessage
+    applymovement(2, moves(walk_down, face_left))
+    waitmovement(2)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    goto(CoaltineTunnel_EventScript_Grunt1Battle)
+    release
+}
+
+script CoaltineTunnel_EventScript_Trigger2 {
+    lock
+    msgbox(format("Please, let me go!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left * 8, face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, moves(face_right))
+    waitmovement(1)
+    msgbox(format("I promise you, I don't know anything else, I'm just a scientist!"))
+    closemessage
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    msgbox(format("We know you're lying! We know this writing says something about how the crystals in this cave are connected to the gods DIALGA and PALKIA!"))
+    closemessage
+    applymovement(3, moves(face_right))
+    waitmovement(3)
+    msgbox(format("Translate it for us, or you'll be sorry!"))
+    closemessage
+    applymovement(3, moves(emote_exclamation_mark, face_down))
+    waitmovement(3)
+    playse(SE_PIN)
+    msgbox(format("Hey, who is this kid?"))
+    closemessage
+    applymovement(2, moves(walk_down, face_left))
+    waitmovement(2)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    goto(CoaltineTunnel_EventScript_Grunt1Battle)
+    release
+}
+
+script CoaltineTunnel_EventScript_Trigger3 {
+    lock
+    msgbox(format("Please, let me go!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left * 8, walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, moves(face_right))
+    waitmovement(1)
+    msgbox(format("I promise you, I don't know anything else, I'm just a scientist!"))
+    closemessage
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    msgbox(format("We know you're lying! We know this writing says something about how the crystals in this cave are connected to the gods DIALGA and PALKIA!"))
+    closemessage
+    applymovement(3, moves(face_right))
+    waitmovement(3)
+    msgbox(format("Translate it for us, or you'll be sorry!"))
+    closemessage
+    applymovement(3, moves(emote_exclamation_mark, face_down))
+    waitmovement(3)
+    playse(SE_PIN)
+    msgbox(format("Hey, who is this kid?"))
+    closemessage
+    applymovement(2, moves(walk_down, face_left))
+    waitmovement(2)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    goto(CoaltineTunnel_EventScript_Grunt1Battle)
+    release
+}
+
+script CoaltineTunnel_EventScript_Grunt1Battle{
+    trainerbattle_double(TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt1Defeated)
+    release
+    end
+}
+
+text CoaltineTunnel_Text_NotEnoughMons {
+    format("Oh, you don't have enough Pokémon.")
+}
+
+text CoaltineTunnel_Text_Grunt1Intro {
+    format("This must be the kid that took down those guys in the Evergreen Forest. He can't be that tough.\p
+    We'll show you what happens to those who meddle in the business of Team Umbra!")
+}
+
+text CoaltineTunnel_Text_Grunt1Outro {
+    format("Maybe you are that tough.")
+}
+
+script CoaltineTunnel_EventScript_Grunt1Defeated {
+    lock
+    msgbox(format("You're one hell of a trainer, kid, I'll give you that."))
+    closemessage
+    applymovement(3, moves(walk_down, face_right))
+    waitmovement(3)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    setvar(VAR_ROYALSPUR_CITY_STATE, 7)
+    goto(CoaltineTunnel_EventScript_Grunt2Battle)
+    release
+}
+
+script CoaltineTunnel_EventScript_Grunt2Battle{
+    trainerbattle_double(TRAINER_GRUNT_AQUA_HIDEOUT_2, CoaltineTunnel_Text_Grunt2Intro, CoaltineTunnel_Text_Grunt2Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt2Defeated)
+    release
+    end
+}
+
+text CoaltineTunnel_Text_Grunt2Intro {
+    format("You might have beaten him, but can you take on both of us?")
+}
+
+text CoaltineTunnel_Text_Grunt2Outro {
+    format("Who taught you to battle like that?")
+}
+
+script CoaltineTunnel_EventScript_Grunt2Defeated {
+    lock
+    msgbox(format("Tch...this doesn't matter anyways, we at least have something to take back to the boss.\p
+    You only inconvenienced us for now.\p
+    Let's get out of here. We better warn the boss about this kid."))
+    closemessage
+    setvar(VAR_ROYALSPUR_CITY_STATE, 8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    removeobject(3)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(1, moves(face_down))
+    waitmovement(1)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Thank you for helping me, I'm sorry you got caught up in that. I was traveling through here to visit the mayor in Royalspur City when those goons cornered me.\p
+    They were wanting me to translate this ancient Shizen writing for them. The legend goes that long ago, miners were harvesting the crystals from this cave at an alarming rate.\p
+    This angered DIALGA and PALKIA and they caused the tunnel to collapse and trap the miners."))
+    applymovement(1, moves(face_up))
+    waitmovement(1)
+    msgbox(format("These writings were from the miners. They were carving their prayers into this wall asking for the gods to forgive them."))
+    applymovement(1, moves(face_down))
+    waitmovement(1)
+    msgbox(format("Here, I would like to give you something for helping me out. It's a new invention that I was hoping to have tested and it seems like you would be perfect for it!"))
+    closemessage
+    giveitem(ITEM_EXP_SHARE)
+    msgbox(format("Also, could I ask you for a favor? I was delivering this letter to the mayor of Royalspur City but I'd like to head back to Bravefort Town to collect myself.\p
+    Since you're a capable trainer and just came from there, you shouldn't have any issues!"))
+    closemessage
+    giveitem(ITEM_LETTER)
+    msgbox(format("Feel free to come visit me at the lab when you make it to Bravefort Town!"))
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    fadescreen(FADE_FROM_BLACK)
+    setflag(FLAG_SAVED_MAYOR_FRIEND)
+    setvar(VAR_BRAVEFORT_TOWN_STATE, 0)
+    release
+}
+
+script CoaltineTunnel_EventScript_CantLeaveYet {
+    lock
+    applymovement(7, moves(face_right))
+    waitmovement(7)
+    msgbox(format("I'm sorry, I can't let you through right now. The police are investigating something on Route 6 and asked me to keep the route clear for them."))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script CoaltineTunnel_EventScript_Hiker {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    if(var(VAR_ROYALSPUR_CITY_STATE) == 9) {
+        msgbox(format("The police are finished up. Happy hiking!"))
+        closemessage
+    }
+    elif(!(var(VAR_ROYALSPUR_CITY_STATE) == 9)) {
+        msgbox(format("I'm sorry, I can't let you through right now. The police are investigating something on Route 6 and asked me to keep the route clear for them."))
+    }
+    closemessage
+    release
+}
+
+script CoaltineTunnel_EventScript_Felix {
+    trainerbattle_single(TRAINER_FELIX, CoaltineTunnel_Text_FelixIntro, CoaltineTunnel_Text_FelixOutro)
+    msgbox(CoaltineTunnel_Text_FelixPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_FelixIntro {
+    format("I need to stay in top form if I'm going to serve and protect!")
+}
+
+text CoaltineTunnel_Text_FelixOutro {
+    format("I gotta work harder if I'm going to get that promotion.")
+}
+
+text CoaltineTunnel_Text_FelixPostBattle {
+    format("Have you ever considered a career in law enforcement?")
+}
+
+script CoaltineTunnel_EventScript_Mark {
+    trainerbattle_single(TRAINER_MARK, CoaltineTunnel_Text_MarkIntro, CoaltineTunnel_Text_MarkOutro)
+    msgbox(CoaltineTunnel_Text_MarkPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_MarkIntro {
+    format("Hey! Are you searching for Pokémon?\p
+    You came along after me! You're rude!")
+}
+
+text CoaltineTunnel_Text_MarkOutro {
+    format("Ayieeeeh! I'm sorry, forgive me, please!")
+}
+
+text CoaltineTunnel_Text_MarkPostBattle {
+    format("People don't come here often, so I thought there'd be rare Pokémon.")
+}
+
+script CoaltineTunnel_EventScript_Mitchell {
+    trainerbattle_single(TRAINER_MITCHELL, CoaltineTunnel_Text_MitchellIntro, CoaltineTunnel_Text_MitchellOutro)
+    msgbox(CoaltineTunnel_Text_MitchellPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_MitchellIntro {
+    format("This cave isn't even that scary. Bring it on!")
+}
+
+text CoaltineTunnel_Text_MitchellOutro {
+    format("Now that you mention it, is it getting darker in here?")
+}
+
+text CoaltineTunnel_Text_MitchellPostBattle {
+    format("I just gotta stay cool, that's all...")
+}
+
+script CoaltineTunnel_EventScript_Yuji {
+    trainerbattle_single(TRAINER_YUJI, CoaltineTunnel_Text_YujiIntro, CoaltineTunnel_Text_YujiOutro)
+    msgbox(CoaltineTunnel_Text_YujiPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_YujiIntro {
+    format("The harsh conditions in this cave just make me tougher!")
+}
+
+text CoaltineTunnel_Text_YujiOutro {
+    format("Never give up, never surrender.")
+}
+
+text CoaltineTunnel_Text_YujiPostBattle {
+    format("My grunting echoes a lot in here.")
+}
+
+script CoaltineTunnel_EventScript_MartEmployee {
+    call_if_unset(FLAG_RECEIVED_SUPER_POTIONS, CoaltineTunnel_EventScript_MartEmployeePotions)
+    call_if_set(FLAG_RECEIVED_SUPER_POTIONS, CoaltineTunnel_EventScript_MartEmployeeGoodLuck)
+}
+
+script CoaltineTunnel_EventScript_MartEmployeePotions {
+    applymovement(16, moves(face_player))
+    waitmovement(16)
+    msgbox(format("Oh dear, I think I got lost somewhere...\p
+    Oh, you look like a Pokémon trainer! Here, I think these will be better used with you."))
+    closemessage
+    giveitem(ITEM_SUPER_POTION, 3)
+    setflag(FLAG_RECEIVED_SUPER_POTIONS)
+    release
+}
+
+script CoaltineTunnel_EventScript_MartEmployeeGoodLuck {
+    lock
+    applymovement(16, moves(face_player))
+    waitmovement(16)
+    msgbox(format("Don't worry about me, I just need to retrace my steps."))
+    closemessage
+    release
+}
+
+script CoaltineTunnel_EventScript_Miner {
+    lock
+    applymovement(7, moves(face_player))
+    waitmovement(7)
+    msgbox(format("Surely the gods won't mind if I just try to take a little bit of these crystals, right?"))
+    closemessage
+    applymovement(7, moves(face_original_direction))
+    waitmovement(7)
+    call(CoaltineTunnel_EventScript_PathShake)
+    msgbox(format("...Maybe I should stop digging..."))
+    closemessage
+    release
+}
+
+script CoaltineTunnel_EventScript_PathShake {
+    delay(30)
+    setvar(VAR_0x8004, 2)
+    setvar(VAR_0x8005, 6)
+    setvar(VAR_0x8006, 6)
+    setvar(VAR_0x8007, 4)
+    special(ShakeCamera)
+    waitstate
+    delay(30)
+}
+
+script CoaltineTunnel_EventScript_Wyatt {
+    trainerbattle_single(TRAINER_WYATT, CoaltineTunnel_Text_WyattIntro, CoaltineTunnel_Text_WyattOutro)
+    msgbox(CoaltineTunnel_Text_WyattPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_WyattIntro {
+    format("Rare Pokémon make life worth living!")
+}
+
+text CoaltineTunnel_Text_WyattOutro {
+    format("Your Pokémon are simply amazing.")
+}
+
+text CoaltineTunnel_Text_WyattPostBattle {
+    format("Did you know there's a place in Shizen that is inhabited entirely by dragons? Someday, I'll be able to go there.")
+}
+
+script CoaltineTunnel_EventScript_Patricia {
+    trainerbattle_single(TRAINER_WYATT, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro)
+    msgbox(CoaltineTunnel_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text CoaltineTunnel_Text_PatriciaIntro {
+    format("Feeling tired yet? Maybe you should lie down and rest. I'll watch to make sure no one bothers you.")
+}
+
+text CoaltineTunnel_Text_PatriciaOutro {
+    format("Oh...you're not even tired.")
+}
+
+text CoaltineTunnel_Text_PatriciaPostBattle {
+    format("I promise I'm not weird.")
+}
+
+script CoaltineTunnel_EventScript_Ball1 {
+    lock
+    removeobject(9)
+    giveitem(ITEM_ESCAPE_ROPE)
+    release
+}
+
+script CoaltineTunnel_EventScript_Ball2 {
+    lock
+    removeobject(14)
+    giveitem(ITEM_IRON)
+    release
+}
+
+script CoaltineTunnel_EventScript_Ball3 {
+    lock
+    removeobject(10)
+    giveitem(ITEM_ZINC)
+    release
+}
+
+script CoaltineTunnel_EventScript_UnderDevelopment {
+    lock
+    applymovement(16, moves(face_player))
+    waitmovement(16)
+    msgbox(format("This area is currently under development. Check back later!"))
+    closemessage
+    applymovement(16, moves(face_original_direction))
+    waitmovement(16)
+    release
+}

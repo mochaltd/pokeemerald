@@ -1,0 +1,36 @@
+mapscripts RoyalspurCity_MayorHouse_1F_MapScripts {
+    
+}
+
+script RoyalspurCity_MayorHouse_1F_EventScript_Husband {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Oh, are you looking for my wife? She's working upstairs."))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
+
+script RoyalspurCity_MayorHouse_1F_EventScript_Boy {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("Mom has to work a lot, being the mayor and all. But she's always there for the big moments."))
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
+    closemessage
+    release
+}
+
+script RoyalspurCity_MayorHouse_1F_EventScript_Girl {
+    lock
+    applymovement(5, moves(face_player))
+    waitmovement(5)
+    msgbox(format("I love my Pokémon dolls!"))
+    applymovement(5, moves(face_original_direction))
+    waitmovement(5)
+    closemessage
+    release
+}

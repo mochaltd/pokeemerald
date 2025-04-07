@@ -1,0 +1,14 @@
+mapscripts ShivervaleTown_House1_MapScripts {
+    
+}
+
+script ShivervaleTown_House1_EventScript_Husband {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("My wife took the kids out to the park so I'm making sure she has a clean house to come back to.
+    The kids always leave their toys out..."))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release
+}

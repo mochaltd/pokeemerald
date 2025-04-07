@@ -1,0 +1,66 @@
+mapscripts RoyalspurCity_MayorHouse_2F_MapScripts {
+    
+}
+
+//script RoyalspurCity_MayorHouse_2F_EventScript_Mayor {
+    //goto_if_set(FLAG_RECEIVED_BIKE_VOUCHER, Mayor_GoodLuck)
+    //goto_if_unset(FLAG_SAVED_MAYOR_FRIEND, ImTheMayor)
+    //goto_if_set(FLAG_SAVED_MAYOR_FRIEND, GiveBikeVoucher)
+//}
+
+script RoyalspurCity_MayorHouse_2F_EventScript_Mayor {
+    if(var(VAR_ROYALSPUR_CITY_STATE) <= 6) {
+        goto(ImTheMayor)
+    }
+    if(var(VAR_ROYALSPUR_CITY_STATE) >= 8) {
+        goto(GiveBikeVoucher)
+    }
+    if(var(VAR_ROYALSPUR_CITY_STATE) >= 9) {
+        goto(Mayor_GoodLuck)
+    }
+}
+
+script ImTheMayor {
+   lock
+   applymovement(1, moves(face_player))
+   waitmovement(1)
+   msgbox(format("Oh, hello! It's nice to see a new face here in Royalspur City, I hope it has been to your liking.\p
+   My name is Marlene and I'm the mayor of Royalspur City. Please let me know if there's anything I can do to make your visit better!"))
+   closemessage
+   applymovement(1, moves(face_original_direction))
+   waitmovement(1)
+   release 
+}
+
+script GiveBikeVoucher {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Hello again!\p
+    ...\l
+    ...\p
+    Oh my gosh, I hope he's okay! Thank you so much for rescuing him.\p
+    I've never heard of strange individuals like the ones you described, I hope they don't make their way to Royalspur.\p
+    Here, let me reward you for what you've done."))
+    giveitem(ITEM_BIKE_VOUCHER)
+    setflag(FLAG_RECEIVED_BIKE_VOUCHER)
+    msgbox(format("Oh, is that letter for me? I can take that off of your hands.\p
+    {PLAYER} handed over the Letter!"))
+    removeitem(ITEM_LETTER)
+    closemessage
+    setvar(VAR_ROYALSPUR_CITY_STATE, 9)
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    release 
+}
+
+script Mayor_GoodLuck {
+   lock
+   applymovement(1, moves(face_player))
+   waitmovement(1)
+   msgbox(format("Good luck on your journey! You are always welcome back in Royalspur!"))
+   closemessage
+   applymovement(1, moves(face_original_direction))
+   waitmovement(1)
+   release 
+}
