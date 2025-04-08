@@ -52,6 +52,35 @@ mart RoyalspurCity_Mart_SaleWoman {
     ITEM_PERSIM_BERRY
 }
 
+script RoyalspurCity_Mart_EventScript_Salesman {
+    lock
+    applymovement(8, moves(face_player))
+    waitmovement(8)
+    msgbox(format("I sell items to increase your Pokémon's power!"))
+    waitmessage
+    pokemart(RoyalspurCity_Mart_Salesman)
+    msgbox(format("Come back soon!"))
+    closemessage
+    release
+    end
+}
+
+mart RoyalspurCity_Mart_Salesman {
+    ITEM_SEA_INCENSE
+    ITEM_CHARCOAL
+    ITEM_CALCIUM
+    ITEM_CARBOS
+    ITEM_HP_UP
+    ITEM_IRON
+    ITEM_PROTEIN
+    ITEM_ZINC
+    ITEM_X_ACCURACY
+    ITEM_X_ATTACK
+    ITEM_X_DEFEND
+    ITEM_X_SPECIAL
+    ITEM_X_SPEED
+}
+
 script RoyalspurCity_EventScript_Beauty {
     lock
     applymovement(1, moves(face_player))
