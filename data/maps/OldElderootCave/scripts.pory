@@ -9,11 +9,11 @@ script GetPokemon {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 4))
     waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox(format("Welcome, {PLAYER}. It is here that your Pokémon journey will begin.\p
-    In order to bring Celebi back home, you must prove yourself as a trainer, and have an astounding bond with your Pokémon.\p
+    In order to bring CELEBI back home, you must prove yourself as a trainer, and have an astounding bond with your Pokémon.\p
     You must travel to the temples of the League of Eight, spread throughout the Shizen region.\p
     The League of Eight were the eight trainers that banded together to stop DIALGA and PALKIA and ended the War of Time.\p
     In each temple resides an avatar of each member of the League of Eight, where you must battle them with your Pokémon.\p 
-    If you're able to emerge victorious, they will bestow upon you a STONE. These eight STONES will be necessary in order to bring Celebi back.\p
+    If you're able to emerge victorious, they will bestow upon you a STONE. These eight STONES will be necessary in order to bring CELEBI back.\p
     Now, the time has come for you to choose your first Pokémon.\p
     In front of you are Poké Balls that contain rare Pokémon that have existed since the birth of the Shizen region.\p
     I have kept them here for safekeeping and one of them will serve you greatly on your journey. Choose the partner that speaks to your heart the most."))

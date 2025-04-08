@@ -20,15 +20,15 @@ script SageWelcome {
     waitmovement(1)
     msgbox(format("I know you must have so many questions, young {PLAYER}, but allow me to introduce myself first.\p
     I am known as The Sage of Elderoot, an ancient guardian watching over Old Elderoot, a long past version of the Elderoot Town you call home.\p
-    This past version of Elderoot Town was created by Celebi, the original guardian of Shizen, as a way to preserve the energy needed to sustain life here in this region.\p
-    Unfortunately, Celebi has not been seen for roughly 200 years...not since the War of Time, when the ancient beings DIALGA and PALKIA threatened the very existence of this world...\p
+    This past version of Elderoot Town was created by CELEBI, the original guardian of Shizen, as a way to preserve the energy needed to sustain life here in this region.\p
+    Unfortunately, CELEBI has not been seen for roughly 200 years...not since the War of Time, when the ancient beings DIALGA and PALKIA threatened the very existence of this world...\p
     ...and not since she appointed me as the new guardian of this place when she was forced to flee during the war that threatened her existence as well.\p
     Here in Old Elderoot lies the roots of the Primaroot Tree, the first tree on Shizen that birthed this region in its entirety...and continues to sustain it to this day.\p
     I don't know why I was chosen to guard over something so important to life itself, but I knew that I had to protect it at all costs.\p
     Now, I must ask you to do something of great importance...\p
     You being able to enter Old Elderoot confirms my fears...\p
     The energy that has sustained me for so long is beginning to wane and I fear my time is running out.\p 
-    I must ask you to bring Celebi home before I'm gone...\p
+    I must ask you to bring CELEBI home before I'm gone...\p
     ...before the barriers protecting this place break down completely.\p
     I'm not sure why the fates chose to bring us together, but it must have done it for a reason, and I believe you will be the one to bring balance back to the Shizen region."))
     msgbox("What do you say, {PLAYER}? Do you accept?", MSGBOX_YESNO) 
