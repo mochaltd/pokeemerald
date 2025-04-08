@@ -1,3 +1,23 @@
 mapscripts BravefortTown_OneSeaTower_4F_MapScripts {
 
 }
+
+script BravefortTown_OneSeaTower_4F_EventScript_SilkScarf {
+    if(flag(FLAG_RECEIVED_SILK_SCARF)) {
+        lock
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("You look splendid!"))
+        closemessage
+        release
+    }
+    elif(!(flag(FLAG_RECEIVED_SILK_SCARF))) {
+        applymovement(1, moves(face_player))
+        waitmovement(1)
+        msgbox(format("Oh dear child, we must get you something more fashionable. Here, I have just the thing!"))
+        closemessage
+        giveitem(ITEM_SILK_SCARF)
+        setflag(FLAG_RECEIVED_SILK_SCARF)
+        release
+    }
+}

@@ -1,0 +1,13 @@
+mapscripts BravefortTown_TwoSeaTower_1F_MapScripts {
+
+}
+
+script BravefortTown_TwoSeaTower_1F_EventScript_Puking {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("Some poor guy in there has been sick all morning.\p
+    I'm not looking forward to cleaning that up..."))
+    closemessage
+    release
+}

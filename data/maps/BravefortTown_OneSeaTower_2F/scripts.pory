@@ -8,3 +8,14 @@ script BravefortTown_OneSeaTower_2F_EventScript_Sign {
     closemessage
     release
 }
+
+script BravefortTown_OneSeaTower_2F_EventScript_LittleGirl {
+    lock
+    applymovement(1, moves(face_player))
+    waitmovement(1)
+    msgbox(format("I love running up and down the hallway!"))
+    applymovement(1, moves(face_original_direction))
+    waitmovement(1)
+    closemessage
+    release
+}
