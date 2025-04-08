@@ -22,7 +22,7 @@ script EvergreenForest_EventScript_UmbraPreBattle {
     lock
     applymovement(7, moves(face_player))
     waitmovement(7)
-    msgbox(format("Get lost, kid"))
+    msgbox(format("Get lost, kid."))
     closemessage
     release
 }
@@ -53,7 +53,7 @@ script EvergreenForest_EventScript_Grunt1Defeated {
     applymovement(7, moves(face_right))
     waitmovement(7)
     msgbox(format("Get outta the way, I'll show you how it's done."))
-    applymovement(7, moves(face_down))
+    applymovement(7, moves(walk_down, face_player))
     waitmovement(7)
     msgbox(format("You'll be sorry that you messed with us!"))
     closemessage
@@ -74,6 +74,8 @@ text EvergreenForest_Text_Grunt2Outro {
 
 script EvergreenForest_EventScript_Grunt2Defeated {
     lock
+    applymovement(7, moves(face_right))
+    waitmovement(7)
     msgbox(format("Come on, let's get out of here. This shrine didn't have anything helpful and this kid is the real deal!"))
     closemessage
     setvar(VAR_EVERGREEN_FOREST_STATE, 2)
