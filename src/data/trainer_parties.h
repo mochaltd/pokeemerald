@@ -11771,10 +11771,10 @@ static const struct TrainerMonItemCustomMoves sParty_Lucy[] = {
     },
     {
     .iv = 75,
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 13,
+    .species = SPECIES_HOUNDOUR,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TACKLE, MOVE_HOWL, MOVE_BITE, MOVE_SAND_ATTACK}
+    .moves = {MOVE_EMBER, MOVE_HOWL, MOVE_SMOG, MOVE_LEER}
     },
     {
     .iv = 150,
