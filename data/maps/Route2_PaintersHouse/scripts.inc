@@ -35,6 +35,6 @@ Route2_PaintersHouse_Painter_Movement_1:
 Route2_PaintersHouse_Painter_Text_0:
 # 9 "data/maps/Route2_PaintersHouse/scripts.pory"
 	.string "Living up on this hill gives me a great\n"
-	.string "view of Route 2. It's beauty gives me so\l"
+	.string "view of Route 2. Its beauty gives me so\l"
 	.string "much inspiration! I hope you find\l"
 	.string "beauty in your travels.$"
