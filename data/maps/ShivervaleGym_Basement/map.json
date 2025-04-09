@@ -31,7 +31,21 @@
   "warp_events": [
     {
       "x": 7,
-      "y": 16,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_SHIVERVALE_GYM",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_SHIVERVALE_GYM",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 6,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SHIVERVALE_GYM",
       "dest_warp_id": "2"
