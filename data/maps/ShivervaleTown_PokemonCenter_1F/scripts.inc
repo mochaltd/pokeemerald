@@ -30,17 +30,17 @@ ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth::
 # 21 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	lock
 # 22 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 4, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
+	applymovement 2, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
 # 23 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 4
+	waitmovement 2
 # 24 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Text_0
 # 26 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	closemessage
 # 27 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 4, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
+	applymovement 2, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
 # 28 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 4
+	waitmovement 2
 # 29 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	return
@@ -50,17 +50,17 @@ ShivervaleTown_PokemonCenter_1F_EventScript_MaleandFemalePokemon::
 # 33 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	lock
 # 34 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 5, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
+	applymovement 3, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
 # 35 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 5
+	waitmovement 3
 # 36 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox ShivervaleTown_PokemonCenter_1F_EventScript_MaleandFemalePokemon_Text_0
 # 38 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	closemessage
 # 39 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 5, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
+	applymovement 3, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
 # 40 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 5
+	waitmovement 3
 # 41 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	return
@@ -70,17 +70,17 @@ ShivervaleTown_PokemonCenter_1F_EventScript_PokemonCenter::
 # 45 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	lock
 # 46 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 6, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
+	applymovement 4, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_0
 # 47 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 6
+	waitmovement 4
 # 48 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	msgbox ShivervaleTown_PokemonCenter_1F_EventScript_PokemonCenter_Text_0
 # 50 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	closemessage
 # 51 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	applymovement 6, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
+	applymovement 4, ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth_Movement_1
 # 52 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
-	waitmovement 6
+	waitmovement 4
 # 53 "data/maps/ShivervaleTown_PokemonCenter_1F/scripts.pory"
 	release
 	return

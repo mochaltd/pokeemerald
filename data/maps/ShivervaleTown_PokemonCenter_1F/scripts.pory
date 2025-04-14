@@ -19,36 +19,36 @@ script ShivervaleTown_PokemonCenter_1F_EventScript_Nurse {
 
 script ShivervaleTown_PokemonCenter_1F_EventScript_HMCutSouth {
     lock
-    applymovement(4, moves(face_player))
-    waitmovement(4)
+    applymovement(2, moves(face_player))
+    waitmovement(2)
     msgbox(format("The man at the house to the south of here gave me an HM!\p"
 	"I used it to teach my Pokémon how to CUT down skinny trees."))
     closemessage
-    applymovement(4, moves(face_original_direction))
-    waitmovement(4)
+    applymovement(2, moves(face_original_direction))
+    waitmovement(2)
     release
 }
 
 script ShivervaleTown_PokemonCenter_1F_EventScript_MaleandFemalePokemon {
     lock
-    applymovement(5, moves(face_player))
-    waitmovement(5)
+    applymovement(3, moves(face_player))
+    waitmovement(3)
     msgbox(format("Just like people, there are male and female Pokémon.\p
     But no one seems to have any idea how they're different."))
     closemessage
-    applymovement(5, moves(face_original_direction))
-    waitmovement(5)
+    applymovement(3, moves(face_original_direction))
+    waitmovement(3)
     release
 }
 
 script ShivervaleTown_PokemonCenter_1F_EventScript_PokemonCenter {
     lock
-    applymovement(6, moves(face_player))
-    waitmovement(6)
+    applymovement(4, moves(face_player))
+    waitmovement(4)
     msgbox(format("Technology has been changing so quickly. To think you can now heal Pokémon in an instant!\p
     What's next, a portable communication device?"))
     closemessage
-    applymovement(6, moves(face_original_direction))
-    waitmovement(6)
+    applymovement(4, moves(face_original_direction))
+    waitmovement(4)
     release
 }
