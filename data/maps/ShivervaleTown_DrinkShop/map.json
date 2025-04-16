@@ -2,7 +2,7 @@
   "id": "MAP_SHIVERVALE_TOWN_DRINK_SHOP",
   "name": "ShivervaleTown_DrinkShop",
   "layout": "LAYOUT_SHIVERVALE_TOWN_DRINK_SHOP",
-  "music": "SE_RG_SHOP",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_SHIVERVALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

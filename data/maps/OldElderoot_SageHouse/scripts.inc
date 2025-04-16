@@ -174,7 +174,7 @@ SageWelcome_Text_1:
 	.string "...and not since she appointed me as the\n"
 	.string "new guardian of this place when she was\l"
 	.string "forced to flee during the war that\l"
-	.string "threatened her existence as well.\p"
+	.string "threatened her existence.\p"
 	.string "Here in Old Elderoot lies the roots of\n"
 	.string "the Primaroot Tree, the first tree on\l"
 	.string "Shizen that birthed this region in its\l"

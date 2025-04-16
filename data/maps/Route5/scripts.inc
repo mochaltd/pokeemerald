@@ -33,7 +33,7 @@ Route5_EventScript_Hiker::
 	compare VAR_ROYALSPUR_CITY_STATE, 0
 	goto_if_ne Route5_EventScript_Hiker_2
 # 23 "data/maps/Route5/scripts.pory"
-	compare VAR_EVERGREEN_FOREST_STATE, 0
+	compare VAR_ROYALSPUR_CITY_STATE, 0
 	goto_if_eq Route5_EventScript_Hiker_3
 Route5_EventScript_Hiker_1:
 # 26 "data/maps/Route5/scripts.pory"

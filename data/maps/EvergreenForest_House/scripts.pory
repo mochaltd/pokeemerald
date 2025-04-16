@@ -11,6 +11,7 @@ script EvergreenForest_House_EventScript_OldWoman {
     lock
     applymovement(1, moves(face_player))
     waitmovement(1)
+    if(!flag(FLAG_TALKED_OLD_WOMAN)) {
     msgbox(format("Oh, a visitor!\p
     Excuse my surprise but I don't really get very many visitors, unless it's my granddaughter.\p
     ...\l
@@ -29,6 +30,11 @@ script EvergreenForest_House_EventScript_OldWoman {
         {
             msgbox(format("Oh...well that's okay. I'm sure he'll find adventure in other ways."))
         }
+    }
+    elif(flag(FLAG_TALKED_OLD_WOMAN)) {
+        msgbox(format("Thank you for taking PHANTUMP with you!"))
+        closemessage
+    }
     waitmessage
     release
 }

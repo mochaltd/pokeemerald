@@ -18,7 +18,7 @@ script BravefortTown_PokemonLab_GiveRockSmash {
     giveitem(ITEM_HM06)
     setflag(FLAG_RECEIVED_HM_ROCK_SMASH)
     msgbox(format("That HM contains ROCK SMASH to help you break through rocks to find rare Pokémon or find new passages.\p
-    I hope this is a great help to your journey. Thank you again!"))
+    I hope this is a great help to your journey."))
     release
 }
 

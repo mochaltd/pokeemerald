@@ -20,7 +20,7 @@ script Route5_EventScript_Hiker {
     if (!(var(VAR_ROYALSPUR_CITY_STATE) == 0 )) {
         msgbox(format("We got all of those rocks cleared out. The path is back open!"))
     }
-    elif (var(VAR_EVERGREEN_FOREST_STATE) == 0) {
+    elif (var(VAR_ROYALSPUR_CITY_STATE) == 0) {
         msgbox(format("There was a slight collapse inside the tunnel and the path is blocked. You'll have to wait until we're finished clearing it."))
         }
     closemessage
