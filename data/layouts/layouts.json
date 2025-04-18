@@ -6240,6 +6240,18 @@
       "secondary_tileset": "gTileset_dojointerior",
       "border_filepath": "data/layouts/ShivervaleGym_PostBattle/border.bin",
       "blockdata_filepath": "data/layouts/ShivervaleGym_PostBattle/map.bin"
+    },
+    {
+      "id": "LAYOUT_COALTINE_TUNNEL_B1F",
+      "name": "CoaltineTunnel_B1F_Layout",
+      "width": 46,
+      "height": 31,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CoaltineTunnel_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/CoaltineTunnel_B1F/map.bin"
     }
   ]
 }

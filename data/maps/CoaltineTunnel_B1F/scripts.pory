@@ -1,0 +1,31 @@
+mapscripts CoaltineTunnel_B1F_MapScripts {
+
+}
+
+script CoaltineTunnel_B1F_EventScript_Ball1 {
+    lock
+    removeobject(1)
+    giveitem(ITEM_MOON_STONE)
+    release
+}
+
+script CoaltineTunnel_B1F_EventScript_Ball2 {
+    lock
+    removeobject(2)
+    giveitem(ITEM_THUNDER_STONE)
+    release
+}
+
+script CoaltineTunnel_B1F_EventScript_Ball3 {
+    lock
+    removeobject(3)
+    giveitem(ITEM_WATER_STONE)
+    release
+}
+
+script CoaltineTunnel_B1F_EventScript_Ball4 {
+    lock
+    removeobject(4)
+    giveitem(ITEM_DUSK_STONE)
+    release
+}

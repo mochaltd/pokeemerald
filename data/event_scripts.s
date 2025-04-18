@@ -1213,3 +1213,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/RoyalspurGym_Interior_1F_PostBattle/scripts.inc"
 
 	.include "data/maps/ShivervaleGym_PostBattle/scripts.inc"
+
+	.include "data/maps/CoaltineTunnel_B1F/scripts.inc"

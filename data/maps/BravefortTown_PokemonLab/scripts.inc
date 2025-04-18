@@ -119,7 +119,7 @@ BravefortTown_PokemonLab_GiveRockSmash_Text_1:
 	.string "you break through rocks to find rare\l"
 	.string "Pokémon or find new passages.\p"
 	.string "I hope this is a great help to your\n"
-	.string "journey. Thank you again!$"
+	.string "journey.$"
 
 BravefortTown_PokemonLab_ThankYou_Text_0:
 # 29 "data/maps/BravefortTown_PokemonLab/scripts.pory"
