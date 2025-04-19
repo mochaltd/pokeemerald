@@ -69,7 +69,7 @@ script EvergreenForest_House_EventScript_Phantump {
     else
     {
         hidemonpic
-        msgbox(format("You left PHANTUMP where he was."))
+        msgbox(format("You left PHANTUMP where they are."))
     }
     release
 }
