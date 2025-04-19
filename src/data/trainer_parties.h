@@ -6869,13 +6869,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR1[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Silver_Shivervale[] = {
     {
-    .iv = 50,
+    .iv = 100,
     .lvl = 14,
     .species = SPECIES_ROCKRUFF,
     },
     {
-    .iv = 75,
-    .lvl = 14,
+    .iv = 150,
+    .lvl = 15,
     .species = SPECIES_ABRA,
     }
 };
@@ -11768,21 +11768,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Noland[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Lucy[] = {
     {
-    .iv = 75,
+    .iv = 125,
     .lvl = 12,
     .species = SPECIES_ZIGZAGOON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_HEADBUTT, MOVE_LEER, MOVE_THIEF, MOVE_SAND_ATTACK}
     },
     {
-    .iv = 75,
+    .iv = 125,
     .lvl = 13,
     .species = SPECIES_HOUNDOUR,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EMBER, MOVE_HOWL, MOVE_SMOG, MOVE_LEER}
     },
     {
-    .iv = 150,
+    .iv = 175,
     .lvl = 14,
     .species = SPECIES_IMPIDIMP,
     .heldItem = ITEM_NONE,

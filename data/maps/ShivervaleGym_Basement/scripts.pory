@@ -61,10 +61,10 @@ script Shivervale_Gym_EventScript_GiveThief {
 }
 
 text Shivervale_Gym_Text_ExplainThief {
-    format("That TM, or Technical Machine, contains the moves THIEF.\p
+    format("That TM, or Technical Machine, contains the move THIEF.\p
     Not only does it inflict damage to Pokémon, but may also steal the foe's held item.\p
     If you use the TM, it will instantly teach the move to any Pokémon that can learn it.\p
-    Also, TMs can be used multiple times, make sure to use it the best that you can.\p
+    Also, TMs can be used multiple times, so make sure to use it the best that you can.\p
     ...\p
     It's strange...we haven't been summoned in almost 200 years, and there have now been two trainers that have begun the trials.\p
     Let me heal your Pokémon before you go.")
