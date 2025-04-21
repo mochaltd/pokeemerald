@@ -3427,14 +3427,14 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     .lvl = 24,
     .species = SPECIES_LUDICOLO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FAKE_OUT, MOVE_RAIN_DANCE, MOVE_ASTONISH, MOVE_NATURE_POWER}
+    .moves = {MOVE_FAKE_OUT, MOVE_RAIN_DANCE, MOVE_ASTONISH, MOVE_ABSORB}
     },
     {
     .iv = 50,
     .lvl = 25,
-    .species = SPECIES_CLOYSTER,
+    .species = SPECIES_QUAGSIRE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_AURORA_BEAM, MOVE_WITHDRAW, MOVE_HAIL, MOVE_PROTECT}
+    .moves = {MOVE_MUD_SHOT, MOVE_WATER_PULSE, MOVE_SLAM, MOVE_HAIL}
     },
     {
     .iv = 75,
