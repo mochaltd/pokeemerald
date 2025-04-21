@@ -116,46 +116,44 @@ ElderootTown_EventScript_TalkToMom::
 # 70 "data/maps/ElderootTown/scripts.pory"
 	closemessage
 # 71 "data/maps/ElderootTown/scripts.pory"
-	setvar VAR_ELDEROOT_TOWN_STATE, 9
-# 72 "data/maps/ElderootTown/scripts.pory"
 	release
 	return
 
 
 ElderootTown_EventScript_SayGoodbye::
-# 76 "data/maps/ElderootTown/scripts.pory"
+# 75 "data/maps/ElderootTown/scripts.pory"
 	lock
-# 77 "data/maps/ElderootTown/scripts.pory"
+# 76 "data/maps/ElderootTown/scripts.pory"
 	msgbox ElderootTown_EventScript_SayGoodbye_Text_0
-# 78 "data/maps/ElderootTown/scripts.pory"
+# 77 "data/maps/ElderootTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ElderootTown_EventScript_BetterCheckItOut_Movement_0
-# 79 "data/maps/ElderootTown/scripts.pory"
+# 78 "data/maps/ElderootTown/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 80 "data/maps/ElderootTown/scripts.pory"
+# 79 "data/maps/ElderootTown/scripts.pory"
 	closemessage
-# 81 "data/maps/ElderootTown/scripts.pory"
+# 80 "data/maps/ElderootTown/scripts.pory"
 	release
 	return
 
 
 ElderootTown_EventScript_DonnaHouseSign::
-# 85 "data/maps/ElderootTown/scripts.pory"
+# 84 "data/maps/ElderootTown/scripts.pory"
 	lockall
-# 86 "data/maps/ElderootTown/scripts.pory"
+# 85 "data/maps/ElderootTown/scripts.pory"
 	msgbox ElderootTown_EventScript_DonnaHouseSign_Text_0
-# 87 "data/maps/ElderootTown/scripts.pory"
+# 86 "data/maps/ElderootTown/scripts.pory"
 	releaseall
 	return
 
 
 ElderootTown_EventScript_LockedHouse::
-# 91 "data/maps/ElderootTown/scripts.pory"
+# 90 "data/maps/ElderootTown/scripts.pory"
 	lock
-# 92 "data/maps/ElderootTown/scripts.pory"
+# 91 "data/maps/ElderootTown/scripts.pory"
 	msgbox ElderootTown_EventScript_LockedHouse_Text_0
-# 93 "data/maps/ElderootTown/scripts.pory"
+# 92 "data/maps/ElderootTown/scripts.pory"
 	closemessage
-# 94 "data/maps/ElderootTown/scripts.pory"
+# 93 "data/maps/ElderootTown/scripts.pory"
 	release
 	return
 
@@ -265,15 +263,15 @@ ElderootTown_EventScript_TalkToMom_Text_0:
 	.string "before I leave.$"
 
 ElderootTown_EventScript_SayGoodbye_Text_0:
-# 77 "data/maps/ElderootTown/scripts.pory"
+# 76 "data/maps/ElderootTown/scripts.pory"
 	.string "Mom would kill me if I left without\n"
 	.string "saying goodbye!$"
 
 ElderootTown_EventScript_DonnaHouseSign_Text_0:
-# 86 "data/maps/ElderootTown/scripts.pory"
+# 85 "data/maps/ElderootTown/scripts.pory"
 	.string "Donna's House$"
 
 ElderootTown_EventScript_LockedHouse_Text_0:
-# 92 "data/maps/ElderootTown/scripts.pory"
+# 91 "data/maps/ElderootTown/scripts.pory"
 	.string "The door is locked. I guess they don't\n"
 	.string "want me to come in.$"

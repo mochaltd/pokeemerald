@@ -85,7 +85,7 @@ LeaveForJourney::
 # 69 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
 	setvar VAR_SHIVERVALE_TOWN_STATE, 1
 # 70 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
-	setvar VAR_ELDEROOT_TOWN_STATE, 10
+	setvar VAR_ELDEROOT_TOWN_STATE, 9
 # 71 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
 	release
 	return
