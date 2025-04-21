@@ -229,7 +229,7 @@ EvergreenForest_House_EventScript_Phantump_Text_1:
 
 EvergreenForest_House_EventScript_Phantump_Text_2:
 # 72 "data/maps/EvergreenForest_House/scripts.pory"
-	.string "You left PHANTUMP where he was.$"
+	.string "You left PHANTUMP where they are.$"
 
 NicknamePhantumpPartyMon_Text_0:
 # 78 "data/maps/EvergreenForest_House/scripts.pory"
