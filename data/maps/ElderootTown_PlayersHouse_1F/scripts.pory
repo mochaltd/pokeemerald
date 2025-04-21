@@ -67,7 +67,7 @@ script LeaveForJourney {
     Be strong and brave and take care of your Pokémon. I'll always be here if you need me!"))
     closemessage
     setvar(VAR_SHIVERVALE_TOWN_STATE, 1)
-    setvar(VAR_ELDEROOT_TOWN_STATE, 10)
+    setvar(VAR_ELDEROOT_TOWN_STATE, 9)
     release
 }
 

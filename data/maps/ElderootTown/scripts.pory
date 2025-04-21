@@ -68,7 +68,6 @@ script ElderootTown_EventScript_TalkToMom {
     msgbox(format("Wow, my very own Pokémon...\p 
     I suppose I should go talk to my mom before I leave."))
     closemessage
-    setvar(VAR_ELDEROOT_TOWN_STATE, 9)
     release
 }
 
