@@ -74,9 +74,9 @@ script ElderootTown_EventScript_TalkToMom {
 script ElderootTown_EventScript_SayGoodbye {
     lock
     msgbox(format("Mom would kill me if I left without saying goodbye!"))
+    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
     waitmovement(OBJ_EVENT_ID_PLAYER)
-    closemessage
     release
 }
 

@@ -11734,17 +11734,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tucker[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Spenser[] = {
     {
-    .iv = 50,
+    .iv = 75,
     .lvl = 21,
     .species = SPECIES_VOLTORB,
     },
     {
-    .iv = 50,
+    .iv = 75,
     .lvl = 21,
     .species = SPECIES_LANTURN,
     },
     {
-    .iv = 75,
+    .iv = 150,
     .lvl = 23,
     .species = SPECIES_MANECTRIC,
     }

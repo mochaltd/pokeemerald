@@ -30,7 +30,8 @@ script ElderootTown_EventScript_GetPotions {
     removeobject(2)
     setflag(FLAG_SYS_POKEDEX_GET)
     special(SetUnlockedPokedexFlags)
-    msgbox(format("What is a Pokédex? I wonder what it does...\p
+    msgbox(format("What is a Pokédex?\p 
+    I wonder what it does...\p
     I'll figure it out later."))
     closemessage
     releaseall

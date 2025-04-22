@@ -126,11 +126,11 @@ ElderootTown_EventScript_SayGoodbye::
 # 76 "data/maps/ElderootTown/scripts.pory"
 	msgbox ElderootTown_EventScript_SayGoodbye_Text_0
 # 77 "data/maps/ElderootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ElderootTown_EventScript_BetterCheckItOut_Movement_0
-# 78 "data/maps/ElderootTown/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 79 "data/maps/ElderootTown/scripts.pory"
 	closemessage
+# 78 "data/maps/ElderootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ElderootTown_EventScript_BetterCheckItOut_Movement_0
+# 79 "data/maps/ElderootTown/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
 # 80 "data/maps/ElderootTown/scripts.pory"
 	release
 	return

@@ -160,9 +160,8 @@ static const u16 sMetapodLevelUpLearnset[] = {
 };
 
 static const u16 sButterfreeLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
-    LEVEL_UP_MOVE(12, MOVE_CONFUSION),
-    LEVEL_UP_MOVE(16, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 0, MOVE_CONFUSION),
+    LEVEL_UP_MOVE( 0, MOVE_ABSORB),
     LEVEL_UP_MOVE(18, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE(23, MOVE_GUST),
     LEVEL_UP_MOVE(26, MOVE_SUPERSONIC),

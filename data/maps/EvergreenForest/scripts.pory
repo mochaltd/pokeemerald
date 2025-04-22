@@ -92,7 +92,8 @@ script EvergreenForest_EventScript_Grunt2Defeated {
     applymovement(2, moves(walk_left * 7, walk_up, face_player))
     waitmovement(2)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
-    msgbox(format("Thank you, trainer, those guys were scaring me. That shrine is dedicated to Mismagius, a Pokémon that has protected these woods for as long as anyone can remember.\p
+    msgbox(format("Thank you, trainer, those guys were scaring me.\p
+    That shrine is dedicated to Mismagius, a Pokémon that has protected these woods for as long as anyone can remember.\p
     I heard those guys talking about forcing dreams and nightmares on people...\p
     The legend of Mismagius is that she would inflict nightmares on people who wished to harm these woods to make them too afraid to enter the forest.\p
     I'm not sure what they were hoping to find, but it worries me that people like them are interested in that power...\p

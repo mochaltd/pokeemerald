@@ -25,7 +25,7 @@ movement MomFaceLeft {
 
 script ElderootTown_PlayersHouse_1F_EventScript_Mom {
     goto_if_eq (VAR_ELDEROOT_TOWN_STATE, 2, ElderootTown_PlayersHouse_1F_EventScript_Shivervale)
-    goto_if_eq (VAR_ELDEROOT_TOWN_STATE, 9, LeaveForJourney)
+    goto_if_eq (VAR_ELDEROOT_TOWN_STATE, 8, LeaveForJourney)
     goto_if_set (FLAG_SYS_POKEMON_GET, ElderootTown_PlayersHouse_1F_EventScript_MomHealsParty) 
     release
     end
@@ -59,7 +59,7 @@ script LeaveForJourney {
     ...\l
     ...your very own Pokémon journey?!\p
     It all sounds so strange, but I can't deny that you have your very own Pokémon now.\p
-    I knew eventually this day would come. That's why I ordered you that Pokédex for your birthday.\p
+    I knew eventually this day would come. That's why I got you those Poké Balls and ordered you that Pokédex for your birthday.\p
     I'm sorry that it was a late 16th birthday present, I had to order it and ship it in from another region.\p
     But it's supposed to be the next best thing for Pokémon trainers, it automatically records Pokémon data!\p
     Anyways, I'm sorry, I'm rambling to keep you here longer. Don't worry about those ingredients I asked for earlier, I'll just see if the neighbors have some!\p 

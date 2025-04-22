@@ -43,7 +43,7 @@ ElderootTown_PlayersHouse_1F_EventScript_Mom::
 # 27 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
 	goto_if_eq VAR_ELDEROOT_TOWN_STATE, 2, ElderootTown_PlayersHouse_1F_EventScript_Shivervale
 # 28 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
-	goto_if_eq VAR_ELDEROOT_TOWN_STATE, 9, LeaveForJourney
+	goto_if_eq VAR_ELDEROOT_TOWN_STATE, 8, LeaveForJourney
 # 29 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"
 	goto_if_set FLAG_SYS_POKEMON_GET, ElderootTown_PlayersHouse_1F_EventScript_MomHealsParty
 # 30 "data/maps/ElderootTown_PlayersHouse_1F/scripts.pory"

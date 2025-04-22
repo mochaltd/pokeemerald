@@ -29,7 +29,7 @@ script SageWelcome {
     You being able to enter Old Elderoot confirms my fears...\p
     The energy that has sustained me for so long is beginning to wane and I fear my time is running out.\p 
     I must ask you to bring CELEBI home before I'm gone...\p
-    ...before the barriers protecting this place break down completely.\p
+    ...before the barriers protecting this place break down completely and the world is thrown into turmoil.\p
     I'm not sure why the fates chose to bring us together, but it must have done it for a reason, and I believe you will be the one to bring balance back to the Shizen region."))
     msgbox("What do you say, {PLAYER}? Do you accept?", MSGBOX_YESNO) 
     while (var(VAR_RESULT) !=1) {

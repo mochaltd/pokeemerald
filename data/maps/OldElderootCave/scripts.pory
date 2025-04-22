@@ -27,12 +27,12 @@ script OldElderootCave_EventScripts_Pokeball1 {
     lockall
     if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
         showmonpic(SPECIES_PICHU, 10,3)
-        msgbox(format("Do you want to choose Pichu, the Tiny Mouse Pokémon?"), MSGBOX_YESNO)
+        msgbox(format("Do you want to choose PICHU, the Tiny Mouse Pokémon?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_PICHU, 5, ITEM_ORAN_BERRY)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Pichu!")
+                msgbox("You received a PICHU!")
                 removeobject(2)
                 setflag(FLAG_GOT_PICHU)
                 call(NicknamePichuPartyMon)
@@ -40,7 +40,7 @@ script OldElderootCave_EventScripts_Pokeball1 {
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Pichu!")
+                msgbox("You received a PICHU!")
                 removeobject(2)
                 setflag(FLAG_GOT_PICHU)
                 call(NicknamePichuBoxMon)
@@ -66,12 +66,12 @@ script OldElderootCave_EventScripts_Pokeball2 {
     lockall
     if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
         showmonpic(SPECIES_OSHAWOTT, 10,3)
-        msgbox(format("Do you want to choose Oshawott, the Sea Otter Pokémon?"), MSGBOX_YESNO)
+        msgbox(format("Do you want to choose OSHAWOTT, the Sea Otter Pokémon?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_OSHAWOTT, 5, ITEM_ORAN_BERRY)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received an Oshawott!")
+                msgbox("You received an OSHAWOTT!")
                 removeobject(3)
                 setflag(FLAG_GOT_OSHAWOTT)
                 call(NicknameOshawottPartyMon)
@@ -79,7 +79,7 @@ script OldElderootCave_EventScripts_Pokeball2 {
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received an Oshawott!")
+                msgbox("You received an OSHAWOTT!")
                 removeobject(3)
                 setflag(FLAG_GOT_OSHAWOTT)
                 call(NicknameOshawottBoxMon)
@@ -105,12 +105,12 @@ script OldElderootCave_EventScripts_Pokeball3 {
     lockall
     if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
         showmonpic(SPECIES_ROWLET, 10,3)
-        msgbox(format("Do you want to choose Rowlet, the Grass Quill Pokémon?"), MSGBOX_YESNO)
+        msgbox(format("Do you want to choose ROWLET, the Grass Quill Pokémon?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_ROWLET, 5, ITEM_ORAN_BERRY)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Rowlet!")
+                msgbox("You received a ROWLET!")
                 removeobject(5)
                 setflag(FLAG_GOT_ROWLET)
                 call(NicknameRowletPartyMon)
@@ -118,7 +118,7 @@ script OldElderootCave_EventScripts_Pokeball3 {
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Rowlet!")
+                msgbox("You received a ROWLET!")
                 removeobject(5)
                 setflag(FLAG_GOT_ROWLET)
                 call(NicknameRowletBoxMon)
@@ -144,12 +144,12 @@ script OldElderootCave_EventScripts_Pokeball4 {
     lockall
     if(!(flag(FLAG_GOT_PICHU) || flag(FLAG_GOT_ROWLET) || flag(FLAG_GOT_CYNDAQUIL) || flag(FLAG_GOT_OSHAWOTT))){
         showmonpic(SPECIES_CYNDAQUIL, 10,3)
-        msgbox(format("Do you want to choose Cyndaquil, the Fire Mouse Pokémon?"), MSGBOX_YESNO)
+        msgbox(format("Do you want to choose CYNDAQUIL, the Fire Mouse Pokémon?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Cyndaquil!")
+                msgbox("You received a CYNDAQUIL!")
                 removeobject(4)
                 setflag(FLAG_GOT_CYNDAQUIL)
                 call(NicknameCyndaquilPartyMon)
@@ -157,7 +157,7 @@ script OldElderootCave_EventScripts_Pokeball4 {
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("You received a Cyndaquil!")
+                msgbox("You received a CYNDAQUIL!")
                 removeobject(4)
                 setflag(FLAG_GOT_CYNDAQUIL)
                 call(NicknameCyndaquilBoxMon)
@@ -185,7 +185,7 @@ text OldElderootCave_TakeYourTime {
 
 script PokemonChosenPichu {
     lock
-    msgbox(format("A great choice indeed, young {PLAYER}. You and Pichu can now begin the greatest adventure known to Shizen, together.\p
+    msgbox(format("A great choice indeed, young {PLAYER}. You and PICHU can now begin the greatest adventure known to Shizen, together.\p
     Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
     Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
     waitmessage
@@ -202,7 +202,7 @@ script PokemonChosenPichu {
 
 script PokemonChosenOshawatt {
     lock
-    msgbox(format("A great choice indeed, young {PLAYER}. You and Oshawott can now begin the greatest adventure known to Shizen, together.\p
+    msgbox(format("A great choice indeed, young {PLAYER}. You and OSHAWOTT can now begin the greatest adventure known to Shizen, together.\p
     Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
     Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon.\p"))
     waitmessage
@@ -219,7 +219,7 @@ script PokemonChosenOshawatt {
 
 script PokemonChosenRowlet {
     lock
-    msgbox(format("A great choice indeed, young {PLAYER}. You and Rowlet can now begin the greatest adventure known to Shizen, together.\p
+    msgbox(format("A great choice indeed, young {PLAYER}. You and ROWLET can now begin the greatest adventure known to Shizen, together.\p
     Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
     Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
     waitmessage
@@ -236,7 +236,7 @@ script PokemonChosenRowlet {
 
 script PokemonChosenCyndaquil {
     lock
-    msgbox(format("A great choice indeed, young {PLAYER}. You and Cyndaquil can now begin the greatest adventure known to Shizen, together.\p
+    msgbox(format("A great choice indeed, young {PLAYER}. You and CYNDAQUIL can now begin the greatest adventure known to Shizen, together.\p
     Selene, the Leader of Darkness, will be waiting for you at the temple in Shivervale Town.\p
     Go forth, and remember...true strength comes from the trust, love, and understanding between trainer and Pokémon."))
     waitmessage
@@ -252,7 +252,7 @@ script PokemonChosenCyndaquil {
 }
 
 script NicknamePichuPartyMon {
-    msgbox("Do you want to give Pichu a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give PICHU a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -261,7 +261,7 @@ script NicknamePichuPartyMon {
 }
 
 script NicknamePichuBoxMon {
-    msgbox("Do you want to give Pichu a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give PICHU a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)
@@ -270,7 +270,7 @@ script NicknamePichuBoxMon {
 }
 
 script NicknameOshawottPartyMon {
-    msgbox("Do you want to give Oshawott a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give OSHAWOTT a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -279,7 +279,7 @@ script NicknameOshawottPartyMon {
 }
 
 script NicknameOshawottBoxMon {
-    msgbox("Do you want to give Oshawott a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give OSHAWOTT a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)
@@ -288,7 +288,7 @@ script NicknameOshawottBoxMon {
 }
 
 script NicknameRowletPartyMon {
-    msgbox("Do you want to give Rowlet a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give ROWLET a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -297,7 +297,7 @@ script NicknameRowletPartyMon {
 }
 
 script NicknameRowletBoxMon {
-    msgbox("Do you want to give Rowlet a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give ROWLET a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)
@@ -306,7 +306,7 @@ script NicknameRowletBoxMon {
 }
 
 script NicknameCyndaquilPartyMon {
-    msgbox("Do you want to give Cyndaquil a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give CYNDAQUIL a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -315,7 +315,7 @@ script NicknameCyndaquilPartyMon {
 }
 
 script NicknameCyndaquilBoxMon {
-    msgbox("Do you want to give Cyndaquil a nickname?", MSGBOX_YESNO)
+    msgbox("Do you want to give CYNDAQUIL a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_NameReceivedBoxMon)

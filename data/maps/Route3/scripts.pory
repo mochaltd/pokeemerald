@@ -18,7 +18,7 @@ script Route3_EventScript_Jacob {
 }
 
 text Route3_Text_JacobIntro {
-    format("I'm in the middle of my daily workout routine right now, but luckily my routine today includes a Pokémon battle!")
+    format("I'm in the middle of my daily workout routine right now, but luckily my routine includes a Pokémon battle!")
 }
 
 text Route2_Text_JacobOutro {
