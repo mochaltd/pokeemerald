@@ -722,12 +722,12 @@ GetPokemon_Text_0:
 
 OldElderootCave_EventScripts_Pokeball1_Text_0:
 # 30 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to choose Pichu, the Tiny\n"
+	.string "Do you want to choose PICHU, the Tiny\n"
 	.string "Mouse Pokémon?$"
 
 OldElderootCave_EventScripts_Pokeball1_Text_1:
 # 35 "data/maps/OldElderootCave/scripts.pory"
-	.string "You received a Pichu!$"
+	.string "You received a PICHU!$"
 
 OldElderootCave_EventScripts_Pokeball1_Text_2:
 # 51 "data/maps/OldElderootCave/scripts.pory"
@@ -735,35 +735,35 @@ OldElderootCave_EventScripts_Pokeball1_Text_2:
 
 OldElderootCave_EventScripts_Pokeball2_Text_0:
 # 69 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to choose Oshawott, the\n"
+	.string "Do you want to choose OSHAWOTT, the\n"
 	.string "Sea Otter Pokémon?$"
 
 OldElderootCave_EventScripts_Pokeball2_Text_1:
 # 74 "data/maps/OldElderootCave/scripts.pory"
-	.string "You received an Oshawott!$"
+	.string "You received an OSHAWOTT!$"
 
 OldElderootCave_EventScripts_Pokeball3_Text_0:
 # 108 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to choose Rowlet, the Grass\n"
-	.string "Quill Pokémon?$"
+	.string "Do you want to choose ROWLET, the\n"
+	.string "Grass Quill Pokémon?$"
 
 OldElderootCave_EventScripts_Pokeball3_Text_1:
 # 113 "data/maps/OldElderootCave/scripts.pory"
-	.string "You received a Rowlet!$"
+	.string "You received a ROWLET!$"
 
 OldElderootCave_EventScripts_Pokeball4_Text_0:
 # 147 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to choose Cyndaquil, the\n"
+	.string "Do you want to choose CYNDAQUIL, the\n"
 	.string "Fire Mouse Pokémon?$"
 
 OldElderootCave_EventScripts_Pokeball4_Text_1:
 # 152 "data/maps/OldElderootCave/scripts.pory"
-	.string "You received a Cyndaquil!$"
+	.string "You received a CYNDAQUIL!$"
 
 PokemonChosenPichu_Text_0:
 # 188 "data/maps/OldElderootCave/scripts.pory"
 	.string "A great choice indeed, young\n"
-	.string "{PLAYER}. You and Pichu can now begin\l"
+	.string "{PLAYER}. You and PICHU can now begin\l"
 	.string "the greatest adventure known to\l"
 	.string "Shizen, together.\p"
 	.string "Selene, the Leader of Darkness, will be\n"
@@ -777,7 +777,7 @@ PokemonChosenPichu_Text_0:
 PokemonChosenOshawatt_Text_0:
 # 205 "data/maps/OldElderootCave/scripts.pory"
 	.string "A great choice indeed, young\n"
-	.string "{PLAYER}. You and Oshawott can now\l"
+	.string "{PLAYER}. You and OSHAWOTT can now\l"
 	.string "begin the greatest adventure known to\l"
 	.string "Shizen, together.\p"
 	.string "Selene, the Leader of Darkness, will be\n"
@@ -792,7 +792,7 @@ PokemonChosenOshawatt_Text_0:
 PokemonChosenRowlet_Text_0:
 # 222 "data/maps/OldElderootCave/scripts.pory"
 	.string "A great choice indeed, young\n"
-	.string "{PLAYER}. You and Rowlet can now\l"
+	.string "{PLAYER}. You and ROWLET can now\l"
 	.string "begin the greatest adventure known to\l"
 	.string "Shizen, together.\p"
 	.string "Selene, the Leader of Darkness, will be\n"
@@ -806,7 +806,7 @@ PokemonChosenRowlet_Text_0:
 PokemonChosenCyndaquil_Text_0:
 # 239 "data/maps/OldElderootCave/scripts.pory"
 	.string "A great choice indeed, young\n"
-	.string "{PLAYER}. You and Cyndaquil can now\l"
+	.string "{PLAYER}. You and CYNDAQUIL can now\l"
 	.string "begin the greatest adventure known to\l"
 	.string "Shizen, together.\p"
 	.string "Selene, the Leader of Darkness, will be\n"
@@ -819,19 +819,19 @@ PokemonChosenCyndaquil_Text_0:
 
 NicknamePichuPartyMon_Text_0:
 # 255 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to give Pichu a nickname?$"
+	.string "Do you want to give PICHU a nickname?$"
 
 NicknameOshawottPartyMon_Text_0:
 # 273 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to give Oshawott a nickname?$"
+	.string "Do you want to give OSHAWOTT a nickname?$"
 
 NicknameRowletPartyMon_Text_0:
 # 291 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to give Rowlet a nickname?$"
+	.string "Do you want to give ROWLET a nickname?$"
 
 NicknameCyndaquilPartyMon_Text_0:
 # 309 "data/maps/OldElderootCave/scripts.pory"
-	.string "Do you want to give Cyndaquil a nickname?$"
+	.string "Do you want to give CYNDAQUIL a nickname?$"
 
 OldElderootCave_EventScripts_Primaroot_Text_0:
 # 330 "data/maps/OldElderootCave/scripts.pory"

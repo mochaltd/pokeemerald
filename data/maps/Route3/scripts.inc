@@ -52,8 +52,7 @@ Route3_Text_JacobIntro::
 # 20 "data/maps/Route3/scripts.pory"
 	.string "I'm in the middle of my daily workout\n"
 	.string "routine right now, but luckily my\l"
-	.string "routine today includes a Pokémon\l"
-	.string "battle!$"
+	.string "routine includes a Pokémon battle!$"
 
 Route2_Text_JacobOutro::
 # 24 "data/maps/Route3/scripts.pory"

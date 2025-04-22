@@ -137,267 +137,267 @@ EvergreenForest_EventScript_Grunt2Defeated::
 	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Grunt1Defeated_Movement_0
 # 95 "data/maps/EvergreenForest/scripts.pory"
 	msgbox EvergreenForest_EventScript_Grunt2Defeated_Text_1
-# 100 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
 # 101 "data/maps/EvergreenForest/scripts.pory"
-	giveitem ITEM_RARE_CANDY
+	closemessage
 # 102 "data/maps/EvergreenForest/scripts.pory"
-	setvar VAR_ROYALSPUR_CITY_STATE, 0
+	giveitem ITEM_RARE_CANDY
 # 103 "data/maps/EvergreenForest/scripts.pory"
+	setvar VAR_ROYALSPUR_CITY_STATE, 0
+# 104 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_HexGirl::
-# 107 "data/maps/EvergreenForest/scripts.pory"
+# 108 "data/maps/EvergreenForest/scripts.pory"
 	compare VAR_EVERGREEN_FOREST_STATE, 1
 	goto_if_ne EvergreenForest_HexGirl_1
-# 113 "data/maps/EvergreenForest/scripts.pory"
+# 114 "data/maps/EvergreenForest/scripts.pory"
 	compare VAR_EVERGREEN_FOREST_STATE, 1
 	goto_if_eq EvergreenForest_HexGirl_4
 	return
 
 EvergreenForest_HexGirl_1:
-# 108 "data/maps/EvergreenForest/scripts.pory"
+# 109 "data/maps/EvergreenForest/scripts.pory"
 	msgbox EvergreenForest_HexGirl_Text_0
-# 110 "data/maps/EvergreenForest/scripts.pory"
+# 111 "data/maps/EvergreenForest/scripts.pory"
 	closemessage
 	return
 
 EvergreenForest_HexGirl_4:
-# 114 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_HexGirl_Text_1
 # 115 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_HexGirl_Text_1
+# 116 "data/maps/EvergreenForest/scripts.pory"
 	closemessage
 	return
 
 
 EvergreenForest_EventScript_Shrine1::
-# 121 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 122 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_0
+	lock
 # 123 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_Shrine1_Text_0
 # 124 "data/maps/EvergreenForest/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine1_Movement_0
-# 125 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 126 "data/maps/EvergreenForest/scripts.pory"
-	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
-# 127 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement 2
-# 128 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_1
-# 129 "data/maps/EvergreenForest/scripts.pory"
 	closemessage
+# 125 "data/maps/EvergreenForest/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine1_Movement_0
+# 126 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 127 "data/maps/EvergreenForest/scripts.pory"
+	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
+# 128 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement 2
+# 129 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_EventScript_Shrine1_Text_1
 # 130 "data/maps/EvergreenForest/scripts.pory"
-	setvar VAR_EVERGREEN_FOREST_STATE, 1
+	closemessage
 # 131 "data/maps/EvergreenForest/scripts.pory"
+	setvar VAR_EVERGREEN_FOREST_STATE, 1
+# 132 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Shrine2::
-# 135 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 136 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_0
+	lock
 # 137 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_Shrine1_Text_0
 # 138 "data/maps/EvergreenForest/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine2_Movement_0
-# 139 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 140 "data/maps/EvergreenForest/scripts.pory"
-	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
-# 141 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement 2
-# 142 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_1
-# 143 "data/maps/EvergreenForest/scripts.pory"
 	closemessage
+# 139 "data/maps/EvergreenForest/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine2_Movement_0
+# 140 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 141 "data/maps/EvergreenForest/scripts.pory"
+	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
+# 142 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement 2
+# 143 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_EventScript_Shrine1_Text_1
 # 144 "data/maps/EvergreenForest/scripts.pory"
-	setvar VAR_EVERGREEN_FOREST_STATE, 1
+	closemessage
 # 145 "data/maps/EvergreenForest/scripts.pory"
+	setvar VAR_EVERGREEN_FOREST_STATE, 1
+# 146 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Shrine3::
-# 149 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 150 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_0
+	lock
 # 151 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_Shrine1_Text_0
 # 152 "data/maps/EvergreenForest/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine3_Movement_0
-# 153 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 154 "data/maps/EvergreenForest/scripts.pory"
-	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
-# 155 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement 2
-# 156 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Shrine1_Text_1
-# 157 "data/maps/EvergreenForest/scripts.pory"
 	closemessage
+# 153 "data/maps/EvergreenForest/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_Shrine3_Movement_0
+# 154 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 155 "data/maps/EvergreenForest/scripts.pory"
+	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
+# 156 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement 2
+# 157 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_EventScript_Shrine1_Text_1
 # 158 "data/maps/EvergreenForest/scripts.pory"
-	setvar VAR_EVERGREEN_FOREST_STATE, 1
+	closemessage
 # 159 "data/maps/EvergreenForest/scripts.pory"
+	setvar VAR_EVERGREEN_FOREST_STATE, 1
+# 160 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_DontLeave1::
-# 163 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 164 "data/maps/EvergreenForest/scripts.pory"
-	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
+	lock
 # 165 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement 2
+	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_0
 # 166 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_DontLeave1_Text_0
+	waitmovement 2
 # 167 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_DontLeave1_Text_0
 # 168 "data/maps/EvergreenForest/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_DontLeave1_Movement_0
+	closemessage
 # 169 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_DontLeave1_Movement_0
 # 170 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 171 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_DontLeave2::
-# 174 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 175 "data/maps/EvergreenForest/scripts.pory"
-	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_1
+	lock
 # 176 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement 2
+	applymovement 2, EvergreenForest_EventScript_Grunt2Defeated_Movement_1
 # 177 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_DontLeave1_Text_0
+	waitmovement 2
 # 178 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_DontLeave1_Text_0
 # 179 "data/maps/EvergreenForest/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_DontLeave2_Movement_0
+	closemessage
 # 180 "data/maps/EvergreenForest/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, EvergreenForest_EventScript_DontLeave2_Movement_0
 # 181 "data/maps/EvergreenForest/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 182 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Taylor::
-# 185 "data/maps/EvergreenForest/scripts.pory"
-	trainerbattle_single TRAINER_TAYLOR, EvergreenForest_Text_TaylorIntro, EvergreenForest_Text_TaylorOutro
 # 186 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_TAYLOR, EvergreenForest_Text_TaylorIntro, EvergreenForest_Text_TaylorOutro
 # 187 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE
+# 188 "data/maps/EvergreenForest/scripts.pory"
 	waitmessage
 	end
 
 
 EvergreenForest_EventScript_Drew::
-# 206 "data/maps/EvergreenForest/scripts.pory"
-	trainerbattle_single TRAINER_DREW, EvergreenForest_Text_DrewIntro, EvergreenForest_Text_DrewOutro
 # 207 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_Text_DrewPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_DREW, EvergreenForest_Text_DrewIntro, EvergreenForest_Text_DrewOutro
 # 208 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_Text_DrewPostBattle, MSGBOX_AUTOCLOSE
+# 209 "data/maps/EvergreenForest/scripts.pory"
 	waitmessage
 	end
 
 
 EvergreenForest_EventScript_Heidi::
-# 226 "data/maps/EvergreenForest/scripts.pory"
-	trainerbattle_single TRAINER_HEIDI, EvergreenForest_Text_HeidiIntro, EvergreenForest_Text_HeidiOutro
 # 227 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_HEIDI, EvergreenForest_Text_HeidiIntro, EvergreenForest_Text_HeidiOutro
 # 228 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
+# 229 "data/maps/EvergreenForest/scripts.pory"
 	waitmessage
 	end
 
 
 EvergreenForest_EventScript_Leah::
-# 245 "data/maps/EvergreenForest/scripts.pory"
-	trainerbattle_single TRAINER_LEAH, EvergreenForest_Text_LeahIntro, EvergreenForest_Text_LeahOutro
 # 246 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_LEAH, EvergreenForest_Text_LeahIntro, EvergreenForest_Text_LeahOutro
 # 247 "data/maps/EvergreenForest/scripts.pory"
+	msgbox EvergreenForest_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
+# 248 "data/maps/EvergreenForest/scripts.pory"
 	waitmessage
 	end
 
 
 EvergreenForest_EventScript_Sign1::
-# 264 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 265 "data/maps/EvergreenForest/scripts.pory"
-	msgbox EvergreenForest_EventScript_Sign1_Text_0
+	lock
 # 266 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
+	msgbox EvergreenForest_EventScript_Sign1_Text_0
 # 267 "data/maps/EvergreenForest/scripts.pory"
+	closemessage
+# 268 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Ball1::
-# 271 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 272 "data/maps/EvergreenForest/scripts.pory"
-	removeobject 5
+	lock
 # 273 "data/maps/EvergreenForest/scripts.pory"
-	giveitem ITEM_SUPER_POTION
+	removeobject 5
 # 274 "data/maps/EvergreenForest/scripts.pory"
+	giveitem ITEM_SUPER_POTION
+# 275 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Ball2::
-# 278 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 279 "data/maps/EvergreenForest/scripts.pory"
-	removeobject 9
+	lock
 # 280 "data/maps/EvergreenForest/scripts.pory"
-	giveitem ITEM_ELIXIR
+	removeobject 9
 # 281 "data/maps/EvergreenForest/scripts.pory"
+	giveitem ITEM_ELIXIR
+# 282 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Ball3::
-# 285 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 286 "data/maps/EvergreenForest/scripts.pory"
-	removeobject 6
+	lock
 # 287 "data/maps/EvergreenForest/scripts.pory"
-	giveitem ITEM_GREAT_BALL
+	removeobject 6
 # 288 "data/maps/EvergreenForest/scripts.pory"
+	giveitem ITEM_GREAT_BALL
+# 289 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_Sign2::
-# 292 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 293 "data/maps/EvergreenForest/scripts.pory"
+	lock
+# 294 "data/maps/EvergreenForest/scripts.pory"
 	msgbox EvergreenForest_EventScript_Sign2_Text_0
-# 295 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
 # 296 "data/maps/EvergreenForest/scripts.pory"
+	closemessage
+# 297 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
 
 EvergreenForest_EventScript_HouseSign::
-# 300 "data/maps/EvergreenForest/scripts.pory"
-	lock
 # 301 "data/maps/EvergreenForest/scripts.pory"
+	lock
+# 302 "data/maps/EvergreenForest/scripts.pory"
 	msgbox EvergreenForest_EventScript_HouseSign_Text_0
-# 303 "data/maps/EvergreenForest/scripts.pory"
-	closemessage
 # 304 "data/maps/EvergreenForest/scripts.pory"
+	closemessage
+# 305 "data/maps/EvergreenForest/scripts.pory"
 	release
 	return
 
@@ -468,95 +468,95 @@ EvergreenForest_EventScript_Grunt2Defeated_Movement_2:
 	face_player
 	step_end
 
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 EvergreenForest_EventScript_Shrine1_Movement_0:
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 124 "data/maps/EvergreenForest/scripts.pory"
+# 125 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 EvergreenForest_EventScript_Shrine2_Movement_0:
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 138 "data/maps/EvergreenForest/scripts.pory"
+# 139 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 EvergreenForest_EventScript_Shrine3_Movement_0:
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_left
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
-# 152 "data/maps/EvergreenForest/scripts.pory"
+# 153 "data/maps/EvergreenForest/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 168 "data/maps/EvergreenForest/scripts.pory"
+# 169 "data/maps/EvergreenForest/scripts.pory"
 EvergreenForest_EventScript_DontLeave1_Movement_0:
-# 168 "data/maps/EvergreenForest/scripts.pory"
+# 169 "data/maps/EvergreenForest/scripts.pory"
 	walk_down
 	step_end
 
-# 179 "data/maps/EvergreenForest/scripts.pory"
+# 180 "data/maps/EvergreenForest/scripts.pory"
 EvergreenForest_EventScript_DontLeave2_Movement_0:
-# 179 "data/maps/EvergreenForest/scripts.pory"
+# 180 "data/maps/EvergreenForest/scripts.pory"
 	walk_up
 	step_end
 
@@ -586,10 +586,11 @@ EvergreenForest_EventScript_Grunt2Defeated_Text_0:
 EvergreenForest_EventScript_Grunt2Defeated_Text_1:
 # 95 "data/maps/EvergreenForest/scripts.pory"
 	.string "Thank you, trainer, those guys were\n"
-	.string "scaring me. That shrine is dedicated to\l"
-	.string "Mismagius, a Pokémon that has\l"
-	.string "protected these woods for as long as\l"
-	.string "anyone can remember.\p"
+	.string "scaring me.\p"
+	.string "That shrine is dedicated to Mismagius, a\n"
+	.string "Pokémon that has protected these\l"
+	.string "woods for as long as anyone can\l"
+	.string "remember.\p"
 	.string "I heard those guys talking about\n"
 	.string "forcing dreams and nightmares on\l"
 	.string "people...\p"
@@ -605,42 +606,42 @@ EvergreenForest_EventScript_Grunt2Defeated_Text_1:
 	.string "token of my thanks.$"
 
 EvergreenForest_HexGirl_Text_0:
-# 108 "data/maps/EvergreenForest/scripts.pory"
+# 109 "data/maps/EvergreenForest/scripts.pory"
 	.string "My grandma lives in these woods and\n"
 	.string "makes medicine for people, but people\l"
 	.string "like to call her a witch.\p"
 	.string "They just don't understand her.$"
 
 EvergreenForest_HexGirl_Text_1:
-# 114 "data/maps/EvergreenForest/scripts.pory"
+# 115 "data/maps/EvergreenForest/scripts.pory"
 	.string "You have to help! They're going to\n"
 	.string "destroy the shrine!$"
 
 EvergreenForest_EventScript_Shrine1_Text_0:
-# 122 "data/maps/EvergreenForest/scripts.pory"
+# 123 "data/maps/EvergreenForest/scripts.pory"
 	.string "Someone please help!$"
 
 EvergreenForest_EventScript_Shrine1_Text_1:
-# 128 "data/maps/EvergreenForest/scripts.pory"
+# 129 "data/maps/EvergreenForest/scripts.pory"
 	.string "Help! Those strange men came into the\n"
 	.string "forest and are defacing the forest\l"
 	.string "shrine. You have to do something!$"
 
 EvergreenForest_EventScript_DontLeave1_Text_0:
-# 166 "data/maps/EvergreenForest/scripts.pory"
+# 167 "data/maps/EvergreenForest/scripts.pory"
 	.string "Please don't leave me!$"
 
 EvergreenForest_EventScript_Sign1_Text_0:
-# 265 "data/maps/EvergreenForest/scripts.pory"
+# 266 "data/maps/EvergreenForest/scripts.pory"
 	.string "{UP_ARROW} Route 3$"
 
 EvergreenForest_EventScript_Sign2_Text_0:
-# 293 "data/maps/EvergreenForest/scripts.pory"
+# 294 "data/maps/EvergreenForest/scripts.pory"
 	.string "{DOWN_ARROW} Route 4\l"
 	.string "{DOWN_ARROW} Royalspur City$"
 
 EvergreenForest_EventScript_HouseSign_Text_0:
-# 301 "data/maps/EvergreenForest/scripts.pory"
+# 302 "data/maps/EvergreenForest/scripts.pory"
 	.string "It's hard to read the original sign.\p"
 	.string "Someone wrote WITCH'S HUT in really big\n"
 	.string "letters.$"
@@ -663,59 +664,59 @@ EvergreenForest_Text_Grunt2Outro::
 	.string "The boss isn't gonna like this...$"
 
 EvergreenForest_Text_TaylorIntro::
-# 191 "data/maps/EvergreenForest/scripts.pory"
+# 192 "data/maps/EvergreenForest/scripts.pory"
 	.string "… … … … … …\p"
 	.string "Want to battle?$"
 
 EvergreenForest_Text_TaylorOutro::
-# 196 "data/maps/EvergreenForest/scripts.pory"
+# 197 "data/maps/EvergreenForest/scripts.pory"
 	.string "Lost it…$"
 
 EvergreenForest_Text_TaylorPostBattle::
-# 200 "data/maps/EvergreenForest/scripts.pory"
+# 201 "data/maps/EvergreenForest/scripts.pory"
 	.string "I'll try harder…\p"
 	.string "For my precious Bug Pokémon…$"
 
 EvergreenForest_Text_DrewIntro::
-# 212 "data/maps/EvergreenForest/scripts.pory"
+# 213 "data/maps/EvergreenForest/scripts.pory"
 	.string "I think I took a wrong turn, and it's\n"
 	.string "dark in here...\p"
 	.string "I'll get my confidence back by beating\n"
 	.string "you!$"
 
 EvergreenForest_Text_DrewOutro::
-# 217 "data/maps/EvergreenForest/scripts.pory"
+# 218 "data/maps/EvergreenForest/scripts.pory"
 	.string "Great, now I'm lost with no Pokémon.$"
 
 EvergreenForest_Text_DrewPostBattle::
-# 221 "data/maps/EvergreenForest/scripts.pory"
+# 222 "data/maps/EvergreenForest/scripts.pory"
 	.string "Have you heard about the witch in the\n"
 	.string "forest?$"
 
 EvergreenForest_Text_HeidiIntro::
-# 232 "data/maps/EvergreenForest/scripts.pory"
+# 233 "data/maps/EvergreenForest/scripts.pory"
 	.string "I thought this forest was going to be\n"
 	.string "less scary.$"
 
 EvergreenForest_Text_HeidiOutro::
-# 236 "data/maps/EvergreenForest/scripts.pory"
+# 237 "data/maps/EvergreenForest/scripts.pory"
 	.string "Can you help me find the exit?$"
 
 EvergreenForest_Text_HeidiPostBattle::
-# 240 "data/maps/EvergreenForest/scripts.pory"
+# 241 "data/maps/EvergreenForest/scripts.pory"
 	.string "There are some scary people in this\n"
 	.string "forest.$"
 
 EvergreenForest_Text_LeahIntro::
-# 251 "data/maps/EvergreenForest/scripts.pory"
+# 252 "data/maps/EvergreenForest/scripts.pory"
 	.string "Have you ever talked to a dead\n"
 	.string "Pokémon?$"
 
 EvergreenForest_Text_LeahOutro::
-# 255 "data/maps/EvergreenForest/scripts.pory"
+# 256 "data/maps/EvergreenForest/scripts.pory"
 	.string "Sorry, that was a strange thing to ask.$"
 
 EvergreenForest_Text_LeahPostBattle::
-# 259 "data/maps/EvergreenForest/scripts.pory"
+# 260 "data/maps/EvergreenForest/scripts.pory"
 	.string "Be careful of the weird people in this\n"
 	.string "forest.$"
