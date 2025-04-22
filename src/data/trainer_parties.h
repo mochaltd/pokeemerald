@@ -11734,21 +11734,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tucker[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Spenser[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_Spenser[] = {
     {
     .iv = 75,
     .lvl = 21,
     .species = SPECIES_VOLTORB,
+    .moves = {MOVE_THUNDER_WAVE, MOVE_SPARK, MOVE_TACKLE, MOVE_RAZOR_LEAF}
     },
     {
     .iv = 75,
     .lvl = 21,
     .species = SPECIES_LANTURN,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_SUPERSONIC, MOVE_FLAIL, MOVE_WATER_GUN}
     },
     {
     .iv = 150,
     .lvl = 23,
     .species = SPECIES_MANECTRIC,
+    .moves = {MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_HOWL}
     }
 };
 

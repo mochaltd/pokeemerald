@@ -9739,10 +9739,10 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_PALACE_MAVEN_SPENSER,
         .trainerName = _("Raikov"),
-        .items = {ITEM_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
+        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_HP_AWARE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Spenser),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_Spenser),
     },
 
     [TRAINER_GRETA] =
