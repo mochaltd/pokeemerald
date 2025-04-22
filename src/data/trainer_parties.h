@@ -2230,12 +2230,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Takao[] = {
     {
     .iv = 0,
     .lvl = 18,
-    .species = SPECIES_HITMONCHAN,
+    .species = SPECIES_TOXEL,
     },
     {
     .iv = 0,
     .lvl = 18,
-    .species = SPECIES_HITMONLEE,
+    .species = SPECIES_ELECTRIKE,
     },
 };
 
@@ -5668,12 +5668,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jocelyn[] = {
     {
     .iv = 50,
     .lvl = 18,
-    .species = SPECIES_MEDITITE,
+    .species = SPECIES_GEODUDE,
     },
     {
     .iv = 50,
     .lvl = 18,
-    .species = SPECIES_CROAGUNK,
+    .species = SPECIES_JOLTEON,
     }
 };
 
