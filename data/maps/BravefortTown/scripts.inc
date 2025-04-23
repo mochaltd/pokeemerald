@@ -189,233 +189,239 @@ BravefortTown_EventScript_Guard_VenomLocustArrested::
 # 108 "data/maps/BravefortTown/scripts.pory"
 	playse SE_PIN
 # 109 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_0
-# 112 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_1
-# 113 "data/maps/BravefortTown/scripts.pory"
-	playse MUS_OBTAIN_ITEM
-# 114 "data/maps/BravefortTown/scripts.pory"
 	waitse
+# 110 "data/maps/BravefortTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BravefortTown_EventScript_Guard_VenomLocustArrested_Movement_1
+# 111 "data/maps/BravefortTown/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 112 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_0
 # 115 "data/maps/BravefortTown/scripts.pory"
-	addmoney 4000
+	playse MUS_OBTAIN_ITEM
 # 116 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_1
 # 117 "data/maps/BravefortTown/scripts.pory"
-	setflag FLAG_RECEIVED_POLICE_REWARD
+	waitse
 # 118 "data/maps/BravefortTown/scripts.pory"
-	setvar VAR_BRAVEFORT_TOWN_STATE, 4
+	addmoney 4000
 # 119 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_2
-# 120 "data/maps/BravefortTown/scripts.pory"
 	closemessage
+# 120 "data/maps/BravefortTown/scripts.pory"
+	setflag FLAG_RECEIVED_POLICE_REWARD
 # 121 "data/maps/BravefortTown/scripts.pory"
+	setvar VAR_BRAVEFORT_TOWN_STATE, 4
+# 122 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Guard_VenomLocustArrested_Text_2
+# 123 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 124 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Military::
-# 125 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 126 "data/maps/BravefortTown/scripts.pory"
-	applymovement 14, BravefortTown_EventScript_Scientist_Movement_0
-# 127 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 14
 # 128 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Military_Text_0
-# 131 "data/maps/BravefortTown/scripts.pory"
-	closemessage
-# 132 "data/maps/BravefortTown/scripts.pory"
-	applymovement 14, BravefortTown_EventScript_Scientist_Movement_1
-# 133 "data/maps/BravefortTown/scripts.pory"
+	lock
+# 129 "data/maps/BravefortTown/scripts.pory"
+	applymovement 14, BravefortTown_EventScript_Scientist_Movement_0
+# 130 "data/maps/BravefortTown/scripts.pory"
 	waitmovement 14
+# 131 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Military_Text_0
 # 134 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 135 "data/maps/BravefortTown/scripts.pory"
+	applymovement 14, BravefortTown_EventScript_Scientist_Movement_1
+# 136 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 14
+# 137 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_CantPassYet::
-# 138 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 139 "data/maps/BravefortTown/scripts.pory"
-	applymovement 13, BravefortTown_EventScript_Scientist_Movement_0
-# 140 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 13
 # 141 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_CantPassYet_Text_0
+	lock
+# 142 "data/maps/BravefortTown/scripts.pory"
+	applymovement 13, BravefortTown_EventScript_Scientist_Movement_0
 # 143 "data/maps/BravefortTown/scripts.pory"
-	closemessage
-# 144 "data/maps/BravefortTown/scripts.pory"
-	applymovement 13, BravefortTown_EventScript_Scientist_Movement_1
-# 145 "data/maps/BravefortTown/scripts.pory"
 	waitmovement 13
+# 144 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_CantPassYet_Text_0
 # 146 "data/maps/BravefortTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, BravefortTown_EventScript_CantPassYet_Movement_0
+	closemessage
 # 147 "data/maps/BravefortTown/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement 13, BravefortTown_EventScript_Scientist_Movement_1
 # 148 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 13
+# 149 "data/maps/BravefortTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, BravefortTown_EventScript_CantPassYet_Movement_0
+# 150 "data/maps/BravefortTown/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 151 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_GuardCantPassYet::
-# 152 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 153 "data/maps/BravefortTown/scripts.pory"
-	applymovement 13, BravefortTown_EventScript_Scientist_Movement_0
-# 154 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 13
 # 155 "data/maps/BravefortTown/scripts.pory"
+	lock
+# 156 "data/maps/BravefortTown/scripts.pory"
+	applymovement 13, BravefortTown_EventScript_Scientist_Movement_0
+# 157 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 13
+# 158 "data/maps/BravefortTown/scripts.pory"
 	compare VAR_BRAVEFORT_TOWN_STATE, 3
 	goto_if_lt BravefortTown_EventScript_GuardCantPassYet_2
-# 160 "data/maps/BravefortTown/scripts.pory"
+# 163 "data/maps/BravefortTown/scripts.pory"
 	compare VAR_BRAVEFORT_TOWN_STATE, 3
 	goto_if_gt BravefortTown_EventScript_GuardCantPassYet_3
 BravefortTown_EventScript_GuardCantPassYet_1:
-# 164 "data/maps/BravefortTown/scripts.pory"
+# 167 "data/maps/BravefortTown/scripts.pory"
 	applymovement 13, BravefortTown_EventScript_Scientist_Movement_1
-# 165 "data/maps/BravefortTown/scripts.pory"
+# 168 "data/maps/BravefortTown/scripts.pory"
 	waitmovement 13
-# 166 "data/maps/BravefortTown/scripts.pory"
+# 169 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 BravefortTown_EventScript_GuardCantPassYet_2:
-# 156 "data/maps/BravefortTown/scripts.pory"
+# 159 "data/maps/BravefortTown/scripts.pory"
 	msgbox BravefortTown_EventScript_CantPassYet_Text_0
-# 158 "data/maps/BravefortTown/scripts.pory"
+# 161 "data/maps/BravefortTown/scripts.pory"
 	closemessage
 	goto BravefortTown_EventScript_GuardCantPassYet_1
 
 BravefortTown_EventScript_GuardCantPassYet_3:
-# 161 "data/maps/BravefortTown/scripts.pory"
+# 164 "data/maps/BravefortTown/scripts.pory"
 	msgbox BravefortTown_EventScript_GuardCantPassYet_Text_0
-# 162 "data/maps/BravefortTown/scripts.pory"
+# 165 "data/maps/BravefortTown/scripts.pory"
 	closemessage
 	goto BravefortTown_EventScript_GuardCantPassYet_1
 
 
 BravefortTown_EventScript_DisgruntledSailor::
-# 170 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 171 "data/maps/BravefortTown/scripts.pory"
-	applymovement 3, BravefortTown_EventScript_Scientist_Movement_0
-# 172 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 3
 # 173 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_DisgruntledSailor_Text_0
+	lock
 # 174 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	applymovement 3, BravefortTown_EventScript_Scientist_Movement_0
 # 175 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 3
+# 176 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_DisgruntledSailor_Text_0
+# 177 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 178 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Sailor::
-# 179 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 180 "data/maps/BravefortTown/scripts.pory"
-	applymovement 2, BravefortTown_EventScript_Scientist_Movement_0
-# 181 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 2
 # 182 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Sailor_Text_0
+	lock
+# 183 "data/maps/BravefortTown/scripts.pory"
+	applymovement 2, BravefortTown_EventScript_Scientist_Movement_0
 # 184 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	waitmovement 2
 # 185 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Sailor_Text_0
+# 187 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 188 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Girlfriend::
-# 189 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 190 "data/maps/BravefortTown/scripts.pory"
-	applymovement 4, BravefortTown_EventScript_Scientist_Movement_0
-# 191 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 4
 # 192 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Girlfriend_Text_0
+	lock
 # 193 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	applymovement 4, BravefortTown_EventScript_Scientist_Movement_0
 # 194 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 4
+# 195 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Girlfriend_Text_0
+# 196 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 197 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Boyfriend::
-# 198 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 199 "data/maps/BravefortTown/scripts.pory"
-	applymovement 5, BravefortTown_EventScript_Scientist_Movement_0
-# 200 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 5
 # 201 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Boyfriend_Text_0
+	lock
+# 202 "data/maps/BravefortTown/scripts.pory"
+	applymovement 5, BravefortTown_EventScript_Scientist_Movement_0
 # 203 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	waitmovement 5
 # 204 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Boyfriend_Text_0
+# 206 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 207 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Ghost::
-# 208 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 209 "data/maps/BravefortTown/scripts.pory"
-	applymovement 6, BravefortTown_EventScript_Scientist_Movement_0
-# 210 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 6
 # 211 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Ghost_Text_0
+	lock
+# 212 "data/maps/BravefortTown/scripts.pory"
+	applymovement 6, BravefortTown_EventScript_Scientist_Movement_0
+# 213 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 6
 # 214 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Ghost_Text_0
+# 217 "data/maps/BravefortTown/scripts.pory"
 	closemessage
-# 215 "data/maps/BravefortTown/scripts.pory"
+# 218 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Walter::
-# 219 "data/maps/BravefortTown/scripts.pory"
+# 222 "data/maps/BravefortTown/scripts.pory"
 	trainerbattle_single TRAINER_WALTER_2, BravefortTown_Text_WalterIntro, BravefortTown_Text_WalterOutro
-# 220 "data/maps/BravefortTown/scripts.pory"
+# 223 "data/maps/BravefortTown/scripts.pory"
 	msgbox BravefortTown_Text_WalterPostBattle, MSGBOX_AUTOCLOSE
-# 221 "data/maps/BravefortTown/scripts.pory"
+# 224 "data/maps/BravefortTown/scripts.pory"
 	waitmessage
 	end
 
 
 BravefortTown_EventScript_Beauty::
-# 238 "data/maps/BravefortTown/scripts.pory"
-	lock
-# 239 "data/maps/BravefortTown/scripts.pory"
-	applymovement 11, BravefortTown_EventScript_Scientist_Movement_0
-# 240 "data/maps/BravefortTown/scripts.pory"
-	waitmovement 11
 # 241 "data/maps/BravefortTown/scripts.pory"
-	msgbox BravefortTown_EventScript_Beauty_Text_0
+	lock
 # 242 "data/maps/BravefortTown/scripts.pory"
-	closemessage
+	applymovement 11, BravefortTown_EventScript_Scientist_Movement_0
 # 243 "data/maps/BravefortTown/scripts.pory"
+	waitmovement 11
+# 244 "data/maps/BravefortTown/scripts.pory"
+	msgbox BravefortTown_EventScript_Beauty_Text_0
+# 245 "data/maps/BravefortTown/scripts.pory"
+	closemessage
+# 246 "data/maps/BravefortTown/scripts.pory"
 	release
 	return
 
 
 BravefortTown_EventScript_Austina::
-# 247 "data/maps/BravefortTown/scripts.pory"
+# 250 "data/maps/BravefortTown/scripts.pory"
 	trainerbattle_single TRAINER_AUSTINA, BravefortTown_Text_AustinaIntro, BravefortTown_Text_AustinaOutro
-# 248 "data/maps/BravefortTown/scripts.pory"
+# 251 "data/maps/BravefortTown/scripts.pory"
 	msgbox BravefortTown_Text_AustinaPostBattle, MSGBOX_AUTOCLOSE
-# 249 "data/maps/BravefortTown/scripts.pory"
+# 252 "data/maps/BravefortTown/scripts.pory"
 	waitmessage
 	end
 
 
 BravefortTown_EventScript_Simon::
-# 266 "data/maps/BravefortTown/scripts.pory"
+# 269 "data/maps/BravefortTown/scripts.pory"
 	trainerbattle_single TRAINER_SIMON, BravefortTown_Text_SimonIntro, BravefortTown_Text_SimonOutro
-# 267 "data/maps/BravefortTown/scripts.pory"
+# 270 "data/maps/BravefortTown/scripts.pory"
 	msgbox BravefortTown_Text_SimonPostBattle, MSGBOX_AUTOCLOSE
-# 268 "data/maps/BravefortTown/scripts.pory"
+# 271 "data/maps/BravefortTown/scripts.pory"
 	waitmessage
 	end
 
@@ -440,9 +446,15 @@ BravefortTown_EventScript_Guard_VenomLocustArrested_Movement_0:
 	face_player
 	step_end
 
-# 146 "data/maps/BravefortTown/scripts.pory"
+# 110 "data/maps/BravefortTown/scripts.pory"
+BravefortTown_EventScript_Guard_VenomLocustArrested_Movement_1:
+# 110 "data/maps/BravefortTown/scripts.pory"
+	face_up
+	step_end
+
+# 149 "data/maps/BravefortTown/scripts.pory"
 BravefortTown_EventScript_CantPassYet_Movement_0:
-# 146 "data/maps/BravefortTown/scripts.pory"
+# 149 "data/maps/BravefortTown/scripts.pory"
 	walk_down
 	step_end
 
@@ -504,7 +516,7 @@ BravefortTown_EventScript_Guard_Text_1:
 	.string "You're welcome to take a look inside.$"
 
 BravefortTown_EventScript_Guard_VenomLocustArrested_Text_0:
-# 109 "data/maps/BravefortTown/scripts.pory"
+# 112 "data/maps/BravefortTown/scripts.pory"
 	.string "Hey, it's you!\p"
 	.string "Because of you, the police were able to\n"
 	.string "arrest the members of the Venom Locust\l"
@@ -513,15 +525,15 @@ BravefortTown_EventScript_Guard_VenomLocustArrested_Text_0:
 	.string "Here, this reward is for you.$"
 
 BravefortTown_EventScript_Guard_VenomLocustArrested_Text_1:
-# 112 "data/maps/BravefortTown/scripts.pory"
+# 116 "data/maps/BravefortTown/scripts.pory"
 	.string "{PAUSE_MUSIC} {PLAYER} received ¥4,000!$"
 
 BravefortTown_EventScript_Guard_VenomLocustArrested_Text_2:
-# 119 "data/maps/BravefortTown/scripts.pory"
+# 122 "data/maps/BravefortTown/scripts.pory"
 	.string "{RESUME_MUSIC} Thank you again!$"
 
 BravefortTown_EventScript_Military_Text_0:
-# 128 "data/maps/BravefortTown/scripts.pory"
+# 131 "data/maps/BravefortTown/scripts.pory"
 	.string "Have you ever wondered where the name\n"
 	.string "Bravefort comes from?\p"
 	.string "Many, many years ago, Shizen had a\n"
@@ -533,7 +545,7 @@ BravefortTown_EventScript_Military_Text_0:
 	.string "for more living spaces.$"
 
 BravefortTown_EventScript_CantPassYet_Text_0:
-# 141 "data/maps/BravefortTown/scripts.pory"
+# 144 "data/maps/BravefortTown/scripts.pory"
 	.string "I'm sorry, we're not allowing anyone into\n"
 	.string "the temple grounds until we find the\l"
 	.string "culprit that attacked the Day Care.\p"
@@ -541,36 +553,36 @@ BravefortTown_EventScript_CantPassYet_Text_0:
 	.string "investigation has included.$"
 
 BravefortTown_EventScript_GuardCantPassYet_Text_0:
-# 161 "data/maps/BravefortTown/scripts.pory"
+# 164 "data/maps/BravefortTown/scripts.pory"
 	.string "Thank you for helping us capture those\n"
 	.string "thugs. Enjoy your time in the temple!$"
 
 BravefortTown_EventScript_DisgruntledSailor_Text_0:
-# 173 "data/maps/BravefortTown/scripts.pory"
+# 176 "data/maps/BravefortTown/scripts.pory"
 	.string "Moving goods over to the warehouse was\n"
 	.string "a lot easier before they built these\l"
 	.string "stupid towers here.$"
 
 BravefortTown_EventScript_Sailor_Text_0:
-# 182 "data/maps/BravefortTown/scripts.pory"
+# 185 "data/maps/BravefortTown/scripts.pory"
 	.string "Do you ever wonder what's in some of\n"
 	.string "these boxes?\p"
 	.string "I hope I wouldn't get in trouble if\n"
 	.string "something bad was in them.$"
 
 BravefortTown_EventScript_Girlfriend_Text_0:
-# 192 "data/maps/BravefortTown/scripts.pory"
+# 195 "data/maps/BravefortTown/scripts.pory"
 	.string "Don't you think lighthouses are so\n"
 	.string "romantic?$"
 
 BravefortTown_EventScript_Boyfriend_Text_0:
-# 201 "data/maps/BravefortTown/scripts.pory"
+# 204 "data/maps/BravefortTown/scripts.pory"
 	.string "People say that an AMPHAROS provides\n"
 	.string "light from the lighthouse.\p"
 	.string "Pokémon are amazing.$"
 
 BravefortTown_EventScript_Ghost_Text_0:
-# 211 "data/maps/BravefortTown/scripts.pory"
+# 214 "data/maps/BravefortTown/scripts.pory"
 	.string "This new warehouse was built about 5\n"
 	.string "years ago after we outgrew the old one.\p"
 	.string "Rumors say that the ghost of Pirate\n"
@@ -581,45 +593,45 @@ BravefortTown_EventScript_Ghost_Text_0:
 	.string "there.$"
 
 BravefortTown_EventScript_Beauty_Text_0:
-# 241 "data/maps/BravefortTown/scripts.pory"
+# 244 "data/maps/BravefortTown/scripts.pory"
 	.string "My children love Pokémon battling!$"
 
 BravefortTown_Text_WalterIntro::
-# 225 "data/maps/BravefortTown/scripts.pory"
+# 228 "data/maps/BravefortTown/scripts.pory"
 	.string "Care to have a beach battle with a\n"
 	.string "gentleman?$"
 
 BravefortTown_Text_WalterOutro::
-# 229 "data/maps/BravefortTown/scripts.pory"
+# 232 "data/maps/BravefortTown/scripts.pory"
 	.string "You battle exquisitly.$"
 
 BravefortTown_Text_WalterPostBattle::
-# 233 "data/maps/BravefortTown/scripts.pory"
+# 236 "data/maps/BravefortTown/scripts.pory"
 	.string "Is it weird wearing a suit on the beach?$"
 
 BravefortTown_Text_AustinaIntro::
-# 253 "data/maps/BravefortTown/scripts.pory"
+# 256 "data/maps/BravefortTown/scripts.pory"
 	.string "Play in the sand with me!$"
 
 BravefortTown_Text_AustinaOutro::
-# 257 "data/maps/BravefortTown/scripts.pory"
+# 260 "data/maps/BravefortTown/scripts.pory"
 	.string "Waahhhh, you beat me!$"
 
 BravefortTown_Text_AustinaPostBattle::
-# 261 "data/maps/BravefortTown/scripts.pory"
+# 264 "data/maps/BravefortTown/scripts.pory"
 	.string "You were supposed to let me win!$"
 
 BravefortTown_Text_SimonIntro::
-# 272 "data/maps/BravefortTown/scripts.pory"
+# 275 "data/maps/BravefortTown/scripts.pory"
 	.string "I've won against my sister 4 times now,\n"
 	.string "you're going to make it my first 5 win\l"
 	.string "streak!$"
 
 BravefortTown_Text_SimonOutro::
-# 276 "data/maps/BravefortTown/scripts.pory"
+# 279 "data/maps/BravefortTown/scripts.pory"
 	.string "Wow, you're strong...$"
 
 BravefortTown_Text_SimonPostBattle::
-# 280 "data/maps/BravefortTown/scripts.pory"
+# 283 "data/maps/BravefortTown/scripts.pory"
 	.string "I'll try to get a higher win streak\n"
 	.string "tomorrow!$"

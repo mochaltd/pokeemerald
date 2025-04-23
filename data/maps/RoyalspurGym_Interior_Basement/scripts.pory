@@ -3,6 +3,7 @@ mapscripts RoyalspurGym_Interior_Basement_MapScripts {
 }
 
 script RoyalspurGym_EventScript_Raikov {
+    call(Common_EventScript_SaveGame)
     trainerbattle_single(TRAINER_SPENSER, RoyalspurGym_Text_RaikovIntro, RoyalspurGym_Text_RaikovOutro, RoyalspurGym_EventScript_RaikovDefeated)
     //specialvar(VAR_RESULT, ShouldTryRematchBattle)
     //goto_if_eq(VAR_RESULT, TRUE, RoyalspurGym_EventScript_RaikovRematch)

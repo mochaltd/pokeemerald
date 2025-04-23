@@ -76,6 +76,7 @@ text BravefortTown_Sewers_Tunnel_Text_EdgarPostBattle {
 }
 
 script BravefortTown_Sewers_Tunnel_EventScript_Leroy {
+    call(Common_EventScript_SaveGame)
     trainerbattle_single(TRAINER_LEROY, BravefortTown_Sewers_Tunnel_Text_LeroyIntro, BravefortTown_Sewers_Tunnel_Text_LeroyOutro, BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested)
     end
 }

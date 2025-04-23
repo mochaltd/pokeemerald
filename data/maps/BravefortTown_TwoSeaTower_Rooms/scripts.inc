@@ -148,6 +148,22 @@ BravefortTown_TwoSeaTower_Rooms_EventScript_LittleGirl::
 	return
 
 
+BravefortTown_TwoSeaTower_Rooms_EventScript_Rest::
+# 164 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	lock
+# 165 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	applymovement 2, BravefortTown_TwoSeaTower_Rooms_EventScript_Gentleman_Movement_0
+# 166 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	waitmovement 2
+# 167 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	msgbox BravefortTown_TwoSeaTower_Rooms_EventScript_Rest_Text_0
+# 168 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	closemessage
+# 169 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	release
+	return
+
+
 # 7 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
 BravefortTown_TwoSeaTower_Rooms_EventScript_Gentleman_Movement_0:
 # 7 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
@@ -200,6 +216,11 @@ BravefortTown_TwoSeaTower_Rooms_EventScript_Sister_Text_0:
 BravefortTown_TwoSeaTower_Rooms_EventScript_LittleGirl_Text_0:
 # 156 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
 	.string "I wanna go to the beach NOW!!$"
+
+BravefortTown_TwoSeaTower_Rooms_EventScript_Rest_Text_0:
+# 167 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"
+	.string "This is a resting room. Feel free to lie\n"
+	.string "down on the bed for a bit.$"
 
 BravefortTown_TwoSeaTower_Rooms_Text_ShelbyIntro::
 # 26 "data/maps/BravefortTown_TwoSeaTower_Rooms/scripts.pory"

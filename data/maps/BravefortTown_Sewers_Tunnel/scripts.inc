@@ -62,38 +62,40 @@ BravefortTown_Sewers_Tunnel_EventScript_Edgar::
 
 BravefortTown_Sewers_Tunnel_EventScript_Leroy::
 # 79 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
+	call Common_EventScript_SaveGame
+# 80 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
 	trainerbattle_single TRAINER_LEROY, BravefortTown_Sewers_Tunnel_Text_LeroyIntro, BravefortTown_Sewers_Tunnel_Text_LeroyOutro, BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested
 	end
 
 
 BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested::
-# 101 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	lock
 # 102 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	msgbox BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested_Text_0
+	lock
 # 103 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	closemessage
+	msgbox BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested_Text_0
 # 104 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	setvar VAR_BRAVEFORT_TOWN_STATE, 3
+	closemessage
 # 105 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	setvar VAR_BRAVEFORT_TOWN_STATE, 3
 # 106 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	removeobject 1
+	fadescreen FADE_TO_BLACK
 # 107 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	removeobject 2
+	removeobject 1
 # 108 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	removeobject 3
+	removeobject 2
 # 109 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	removeobject 4
+	removeobject 3
 # 110 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	removeobject 4
 # 111 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 112 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
 	release
 	return
 
 
 BravefortTown_Sewers_Tunnel_EventScript_LeroyArrested_Text_0:
-# 102 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
+# 103 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
 	.string "You have stopped us for now, but there\n"
 	.string "are others who will rise in our place.\l"
 	.string "This isn't over.$"
@@ -139,7 +141,7 @@ BravefortTown_Sewers_Tunnel_Text_EdgarPostBattle::
 	.string "for what they did.$"
 
 BravefortTown_Sewers_Tunnel_Text_LeroyIntro::
-# 83 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
+# 84 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
 	.string "You're strong, kid, I'll give you that.\p"
 	.string "The Venom Locust's goal has been to\n"
 	.string "destroy the towers built on the remains\l"
@@ -166,6 +168,6 @@ BravefortTown_Sewers_Tunnel_Text_LeroyIntro::
 	.string "resolve is!$"
 
 BravefortTown_Sewers_Tunnel_Text_LeroyOutro::
-# 96 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
+# 97 "data/maps/BravefortTown_Sewers_Tunnel/scripts.pory"
 	.string "You may have won this battle, but you\n"
 	.string "won't win the war.$"

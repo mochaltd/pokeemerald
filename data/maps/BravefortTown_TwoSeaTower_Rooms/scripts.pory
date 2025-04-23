@@ -159,3 +159,12 @@ script BravefortTown_TwoSeaTower_Rooms_EventScript_LittleGirl {
     waitmovement(8)
     release
 }
+
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Rest {
+    lock
+    applymovement(2, moves(face_player))
+    waitmovement(2)
+    msgbox(format("This is a resting room. Feel free to lie down on the bed for a bit."))
+    closemessage
+    release
+}

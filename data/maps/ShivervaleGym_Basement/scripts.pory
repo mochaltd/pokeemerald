@@ -2,7 +2,8 @@ mapscripts ShivervaleGym_Basement_MapScripts {
 
 }
 
-script Shivervale_Gym_EventScript_Lucy{
+script Shivervale_Gym_EventScript_Lucy {
+    call(Common_EventScript_SaveGame)
     trainerbattle_single(TRAINER_LUCY, ShivervaleTown_Gym_Text_LucyIntro, ShivervaleTown_Gym_Text_LucyOutro, Shivervale_Gym_EventScript_LucyDefeated)
     //specialvar(VAR_RESULT, ShouldTryRematchBattle)
     //goto_if_eq(VAR_RESULT, TRUE, Shivervale_Gym_EventScript_LucyRematch)
