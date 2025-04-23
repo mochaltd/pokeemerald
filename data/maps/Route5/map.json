@@ -243,6 +243,14 @@
       "elevation": 0,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET"
+    },
+    {
+      "type": "sign",
+      "x": 102,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route5_EventScript_CoaltineSign"
     }
   ]
 }

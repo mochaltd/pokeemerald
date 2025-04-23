@@ -44,6 +44,12 @@ script Route5_EventScript_TunnelSign {
     release
 }
 
+script Route5_EventScript_CoaltineSign {
+    lock
+    msgbox(format("Coaltine Tunnel"))
+    release
+}
+
 script Route5_EventScript_Perry {
     trainerbattle_single(TRAINER_PERRY, Route5_Text_PerryIntro, Route5_Text_PerryOutro)
     msgbox(Route5_Text_PerryPostBattle, MSGBOX_AUTOCLOSE)
