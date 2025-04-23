@@ -85,10 +85,10 @@ text BravefortTown_OneSeaTower_Rooms_Text_EdmondPostBattle {
     format("To always be near the ocean is the dream!")
 }
 
-script BravefortTown_OneSeaTower_Rooms_EventScript_Rest {
+script BravefortTown_TwoSeaTower_Rooms_EventScript_Rest {
     lock
-    applymovement(7, moves(face_player))
-    waitmovement(7)
+    applymovement(2, moves(face_player))
+    waitmovement(2)
     msgbox(format("This is a resting room. Feel free to lie down on the bed for a bit."))
     closemessage
     release

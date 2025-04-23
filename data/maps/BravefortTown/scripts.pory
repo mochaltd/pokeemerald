@@ -106,11 +106,14 @@ script BravefortTown_EventScript_Guard_VenomLocustArrested {
     applymovement(1, moves(emote_exclamation_mark, face_player))
     waitmovement(1)
     playse(SE_PIN)
+    waitse
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox(format("Hey, it's you!\p
     Because of you, the police were able to arrest the members of the Venom Locust that were down in the sewer planning their attack on One and Two Sea Tower.\p
     Here, this reward is for you."))
-    msgbox(format("{PAUSE_MUSIC} {PLAYER} received ¥4,000!"))
     playse(MUS_OBTAIN_ITEM)
+    msgbox(format("{PAUSE_MUSIC} {PLAYER} received ¥4,000!"))
     waitse
     addmoney(4000)
     closemessage
