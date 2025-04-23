@@ -12,7 +12,7 @@ script RoyalspurCity_MayorHouse_2F_EventScript_Mayor {
     if(var(VAR_ROYALSPUR_CITY_STATE) <= 6) {
         goto(ImTheMayor)
     }
-    if(var(VAR_ROYALSPUR_CITY_STATE) >= 8) {
+    if(var(VAR_ROYALSPUR_CITY_STATE) == 8) {
         goto(GiveBikeVoucher)
     }
     if(var(VAR_ROYALSPUR_CITY_STATE) >= 9) {
@@ -40,7 +40,7 @@ script GiveBikeVoucher {
     ...\l
     ...\p
     Oh my gosh, I hope he's okay! Thank you so much for rescuing him.\p
-    I've never heard of strange individuals like the ones you described, I hope they don't make their way to Royalspur.\p
+    I've never heard of strange individuals like the ones you described, I hope they don't make their way to our wonderful city.\p
     Here, let me reward you for what you've done."))
     giveitem(ITEM_BIKE_VOUCHER)
     setflag(FLAG_RECEIVED_BIKE_VOUCHER)
@@ -58,7 +58,7 @@ script Mayor_GoodLuck {
    lock
    applymovement(1, moves(face_player))
    waitmovement(1)
-   msgbox(format("Good luck on your journey! You are always welcome back in Royalspur!"))
+   msgbox(format("Good luck on your journey! You are always welcome back in Royalspur City!"))
    closemessage
    applymovement(1, moves(face_original_direction))
    waitmovement(1)

@@ -9,7 +9,7 @@ RoyalspurCity_MayorHouse_2F_EventScript_Mayor::
 RoyalspurCity_MayorHouse_2F_EventScript_Mayor_1:
 # 15 "data/maps/RoyalspurCity_MayorHouse_2F/scripts.pory"
 	compare VAR_ROYALSPUR_CITY_STATE, 8
-	goto_if_ge RoyalspurCity_MayorHouse_2F_EventScript_Mayor_5
+	goto_if_eq RoyalspurCity_MayorHouse_2F_EventScript_Mayor_5
 RoyalspurCity_MayorHouse_2F_EventScript_Mayor_4:
 # 18 "data/maps/RoyalspurCity_MayorHouse_2F/scripts.pory"
 	compare VAR_ROYALSPUR_CITY_STATE, 9
@@ -133,7 +133,8 @@ GiveBikeVoucher_Text_0:
 	.string "so much for rescuing him.\p"
 	.string "I've never heard of strange individuals\n"
 	.string "like the ones you described, I hope\l"
-	.string "they don't make their way to Royalspur.\p"
+	.string "they don't make their way to our\l"
+	.string "wonderful city.\p"
 	.string "Here, let me reward you for what you've\n"
 	.string "done.$"
 
@@ -146,4 +147,4 @@ GiveBikeVoucher_Text_1:
 Mayor_GoodLuck_Text_0:
 # 61 "data/maps/RoyalspurCity_MayorHouse_2F/scripts.pory"
 	.string "Good luck on your journey! You are\n"
-	.string "always welcome back in Royalspur!$"
+	.string "always welcome back in Royalspur City!$"
