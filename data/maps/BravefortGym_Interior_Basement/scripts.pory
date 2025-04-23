@@ -3,6 +3,7 @@ mapscripts BravefortGym_Interior_Basement_MapScripts {
 }
 
 script BravefortGym_Interior_Basement_Barlow {
+    call(Common_EventScript_SaveGame)
     trainerbattle_single(TRAINER_DRAKE, RoyalspurGym_Text_BarlowIntro, RoyalspurGym_Text_BarlowOutro, BravefortGym_Interior_Basement_BarlowDefeated)
     //specialvar(VAR_RESULT, ShouldTryRematchBattle)
     //goto_if_eq(VAR_RESULT, TRUE, BravefortGym_Interior_Basement_BarlowRematch)
