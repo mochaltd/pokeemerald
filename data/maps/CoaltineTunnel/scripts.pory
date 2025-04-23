@@ -211,8 +211,8 @@ script CoaltineTunnel_EventScript_Grunt2Defeated {
 
 script CoaltineTunnel_EventScript_CantLeaveYet {
     lock
-    applymovement(7, moves(face_right))
-    waitmovement(7)
+    applymovement(4, moves(face_right))
+    waitmovement(4)
     msgbox(format("I'm sorry, I can't let you through right now. The police are investigating something on Route 6 and asked me to keep the route clear for them."))
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
@@ -222,8 +222,8 @@ script CoaltineTunnel_EventScript_CantLeaveYet {
 
 script CoaltineTunnel_EventScript_Hiker {
     lock
-    applymovement(7, moves(face_player))
-    waitmovement(7)
+    applymovement(4, moves(face_player))
+    waitmovement(4)
     if(var(VAR_ROYALSPUR_CITY_STATE) == 9) {
         msgbox(format("The police are finished up. Happy hiking!"))
         closemessage
@@ -382,7 +382,7 @@ text CoaltineTunnel_Text_WyattPostBattle {
 }
 
 script CoaltineTunnel_EventScript_Patricia {
-    trainerbattle_single(TRAINER_WYATT, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro)
+    trainerbattle_single(TRAINER_PATRICIA, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro)
     msgbox(CoaltineTunnel_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE)
     waitmessage
     end

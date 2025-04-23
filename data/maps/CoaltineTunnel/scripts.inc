@@ -344,9 +344,9 @@ CoaltineTunnel_EventScript_CantLeaveYet::
 # 213 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
 # 214 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 7, CoaltineTunnel_EventScript_Trigger1_Movement_1
+	applymovement 4, CoaltineTunnel_EventScript_Trigger1_Movement_1
 # 215 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 7
+	waitmovement 4
 # 216 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_CantLeaveYet_Text_0
 # 217 "data/maps/CoaltineTunnel/scripts.pory"
@@ -364,9 +364,9 @@ CoaltineTunnel_EventScript_Hiker::
 # 224 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
 # 225 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 7, CoaltineTunnel_EventScript_Hiker_Movement_0
+	applymovement 4, CoaltineTunnel_EventScript_Hiker_Movement_0
 # 226 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 7
+	waitmovement 4
 # 227 "data/maps/CoaltineTunnel/scripts.pory"
 	compare VAR_ROYALSPUR_CITY_STATE, 9
 	goto_if_eq CoaltineTunnel_EventScript_Hiker_2
@@ -533,7 +533,7 @@ CoaltineTunnel_EventScript_Wyatt::
 
 CoaltineTunnel_EventScript_Patricia::
 # 385 "data/maps/CoaltineTunnel/scripts.pory"
-	trainerbattle_single TRAINER_WYATT, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro
+	trainerbattle_single TRAINER_PATRICIA, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro
 # 386 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
 # 387 "data/maps/CoaltineTunnel/scripts.pory"
