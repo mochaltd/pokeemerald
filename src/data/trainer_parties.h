@@ -11791,7 +11791,7 @@ static const struct TrainerMonItemCustomMoves sParty_Lucy[] = {
     .lvl = 14,
     .species = SPECIES_IMPIDIMP,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FAKE_TEARS, MOVE_FAKE_OUT, MOVE_BITE, MOVE_DISABLE}
+    .moves = {MOVE_FAKE_TEARS, MOVE_FAKE_OUT, MOVE_THIEF, MOVE_DISABLE}
     }
 };
 
