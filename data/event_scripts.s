@@ -1215,3 +1215,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/ShivervaleGym_PostBattle/scripts.inc"
 
 	.include "data/maps/CoaltineTunnel_B1F/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"

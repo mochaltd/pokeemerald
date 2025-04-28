@@ -6252,6 +6252,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/CoaltineTunnel_B1F/border.bin",
       "blockdata_filepath": "data/layouts/CoaltineTunnel_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 52,
+      "height": 100,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralCopy",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
     }
   ]
 }

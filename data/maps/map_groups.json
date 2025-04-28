@@ -138,7 +138,8 @@
     "BravefortTown_IVChecker",
     "Route6_BuildersHouse",
     "RoyalspurGym_Interior_1F_PostBattle",
-    "CoaltineTunnel_B1F"
+    "CoaltineTunnel_B1F",
+    "Route7"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
