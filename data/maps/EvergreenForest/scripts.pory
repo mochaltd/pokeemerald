@@ -30,7 +30,6 @@ script EvergreenForest_EventScript_UmbraPreBattle {
 }
 
 script EvergreenForest_EventScript_Grunt1Battle{
-    call(Common_EventScript_SaveGame)
     trainerbattle_single(TRAINER_GRUNT1_EVERGREEN_FOREST, EvergreenForest_Text_Grunt1Intro, EvergreenForest_Text_Grunt1Outro, EvergreenForest_EventScript_Grunt1Defeated)
     release
     end

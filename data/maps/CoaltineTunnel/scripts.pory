@@ -124,7 +124,6 @@ script CoaltineTunnel_EventScript_Trigger3 {
 }
 
 script CoaltineTunnel_EventScript_Grunt1Battle{
-    call(Common_EventScript_SaveGame)
     trainerbattle_double(TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt1Defeated)
     release
     end
