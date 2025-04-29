@@ -11751,7 +11751,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Spenser[] = {
     .iv = 200,
     .lvl = 23,
     .species = SPECIES_MANECTRIC,
-    .moves = {MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_HOWL}
+    .moves = {MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_ROAR}
     }
 };
 
