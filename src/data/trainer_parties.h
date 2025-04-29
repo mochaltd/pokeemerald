@@ -42,6 +42,12 @@ static const struct TrainerMonNoItemCustomMoves sParty_GruntAquaHideout1[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_GruntAquaHideout2[] = {
     {
     .iv = 125,
+    .lvl = 22,
+    .species = SPECIES_METANG,
+    .moves = {MOVE_CONFUSION, MOVE_METAL_CLAW, MOVE_TAKE_DOWN, MOVE_LIGHT_SCREEN}
+    },
+    {
+    .iv = 125,
     .lvl = 24,
     .species = SPECIES_HAUNTER,
     .moves = {MOVE_HYPNOSIS, MOVE_NIGHT_SHADE, MOVE_CURSE, MOVE_SPITE}
