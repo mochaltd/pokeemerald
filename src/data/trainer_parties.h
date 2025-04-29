@@ -24,29 +24,33 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route2Sarah[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_GruntAquaHideout1[] = {
     {
-    .iv = 50,
-    .lvl = 25,
-    .species = SPECIES_HOUNDOUR,
-    },
-    {
-    .iv = 50,
+    .iv = 125,
     .lvl = 24,
     .species = SPECIES_ABSOL,
+    .moves = {MOVE_BITE, MOVE_RAZOR_WIND, MOVE_QUICK_ATTACK, MOVE_LEER}
+    },
+    {
+    .iv = 125,
+    .lvl = 25,
+    .species = SPECIES_HOUNDOUR,
+    .moves = {MOVE_BITE, MOVE_ROAR, MOVE_SMOG, MOVE_EMBER}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_GruntAquaHideout2[] = {
     {
-    .iv = 50,
+    .iv = 125,
     .lvl = 24,
     .species = SPECIES_HAUNTER,
+    .moves = {MOVE_HYPNOSIS, MOVE_NIGHT_SHADE, MOVE_CURSE, MOVE_SPITE}
     },
     {
-    .iv = 50,
+    .iv = 125,
     .lvl = 26,
     .species = SPECIES_UMBREON,
+    .moves = {MOVE_QUICK_ATTACK, MOVE_PURSUIT, MOVE_SAND_ATTACK, MOVE_TAIL_WHIP}
     }
 };
 

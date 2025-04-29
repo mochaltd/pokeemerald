@@ -232,367 +232,387 @@ CoaltineTunnel_EventScript_Trigger3::
 	return
 
 
-CoaltineTunnel_EventScript_Grunt1Battle::
+CoaltineTunnel_EventScript_Grunt1::
 # 127 "data/maps/CoaltineTunnel/scripts.pory"
-	trainerbattle_double TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt1Defeated
-# 128 "data/maps/CoaltineTunnel/scripts.pory"
+	goto CoaltineTunnel_EventScript_Grunt1Battle
+	return
+
+
+CoaltineTunnel_EventScript_Grunt1Battle::
+# 131 "data/maps/CoaltineTunnel/scripts.pory"
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_EventScript_Grunt1Defeated
+# 132 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	end
 
 
 CoaltineTunnel_EventScript_Grunt1Defeated::
-# 146 "data/maps/CoaltineTunnel/scripts.pory"
-	lock
-# 147 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt1Defeated_Text_0
-# 148 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 149 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 3, CoaltineTunnel_EventScript_Grunt1Defeated_Movement_0
 # 150 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 3
+	lock
 # 151 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CoaltineTunnel_EventScript_Trigger1_Movement_1
+	msgbox CoaltineTunnel_EventScript_Grunt1Defeated_Text_0
 # 152 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	closemessage
 # 153 "data/maps/CoaltineTunnel/scripts.pory"
-	setvar VAR_ROYALSPUR_CITY_STATE, 7
+	applymovement 3, CoaltineTunnel_EventScript_Grunt1Defeated_Movement_0
 # 154 "data/maps/CoaltineTunnel/scripts.pory"
-	goto CoaltineTunnel_EventScript_Grunt2Battle
+	waitmovement 3
 # 155 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CoaltineTunnel_EventScript_Trigger1_Movement_1
+# 156 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 157 "data/maps/CoaltineTunnel/scripts.pory"
+	setvar VAR_ROYALSPUR_CITY_STATE, 7
+# 158 "data/maps/CoaltineTunnel/scripts.pory"
+	goto CoaltineTunnel_EventScript_Grunt2Battle
+# 159 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_Grunt2Battle::
-# 159 "data/maps/CoaltineTunnel/scripts.pory"
-	trainerbattle_double TRAINER_GRUNT_AQUA_HIDEOUT_2, CoaltineTunnel_Text_Grunt2Intro, CoaltineTunnel_Text_Grunt2Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt2Defeated
-# 160 "data/maps/CoaltineTunnel/scripts.pory"
+# 163 "data/maps/CoaltineTunnel/scripts.pory"
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_2, CoaltineTunnel_Text_Grunt2Intro, CoaltineTunnel_Text_Grunt2Outro, CoaltineTunnel_EventScript_Grunt2Defeated
+# 164 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	end
 
 
-CoaltineTunnel_EventScript_Grunt2Defeated::
-# 173 "data/maps/CoaltineTunnel/scripts.pory"
-	lock
-# 174 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_0
+CoaltineTunnel_EventScript_Grunt2::
 # 177 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 178 "data/maps/CoaltineTunnel/scripts.pory"
-	setvar VAR_ROYALSPUR_CITY_STATE, 8
-# 179 "data/maps/CoaltineTunnel/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 180 "data/maps/CoaltineTunnel/scripts.pory"
-	removeobject 2
+	goto CoaltineTunnel_EventScript_Grunt2Battle
+	return
+
+
+CoaltineTunnel_EventScript_Grunt2Defeated::
 # 181 "data/maps/CoaltineTunnel/scripts.pory"
-	removeobject 3
+	lock
 # 182 "data/maps/CoaltineTunnel/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	applymovement 2, CoaltineTunnel_EventScript_Trigger1_Movement_2
 # 183 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_0
+	waitmovement 2
 # 184 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 1
+	applymovement 3, CoaltineTunnel_EventScript_Trigger1_Movement_1
 # 185 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_1
+	waitmovement 3
 # 186 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
-# 187 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_1
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_0
+# 189 "data/maps/CoaltineTunnel/scripts.pory"
+	closemessage
 # 190 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_1
+	setvar VAR_ROYALSPUR_CITY_STATE, 8
 # 191 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 1
-# 192 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_2
-# 193 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_0
-# 194 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 1
-# 195 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_3
-# 196 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 197 "data/maps/CoaltineTunnel/scripts.pory"
-	giveitem ITEM_EXP_SHARE
-# 198 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_4
-# 200 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 201 "data/maps/CoaltineTunnel/scripts.pory"
-	giveitem ITEM_LETTER
-# 202 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_5
-# 203 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 204 "data/maps/CoaltineTunnel/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 205 "data/maps/CoaltineTunnel/scripts.pory"
-	removeobject 1
-# 206 "data/maps/CoaltineTunnel/scripts.pory"
+# 192 "data/maps/CoaltineTunnel/scripts.pory"
+	removeobject 2
+# 193 "data/maps/CoaltineTunnel/scripts.pory"
+	removeobject 3
+# 194 "data/maps/CoaltineTunnel/scripts.pory"
 	fadescreen FADE_FROM_BLACK
+# 195 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_0
+# 196 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement 1
+# 197 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_1
+# 198 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 199 "data/maps/CoaltineTunnel/scripts.pory"
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_1
+# 202 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_1
+# 203 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement 1
+# 204 "data/maps/CoaltineTunnel/scripts.pory"
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_2
+# 205 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement 1, CoaltineTunnel_EventScript_Grunt2Defeated_Movement_0
+# 206 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement 1
 # 207 "data/maps/CoaltineTunnel/scripts.pory"
-	setflag FLAG_SAVED_MAYOR_FRIEND
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_3
 # 208 "data/maps/CoaltineTunnel/scripts.pory"
-	setvar VAR_BRAVEFORT_TOWN_STATE, 0
+	closemessage
 # 209 "data/maps/CoaltineTunnel/scripts.pory"
+	giveitem ITEM_EXP_SHARE
+# 210 "data/maps/CoaltineTunnel/scripts.pory"
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_4
+# 212 "data/maps/CoaltineTunnel/scripts.pory"
+	closemessage
+# 213 "data/maps/CoaltineTunnel/scripts.pory"
+	giveitem ITEM_LETTER
+# 214 "data/maps/CoaltineTunnel/scripts.pory"
+	msgbox CoaltineTunnel_EventScript_Grunt2Defeated_Text_5
+# 215 "data/maps/CoaltineTunnel/scripts.pory"
+	closemessage
+# 216 "data/maps/CoaltineTunnel/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 217 "data/maps/CoaltineTunnel/scripts.pory"
+	removeobject 1
+# 218 "data/maps/CoaltineTunnel/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 219 "data/maps/CoaltineTunnel/scripts.pory"
+	setflag FLAG_SAVED_MAYOR_FRIEND
+# 220 "data/maps/CoaltineTunnel/scripts.pory"
+	setvar VAR_BRAVEFORT_TOWN_STATE, 0
+# 221 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_CantLeaveYet::
-# 213 "data/maps/CoaltineTunnel/scripts.pory"
+# 225 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 214 "data/maps/CoaltineTunnel/scripts.pory"
+# 226 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 4, CoaltineTunnel_EventScript_Trigger1_Movement_1
-# 215 "data/maps/CoaltineTunnel/scripts.pory"
+# 227 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 4
-# 216 "data/maps/CoaltineTunnel/scripts.pory"
+# 228 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_CantLeaveYet_Text_0
-# 217 "data/maps/CoaltineTunnel/scripts.pory"
+# 229 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
-# 218 "data/maps/CoaltineTunnel/scripts.pory"
+# 230 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, CoaltineTunnel_EventScript_CantLeaveYet_Movement_0
-# 219 "data/maps/CoaltineTunnel/scripts.pory"
+# 231 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 220 "data/maps/CoaltineTunnel/scripts.pory"
+# 232 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_Hiker::
-# 224 "data/maps/CoaltineTunnel/scripts.pory"
+# 236 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 225 "data/maps/CoaltineTunnel/scripts.pory"
+# 237 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 4, CoaltineTunnel_EventScript_Hiker_Movement_0
-# 226 "data/maps/CoaltineTunnel/scripts.pory"
+# 238 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 4
-# 227 "data/maps/CoaltineTunnel/scripts.pory"
+# 239 "data/maps/CoaltineTunnel/scripts.pory"
 	compare VAR_ROYALSPUR_CITY_STATE, 9
 	goto_if_eq CoaltineTunnel_EventScript_Hiker_2
-# 231 "data/maps/CoaltineTunnel/scripts.pory"
+# 243 "data/maps/CoaltineTunnel/scripts.pory"
 	compare VAR_ROYALSPUR_CITY_STATE, 9
 	goto_if_ne CoaltineTunnel_EventScript_Hiker_3
 CoaltineTunnel_EventScript_Hiker_1:
-# 234 "data/maps/CoaltineTunnel/scripts.pory"
+# 246 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
-# 235 "data/maps/CoaltineTunnel/scripts.pory"
+# 247 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 CoaltineTunnel_EventScript_Hiker_2:
-# 228 "data/maps/CoaltineTunnel/scripts.pory"
+# 240 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_Hiker_Text_0
-# 229 "data/maps/CoaltineTunnel/scripts.pory"
+# 241 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
 	goto CoaltineTunnel_EventScript_Hiker_1
 
 CoaltineTunnel_EventScript_Hiker_3:
-# 232 "data/maps/CoaltineTunnel/scripts.pory"
+# 244 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_CantLeaveYet_Text_0
 	goto CoaltineTunnel_EventScript_Hiker_1
 
 
 CoaltineTunnel_EventScript_Felix::
-# 239 "data/maps/CoaltineTunnel/scripts.pory"
+# 251 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_FELIX, CoaltineTunnel_Text_FelixIntro, CoaltineTunnel_Text_FelixOutro
-# 240 "data/maps/CoaltineTunnel/scripts.pory"
+# 252 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_FelixPostBattle, MSGBOX_AUTOCLOSE
-# 241 "data/maps/CoaltineTunnel/scripts.pory"
+# 253 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_Mark::
-# 258 "data/maps/CoaltineTunnel/scripts.pory"
+# 270 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_MARK, CoaltineTunnel_Text_MarkIntro, CoaltineTunnel_Text_MarkOutro
-# 259 "data/maps/CoaltineTunnel/scripts.pory"
+# 271 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
-# 260 "data/maps/CoaltineTunnel/scripts.pory"
+# 272 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_Mitchell::
-# 278 "data/maps/CoaltineTunnel/scripts.pory"
+# 290 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_MITCHELL, CoaltineTunnel_Text_MitchellIntro, CoaltineTunnel_Text_MitchellOutro
-# 279 "data/maps/CoaltineTunnel/scripts.pory"
+# 291 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_MitchellPostBattle, MSGBOX_AUTOCLOSE
-# 280 "data/maps/CoaltineTunnel/scripts.pory"
+# 292 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_Yuji::
-# 297 "data/maps/CoaltineTunnel/scripts.pory"
+# 309 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_YUJI, CoaltineTunnel_Text_YujiIntro, CoaltineTunnel_Text_YujiOutro
-# 298 "data/maps/CoaltineTunnel/scripts.pory"
+# 310 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_YujiPostBattle, MSGBOX_AUTOCLOSE
-# 299 "data/maps/CoaltineTunnel/scripts.pory"
+# 311 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_MartEmployee::
-# 316 "data/maps/CoaltineTunnel/scripts.pory"
+# 328 "data/maps/CoaltineTunnel/scripts.pory"
 	call_if_unset FLAG_RECEIVED_SUPER_POTIONS, CoaltineTunnel_EventScript_MartEmployeePotions
-# 317 "data/maps/CoaltineTunnel/scripts.pory"
+# 329 "data/maps/CoaltineTunnel/scripts.pory"
 	call_if_set FLAG_RECEIVED_SUPER_POTIONS, CoaltineTunnel_EventScript_MartEmployeeGoodLuck
 	return
 
 
 CoaltineTunnel_EventScript_MartEmployeePotions::
-# 321 "data/maps/CoaltineTunnel/scripts.pory"
-	applymovement 16, CoaltineTunnel_EventScript_Hiker_Movement_0
-# 322 "data/maps/CoaltineTunnel/scripts.pory"
-	waitmovement 16
-# 323 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_MartEmployeePotions_Text_0
-# 325 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
-# 326 "data/maps/CoaltineTunnel/scripts.pory"
-	giveitem ITEM_SUPER_POTION, 3
-# 327 "data/maps/CoaltineTunnel/scripts.pory"
-	setflag FLAG_RECEIVED_SUPER_POTIONS
-# 328 "data/maps/CoaltineTunnel/scripts.pory"
-	release
-	return
-
-
-CoaltineTunnel_EventScript_MartEmployeeGoodLuck::
-# 332 "data/maps/CoaltineTunnel/scripts.pory"
-	lock
 # 333 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 16, CoaltineTunnel_EventScript_Hiker_Movement_0
 # 334 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 16
 # 335 "data/maps/CoaltineTunnel/scripts.pory"
-	msgbox CoaltineTunnel_EventScript_MartEmployeeGoodLuck_Text_0
-# 336 "data/maps/CoaltineTunnel/scripts.pory"
-	closemessage
+	msgbox CoaltineTunnel_EventScript_MartEmployeePotions_Text_0
 # 337 "data/maps/CoaltineTunnel/scripts.pory"
+	closemessage
+# 338 "data/maps/CoaltineTunnel/scripts.pory"
+	giveitem ITEM_SUPER_POTION, 3
+# 339 "data/maps/CoaltineTunnel/scripts.pory"
+	setflag FLAG_RECEIVED_SUPER_POTIONS
+# 340 "data/maps/CoaltineTunnel/scripts.pory"
+	release
+	return
+
+
+CoaltineTunnel_EventScript_MartEmployeeGoodLuck::
+# 344 "data/maps/CoaltineTunnel/scripts.pory"
+	lock
+# 345 "data/maps/CoaltineTunnel/scripts.pory"
+	applymovement 16, CoaltineTunnel_EventScript_Hiker_Movement_0
+# 346 "data/maps/CoaltineTunnel/scripts.pory"
+	waitmovement 16
+# 347 "data/maps/CoaltineTunnel/scripts.pory"
+	msgbox CoaltineTunnel_EventScript_MartEmployeeGoodLuck_Text_0
+# 348 "data/maps/CoaltineTunnel/scripts.pory"
+	closemessage
+# 349 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_Miner::
-# 341 "data/maps/CoaltineTunnel/scripts.pory"
+# 353 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 342 "data/maps/CoaltineTunnel/scripts.pory"
+# 354 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 7, CoaltineTunnel_EventScript_Hiker_Movement_0
-# 343 "data/maps/CoaltineTunnel/scripts.pory"
+# 355 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 7
-# 344 "data/maps/CoaltineTunnel/scripts.pory"
+# 356 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_Miner_Text_0
-# 345 "data/maps/CoaltineTunnel/scripts.pory"
+# 357 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
-# 346 "data/maps/CoaltineTunnel/scripts.pory"
+# 358 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 7, CoaltineTunnel_EventScript_Miner_Movement_0
-# 347 "data/maps/CoaltineTunnel/scripts.pory"
+# 359 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 7
-# 348 "data/maps/CoaltineTunnel/scripts.pory"
+# 360 "data/maps/CoaltineTunnel/scripts.pory"
 	call CoaltineTunnel_EventScript_PathShake
-# 349 "data/maps/CoaltineTunnel/scripts.pory"
+# 361 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_Miner_Text_1
-# 350 "data/maps/CoaltineTunnel/scripts.pory"
+# 362 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
-# 351 "data/maps/CoaltineTunnel/scripts.pory"
+# 363 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_PathShake::
-# 355 "data/maps/CoaltineTunnel/scripts.pory"
+# 367 "data/maps/CoaltineTunnel/scripts.pory"
 	delay 30
-# 356 "data/maps/CoaltineTunnel/scripts.pory"
+# 368 "data/maps/CoaltineTunnel/scripts.pory"
 	setvar VAR_0x8004, 2
-# 357 "data/maps/CoaltineTunnel/scripts.pory"
+# 369 "data/maps/CoaltineTunnel/scripts.pory"
 	setvar VAR_0x8005, 6
-# 358 "data/maps/CoaltineTunnel/scripts.pory"
+# 370 "data/maps/CoaltineTunnel/scripts.pory"
 	setvar VAR_0x8006, 6
-# 359 "data/maps/CoaltineTunnel/scripts.pory"
+# 371 "data/maps/CoaltineTunnel/scripts.pory"
 	setvar VAR_0x8007, 4
-# 360 "data/maps/CoaltineTunnel/scripts.pory"
+# 372 "data/maps/CoaltineTunnel/scripts.pory"
 	special ShakeCamera
-# 361 "data/maps/CoaltineTunnel/scripts.pory"
+# 373 "data/maps/CoaltineTunnel/scripts.pory"
 	waitstate
-# 362 "data/maps/CoaltineTunnel/scripts.pory"
+# 374 "data/maps/CoaltineTunnel/scripts.pory"
 	delay 30
 	return
 
 
 CoaltineTunnel_EventScript_Wyatt::
-# 366 "data/maps/CoaltineTunnel/scripts.pory"
+# 378 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_WYATT, CoaltineTunnel_Text_WyattIntro, CoaltineTunnel_Text_WyattOutro
-# 367 "data/maps/CoaltineTunnel/scripts.pory"
+# 379 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_WyattPostBattle, MSGBOX_AUTOCLOSE
-# 368 "data/maps/CoaltineTunnel/scripts.pory"
+# 380 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_Patricia::
-# 385 "data/maps/CoaltineTunnel/scripts.pory"
+# 397 "data/maps/CoaltineTunnel/scripts.pory"
 	trainerbattle_single TRAINER_PATRICIA, CoaltineTunnel_Text_PatriciaIntro, CoaltineTunnel_Text_PatriciaOutro
-# 386 "data/maps/CoaltineTunnel/scripts.pory"
+# 398 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_Text_PatriciaPostBattle, MSGBOX_AUTOCLOSE
-# 387 "data/maps/CoaltineTunnel/scripts.pory"
+# 399 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmessage
 	end
 
 
 CoaltineTunnel_EventScript_Ball1::
-# 404 "data/maps/CoaltineTunnel/scripts.pory"
+# 416 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 405 "data/maps/CoaltineTunnel/scripts.pory"
+# 417 "data/maps/CoaltineTunnel/scripts.pory"
 	removeobject 9
-# 406 "data/maps/CoaltineTunnel/scripts.pory"
+# 418 "data/maps/CoaltineTunnel/scripts.pory"
 	giveitem ITEM_ESCAPE_ROPE
-# 407 "data/maps/CoaltineTunnel/scripts.pory"
+# 419 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_Ball2::
-# 411 "data/maps/CoaltineTunnel/scripts.pory"
+# 423 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 412 "data/maps/CoaltineTunnel/scripts.pory"
+# 424 "data/maps/CoaltineTunnel/scripts.pory"
 	removeobject 14
-# 413 "data/maps/CoaltineTunnel/scripts.pory"
+# 425 "data/maps/CoaltineTunnel/scripts.pory"
 	giveitem ITEM_IRON
-# 414 "data/maps/CoaltineTunnel/scripts.pory"
+# 426 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_Ball3::
-# 418 "data/maps/CoaltineTunnel/scripts.pory"
+# 430 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 419 "data/maps/CoaltineTunnel/scripts.pory"
+# 431 "data/maps/CoaltineTunnel/scripts.pory"
 	removeobject 10
-# 420 "data/maps/CoaltineTunnel/scripts.pory"
+# 432 "data/maps/CoaltineTunnel/scripts.pory"
 	giveitem ITEM_ZINC
-# 421 "data/maps/CoaltineTunnel/scripts.pory"
+# 433 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
 
 CoaltineTunnel_EventScript_UnderDevelopment::
-# 425 "data/maps/CoaltineTunnel/scripts.pory"
+# 437 "data/maps/CoaltineTunnel/scripts.pory"
 	lock
-# 426 "data/maps/CoaltineTunnel/scripts.pory"
+# 438 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 16, CoaltineTunnel_EventScript_Hiker_Movement_0
-# 427 "data/maps/CoaltineTunnel/scripts.pory"
+# 439 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 16
-# 428 "data/maps/CoaltineTunnel/scripts.pory"
+# 440 "data/maps/CoaltineTunnel/scripts.pory"
 	msgbox CoaltineTunnel_EventScript_UnderDevelopment_Text_0
-# 429 "data/maps/CoaltineTunnel/scripts.pory"
+# 441 "data/maps/CoaltineTunnel/scripts.pory"
 	closemessage
-# 430 "data/maps/CoaltineTunnel/scripts.pory"
+# 442 "data/maps/CoaltineTunnel/scripts.pory"
 	applymovement 16, CoaltineTunnel_EventScript_Miner_Movement_0
-# 431 "data/maps/CoaltineTunnel/scripts.pory"
+# 443 "data/maps/CoaltineTunnel/scripts.pory"
 	waitmovement 16
-# 432 "data/maps/CoaltineTunnel/scripts.pory"
+# 444 "data/maps/CoaltineTunnel/scripts.pory"
 	release
 	return
 
@@ -693,41 +713,41 @@ CoaltineTunnel_EventScript_Trigger3_Movement_0:
 	walk_up
 	step_end
 
-# 149 "data/maps/CoaltineTunnel/scripts.pory"
+# 153 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_Grunt1Defeated_Movement_0:
-# 149 "data/maps/CoaltineTunnel/scripts.pory"
+# 153 "data/maps/CoaltineTunnel/scripts.pory"
 	walk_down
-# 149 "data/maps/CoaltineTunnel/scripts.pory"
+# 153 "data/maps/CoaltineTunnel/scripts.pory"
 	face_right
 	step_end
 
-# 183 "data/maps/CoaltineTunnel/scripts.pory"
+# 195 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_Grunt2Defeated_Movement_0:
-# 183 "data/maps/CoaltineTunnel/scripts.pory"
+# 195 "data/maps/CoaltineTunnel/scripts.pory"
 	face_down
 	step_end
 
-# 185 "data/maps/CoaltineTunnel/scripts.pory"
+# 197 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_Grunt2Defeated_Movement_1:
-# 185 "data/maps/CoaltineTunnel/scripts.pory"
+# 197 "data/maps/CoaltineTunnel/scripts.pory"
 	face_up
 	step_end
 
-# 218 "data/maps/CoaltineTunnel/scripts.pory"
+# 230 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_CantLeaveYet_Movement_0:
-# 218 "data/maps/CoaltineTunnel/scripts.pory"
+# 230 "data/maps/CoaltineTunnel/scripts.pory"
 	walk_up
 	step_end
 
-# 225 "data/maps/CoaltineTunnel/scripts.pory"
+# 237 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_Hiker_Movement_0:
-# 225 "data/maps/CoaltineTunnel/scripts.pory"
+# 237 "data/maps/CoaltineTunnel/scripts.pory"
 	face_player
 	step_end
 
-# 346 "data/maps/CoaltineTunnel/scripts.pory"
+# 358 "data/maps/CoaltineTunnel/scripts.pory"
 CoaltineTunnel_EventScript_Miner_Movement_0:
-# 346 "data/maps/CoaltineTunnel/scripts.pory"
+# 358 "data/maps/CoaltineTunnel/scripts.pory"
 	face_original_direction
 	step_end
 
@@ -756,12 +776,12 @@ CoaltineTunnel_EventScript_Trigger1_Text_4:
 	.string "Hey, who is this kid?$"
 
 CoaltineTunnel_EventScript_Grunt1Defeated_Text_0:
-# 147 "data/maps/CoaltineTunnel/scripts.pory"
+# 151 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "You're one hell of a trainer, kid, I'll\n"
 	.string "give you that.$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_0:
-# 174 "data/maps/CoaltineTunnel/scripts.pory"
+# 186 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Tch...this doesn't matter anyways, we at\n"
 	.string "least have something to take back to\l"
 	.string "the boss.\p"
@@ -770,7 +790,7 @@ CoaltineTunnel_EventScript_Grunt2Defeated_Text_0:
 	.string "the boss about this kid.$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_1:
-# 187 "data/maps/CoaltineTunnel/scripts.pory"
+# 199 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Thank you for helping me, I'm sorry you\n"
 	.string "got caught up in that. I was traveling\l"
 	.string "through here to visit the mayor in\l"
@@ -786,21 +806,21 @@ CoaltineTunnel_EventScript_Grunt2Defeated_Text_1:
 	.string "trap the miners.$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_2:
-# 192 "data/maps/CoaltineTunnel/scripts.pory"
+# 204 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "These writings were from the miners.\n"
 	.string "They were carving their prayers into\l"
 	.string "this wall asking for the gods to forgive\l"
 	.string "them.$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_3:
-# 195 "data/maps/CoaltineTunnel/scripts.pory"
+# 207 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Here, I would like to give you something\n"
 	.string "for helping me out. It's a new invention\l"
 	.string "that I was hoping to have tested and it\l"
 	.string "seems like you would be perfect for it!$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_4:
-# 198 "data/maps/CoaltineTunnel/scripts.pory"
+# 210 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Also, could I ask you for a favor? I was\n"
 	.string "delivering this letter to the mayor of\l"
 	.string "Royalspur City but I'd like to head back\l"
@@ -810,55 +830,55 @@ CoaltineTunnel_EventScript_Grunt2Defeated_Text_4:
 	.string "issues!$"
 
 CoaltineTunnel_EventScript_Grunt2Defeated_Text_5:
-# 202 "data/maps/CoaltineTunnel/scripts.pory"
+# 214 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Feel free to come visit me at the lab\n"
 	.string "when you make it to Bravefort Town!$"
 
 CoaltineTunnel_EventScript_CantLeaveYet_Text_0:
-# 216 "data/maps/CoaltineTunnel/scripts.pory"
+# 228 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "I'm sorry, I can't let you through right\n"
 	.string "now. The police are investigating\l"
 	.string "something on Route 6 and asked me to\l"
 	.string "keep the route clear for them.$"
 
 CoaltineTunnel_EventScript_Hiker_Text_0:
-# 228 "data/maps/CoaltineTunnel/scripts.pory"
+# 240 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "The police are finished up. Happy\n"
 	.string "hiking!$"
 
 CoaltineTunnel_EventScript_MartEmployeePotions_Text_0:
-# 323 "data/maps/CoaltineTunnel/scripts.pory"
+# 335 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Oh dear, I think I got lost somewhere...\p"
 	.string "Oh, you look like a Pokémon trainer!\n"
 	.string "Here, I think these will be better used\l"
 	.string "with you.$"
 
 CoaltineTunnel_EventScript_MartEmployeeGoodLuck_Text_0:
-# 335 "data/maps/CoaltineTunnel/scripts.pory"
+# 347 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Don't worry about me, I just need to\n"
 	.string "retrace my steps.$"
 
 CoaltineTunnel_EventScript_Miner_Text_0:
-# 344 "data/maps/CoaltineTunnel/scripts.pory"
+# 356 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Surely the gods won't mind if I just try\n"
 	.string "to take a little bit of these crystals,\l"
 	.string "right?$"
 
 CoaltineTunnel_EventScript_Miner_Text_1:
-# 349 "data/maps/CoaltineTunnel/scripts.pory"
+# 361 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "...Maybe I should stop digging...$"
 
 CoaltineTunnel_EventScript_UnderDevelopment_Text_0:
-# 428 "data/maps/CoaltineTunnel/scripts.pory"
+# 440 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "This area is currently under\n"
 	.string "development. Check back later!$"
 
 CoaltineTunnel_Text_NotEnoughMons::
-# 132 "data/maps/CoaltineTunnel/scripts.pory"
+# 136 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Oh, you don't have enough Pokémon.$"
 
 CoaltineTunnel_Text_Grunt1Intro::
-# 136 "data/maps/CoaltineTunnel/scripts.pory"
+# 140 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "This must be the kid that took down\n"
 	.string "those guys in the Evergreen Forest. He\l"
 	.string "can't be that tough.\p"
@@ -867,98 +887,98 @@ CoaltineTunnel_Text_Grunt1Intro::
 	.string "Umbra!$"
 
 CoaltineTunnel_Text_Grunt1Outro::
-# 141 "data/maps/CoaltineTunnel/scripts.pory"
+# 145 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Maybe you are that tough.$"
 
 CoaltineTunnel_Text_Grunt2Intro::
-# 164 "data/maps/CoaltineTunnel/scripts.pory"
+# 168 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "You might have beaten him, but can you\n"
 	.string "take on both of us?$"
 
 CoaltineTunnel_Text_Grunt2Outro::
-# 168 "data/maps/CoaltineTunnel/scripts.pory"
+# 172 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Who taught you to battle like that?$"
 
 CoaltineTunnel_Text_FelixIntro::
-# 245 "data/maps/CoaltineTunnel/scripts.pory"
+# 257 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "I need to stay in top form if I'm going\n"
 	.string "to serve and protect!$"
 
 CoaltineTunnel_Text_FelixOutro::
-# 249 "data/maps/CoaltineTunnel/scripts.pory"
+# 261 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "I gotta work harder if I'm going to get\n"
 	.string "that promotion.$"
 
 CoaltineTunnel_Text_FelixPostBattle::
-# 253 "data/maps/CoaltineTunnel/scripts.pory"
+# 265 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Have you ever considered a career in\n"
 	.string "law enforcement?$"
 
 CoaltineTunnel_Text_MarkIntro::
-# 264 "data/maps/CoaltineTunnel/scripts.pory"
+# 276 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Hey! Are you searching for Pokémon?\p"
 	.string "You came along after me! You're rude!$"
 
 CoaltineTunnel_Text_MarkOutro::
-# 269 "data/maps/CoaltineTunnel/scripts.pory"
+# 281 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Ayieeeeh! I'm sorry, forgive me, please!$"
 
 CoaltineTunnel_Text_MarkPostBattle::
-# 273 "data/maps/CoaltineTunnel/scripts.pory"
+# 285 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "People don't come here often, so I\n"
 	.string "thought there'd be rare Pokémon.$"
 
 CoaltineTunnel_Text_MitchellIntro::
-# 284 "data/maps/CoaltineTunnel/scripts.pory"
+# 296 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "This cave isn't even that scary. Bring\n"
 	.string "it on!$"
 
 CoaltineTunnel_Text_MitchellOutro::
-# 288 "data/maps/CoaltineTunnel/scripts.pory"
+# 300 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Now that you mention it, is it getting\n"
 	.string "darker in here?$"
 
 CoaltineTunnel_Text_MitchellPostBattle::
-# 292 "data/maps/CoaltineTunnel/scripts.pory"
+# 304 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "I just gotta stay cool, that's all...$"
 
 CoaltineTunnel_Text_YujiIntro::
-# 303 "data/maps/CoaltineTunnel/scripts.pory"
+# 315 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "The harsh conditions in this cave just\n"
 	.string "make me tougher!$"
 
 CoaltineTunnel_Text_YujiOutro::
-# 307 "data/maps/CoaltineTunnel/scripts.pory"
+# 319 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Never give up, never surrender.$"
 
 CoaltineTunnel_Text_YujiPostBattle::
-# 311 "data/maps/CoaltineTunnel/scripts.pory"
+# 323 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "My grunting echoes a lot in here.$"
 
 CoaltineTunnel_Text_WyattIntro::
-# 372 "data/maps/CoaltineTunnel/scripts.pory"
+# 384 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Rare Pokémon make life worth living!$"
 
 CoaltineTunnel_Text_WyattOutro::
-# 376 "data/maps/CoaltineTunnel/scripts.pory"
+# 388 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Your Pokémon are simply amazing.$"
 
 CoaltineTunnel_Text_WyattPostBattle::
-# 380 "data/maps/CoaltineTunnel/scripts.pory"
+# 392 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Did you know there's a place in Shizen\n"
 	.string "that is inhabited entirely by dragons?\l"
 	.string "Someday, I'll be able to go there.$"
 
 CoaltineTunnel_Text_PatriciaIntro::
-# 391 "data/maps/CoaltineTunnel/scripts.pory"
+# 403 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Feeling tired yet? Maybe you should lie\n"
 	.string "down and rest. I'll watch to make sure\l"
 	.string "no one bothers you.$"
 
 CoaltineTunnel_Text_PatriciaOutro::
-# 395 "data/maps/CoaltineTunnel/scripts.pory"
+# 407 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "Oh...you're not even tired.$"
 
 CoaltineTunnel_Text_PatriciaPostBattle::
-# 399 "data/maps/CoaltineTunnel/scripts.pory"
+# 411 "data/maps/CoaltineTunnel/scripts.pory"
 	.string "I promise I'm not weird.$"

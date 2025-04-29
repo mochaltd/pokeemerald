@@ -123,8 +123,12 @@ script CoaltineTunnel_EventScript_Trigger3 {
     release
 }
 
-script CoaltineTunnel_EventScript_Grunt1Battle{
-    trainerbattle_double(TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt1Defeated)
+script CoaltineTunnel_EventScript_Grunt1 {
+    goto(CoaltineTunnel_EventScript_Grunt1Battle)
+}
+
+script CoaltineTunnel_EventScript_Grunt1Battle {
+    trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_1, CoaltineTunnel_Text_Grunt1Intro, CoaltineTunnel_Text_Grunt1Outro, CoaltineTunnel_EventScript_Grunt1Defeated)
     release
     end
 }
@@ -156,7 +160,7 @@ script CoaltineTunnel_EventScript_Grunt1Defeated {
 }
 
 script CoaltineTunnel_EventScript_Grunt2Battle{
-    trainerbattle_double(TRAINER_GRUNT_AQUA_HIDEOUT_2, CoaltineTunnel_Text_Grunt2Intro, CoaltineTunnel_Text_Grunt2Outro, CoaltineTunnel_Text_NotEnoughMons, CoaltineTunnel_EventScript_Grunt2Defeated)
+    trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_2, CoaltineTunnel_Text_Grunt2Intro, CoaltineTunnel_Text_Grunt2Outro, CoaltineTunnel_EventScript_Grunt2Defeated)
     release
     end
 }
@@ -169,8 +173,16 @@ text CoaltineTunnel_Text_Grunt2Outro {
     format("Who taught you to battle like that?")
 }
 
+script CoaltineTunnel_EventScript_Grunt2 {
+    goto(CoaltineTunnel_EventScript_Grunt2Battle)
+}
+
 script CoaltineTunnel_EventScript_Grunt2Defeated {
     lock
+    applymovement(2, moves(face_left))
+    waitmovement(2)
+    applymovement(3, moves(face_right))
+    waitmovement(3)
     msgbox(format("Tch...this doesn't matter anyways, we at least have something to take back to the boss.\p
     You only inconvenienced us for now.\p
     Let's get out of here. We better warn the boss about this kid."))
