@@ -20,16 +20,24 @@ script EvergreenForest_EventScript_SetupGruntBattle {
 
 script EvergreenForest_EventScript_UmbraPreBattle {
     lock
+    if (defeated(TRAINER_GRUNT1_EVERGREEN_FOREST)) {
+        applymovement(7, moves(face_player))
+        waitmovement(7)
+        goto(EvergreenForest_EventScript_Grunt2Battle)
+    }
+    elif (!defeated(TRAINER_GRUNT1_EVERGREEN_FOREST)) {
     applymovement(7, moves(face_player))
     waitmovement(7)
     msgbox(format("Get lost, kid."))
     applymovement(7, moves(face_original_direction))
     waitmovement(7)
     closemessage
+    }
     release
 }
 
 script EvergreenForest_EventScript_Grunt1Battle{
+    setvar(VAR_EVERGREEN_FOREST_STATE, 2)
     trainerbattle_single(TRAINER_GRUNT1_EVERGREEN_FOREST, EvergreenForest_Text_Grunt1Intro, EvergreenForest_Text_Grunt1Outro, EvergreenForest_EventScript_Grunt1Defeated)
     release
     end
@@ -78,20 +86,20 @@ text EvergreenForest_Text_Grunt2Outro {
 
 script EvergreenForest_EventScript_Grunt2Defeated {
     lock
-    applymovement(7, moves(face_up))
+    applymovement(7, moves(face_right))
     waitmovement(7)
-    applymovement(8, moves(face_down))
+    applymovement(8, moves(face_left))
     waitmovement(8)
     msgbox(format("Come on, let's get out of here. This shrine didn't have anything helpful and this kid is the real deal!"))
     closemessage
-    setvar(VAR_EVERGREEN_FOREST_STATE, 2)
+    setvar(VAR_EVERGREEN_FOREST_STATE, 3)
     fadescreen(FADE_TO_BLACK)
     removeobject(7)
     removeobject(8)
     fadescreen(FADE_FROM_BLACK)
-    applymovement(2, moves(walk_left * 7, walk_up, face_player))
+    applymovement(2, moves(walk_left * 5, walk_up, face_player))
     waitmovement(2)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     msgbox(format("Thank you, trainer, those guys were scaring me.\p
     That shrine is dedicated to Mismagius, a Pokémon that has protected these woods for as long as anyone can remember.\p
     I heard those guys talking about forcing dreams and nightmares on people...\p
@@ -105,16 +113,14 @@ script EvergreenForest_EventScript_Grunt2Defeated {
 }
 
 script EvergreenForest_HexGirl {
-    if(!(var(VAR_EVERGREEN_FOREST_STATE) == 1)) {
+    if (defeated(TRAINER_GRUNT2_EVERGREEN_FOREST)) {
         msgbox(format("My grandma lives in these woods and makes medicine for people, but people like to call her a witch.\p
         They just don't understand her."))
         closemessage
     }
-    else {
-        if(var(VAR_EVERGREEN_FOREST_STATE) == 1) {
-            msgbox(format("You have to help! They're going to destroy the shrine!"))
+    elif (!defeated(TRAINER_GRUNT2_EVERGREEN_FOREST)) {
+        msgbox(format("You have to help! They're going to destroy the shrine!"))
             closemessage
-        }
     }
 }
 
@@ -176,6 +182,15 @@ script EvergreenForest_EventScript_DontLeave2 {
     applymovement(2, moves(face_down))
     waitmovement(2)
     msgbox(format("Please don't leave me!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    release
+}
+
+script EvergreenForest_EventScript_CantLeaveYet {
+    lock
+    msgbox(format("I have to stop them!"))
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement(OBJ_EVENT_ID_PLAYER)

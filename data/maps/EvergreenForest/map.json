@@ -326,6 +326,105 @@
       "var": "VAR_EVERGREEN_FOREST_STATE",
       "var_value": "1",
       "script": "EvergreenForest_EventScript_DontLeave2"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_EVERGREEN_FOREST_STATE",
+      "var_value": "2",
+      "script": "EvergreenForest_EventScript_CantLeaveYet"
     }
   ],
   "bg_events": [
