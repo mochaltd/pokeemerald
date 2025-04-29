@@ -5007,13 +5007,13 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
         case TRAINER_CLASS_MAGMA_LEADER:
         case TRAINER_CLASS_TEAM_UMBRA:
-            PlayBGM(MUS_VICTORY_GYM_LEADER);
+            PlayBGM(MUS_VICTORY_AQUA_MAGMA);
             break;
         case TRAINER_CLASS_LEADER:
             PlayBGM(MUS_VICTORY_LEAGUE);
             break;
         default:
-            PlayBGM(MUS_VICTORY_TRAINER);
+            PlayBGM(MUS_RG_VICTORY_TRAINER);
             break;
         }
     }
