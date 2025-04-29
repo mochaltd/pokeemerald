@@ -198,6 +198,34 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE6_BUILDERS_HOUSE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 19,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUILDING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUILDING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 59,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUILDING",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 19,
+      "y": 59,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6_BUILDING",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

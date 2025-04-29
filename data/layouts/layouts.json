@@ -5876,7 +5876,7 @@
       "height": 60,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralCopy",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/BravefortTown/border.bin",
       "blockdata_filepath": "data/layouts/BravefortTown/map.bin"
@@ -6264,6 +6264,18 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route7/border.bin",
       "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE6_BUILDING",
+      "name": "Route6_Building_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route6_Building/border.bin",
+      "blockdata_filepath": "data/layouts/Route6_Building/map.bin"
     }
   ]
 }

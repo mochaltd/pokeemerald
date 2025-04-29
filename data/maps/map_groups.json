@@ -139,7 +139,8 @@
     "Route6_BuildersHouse",
     "RoyalspurGym_Interior_1F_PostBattle",
     "CoaltineTunnel_B1F",
-    "Route7"
+    "Route7",
+    "Route6_Building"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
