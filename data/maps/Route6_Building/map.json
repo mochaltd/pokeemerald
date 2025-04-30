@@ -28,15 +28,15 @@
       "x": 6,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE6",
-      "dest_warp_id": "5"
+      "dest_map": "MAP_BRAVEFORT_TOWN",
+      "dest_warp_id": "12"
     },
     {
       "x": 5,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE6",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_BRAVEFORT_TOWN",
+      "dest_warp_id": "11"
     }
   ],
   "coord_events": [

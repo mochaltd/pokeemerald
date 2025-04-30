@@ -5876,7 +5876,7 @@
       "height": 60,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralCopy",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/BravefortTown/border.bin",
       "blockdata_filepath": "data/layouts/BravefortTown/map.bin"

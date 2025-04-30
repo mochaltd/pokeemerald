@@ -525,12 +525,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rose1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Felix[] = {
     {
     .iv = 50,
-    .lvl = 20,
+    .lvl = 23,
     .species = SPECIES_GROWLITHE
     },
     {
     .iv = 50,
-    .lvl = 20,
+    .lvl = 24,
     .species = SPECIES_ELECTRIKE
     }
 };
